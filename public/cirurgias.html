@@ -1,0 +1,1976 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Cuidar Mais | Sua Clínica Gerando Valor Além da Consulta</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+      <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+
+@media (max-width: 767.98px) {
+    .footer .row.py-7 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .footer .col-lg-6 {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .footer .logo {
+        margin: 0 auto 1.5rem;
+        display: block;
+    }
+    
+    .footer .col-3, .footer .col-6 {
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .footer h4 {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
+    
+    .footer ul {
+        padding-left: 0;
+    }
+    
+    .footer .row.justify-content-md-between {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer .text-center.text-md-start, 
+    .footer .text-center.text-md-end {
+        text-align: center !important;
+        margin-bottom: 1rem;
+    }
+}
+/* Ajustes para a seção hero em telas pequenas */
+@media (max-width: 768px) {
+    #home .bg-holder.hero-bg {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    #home .container {
+      order: 2;
+      margin-top: 20px;
+    }
+    
+    #home .row {
+      flex-direction: column;
+    }
+  }
+
+  /* Ajustes para o carrossel de feedbacks em telas pequenas */
+  @media (max-width: 768px) {
+    #feedbacks .row.align-items-center {
+      flex-direction: column;
+    }
+    
+    #feedbacks .col-lg-5 {
+      order: -1;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    
+    #feedbacks .col-lg-6 {
+      width: 100%;
+    }
+  }
+      .feature-card {
+  background-color: #6970dd;
+  color: #000000;
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+.text-light{
+  color: #ffffff !important;
+}
+
+.feature-card:hover {
+  background-color: #9e6fff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.backgroundcolorfim{
+  background-color: #ffffff;
+}
+
+.feature-card:hover h4,
+.feature-card:hover p {
+  color: #ffffff;
+}
+
+.feature-icon {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.bg-roxo {
+  background-color: #002db6 !important;
+}
+
+  .hover-scale-card {
+  background-color: #b183ff;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  min-height: 330px; /* altura mínima para padronizar */
+  margin-bottom: 24px; /* espaçamento entre os cards */
+}
+
+.hover-scale-card h4,
+.hover-scale-card p {
+  color: #ffffff;
+}
+/* Impede quebra de linha dos elementos lado a lado */
+#feedbacks .row.align-items-center {
+  flex-wrap: nowrap;
+}
+
+
+/* Ajusta altura dos quadrados dos feedbacks */
+#feedbacks .carousel .p-4 {
+  min-height: 280px;
+}
+
+/* Ajusta a altura do carrossel */
+#carouselFeedbacks {
+  min-height: 600px;
+}
+
+/* Força o carrossel a ocupar o espaço da coluna */
+#carouselFeedbacks .carousel-inner {
+  height: 100%;
+}
+
+       /* Estilos existentes... */
+
+        /* ========== NOVOS ESTILOS PARA RESPONSIVIDADE ========== */
+        
+        /* 1. Centralizar botão "Agendar Demonstração" no mobile */
+        @media (max-width: 768px) {
+            .navbar-collapse .btn-primary {
+                margin-left: 0 !important;
+                margin-top: 15px;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+            
+            .navbar-collapse {
+                text-align: center;
+            }
+            
+            .navbar-nav {
+                width: 100%;
+            }
+        }
+
+/* Alinha verticalmente os feedbacks para ficarem uniformes */
+#carouselFeedbacks .row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.hover-scale-card:hover {
+  transform: translateY(-5px);
+  background-color: #9e6fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+  .services-card-shadow {
+  background-color: #ffffff; /* fundo branco */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* sem sombra inicial */
+  margin-right: 30px !important; /* espaçamento entre os cards */
+}
+
+.services-card-shadow:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* sombra suave no hover */
+  transform: translateY(-9px); /* levanta levemente o card */
+}
+.color-white-inicio{
+  color: #ffffff;
+}
+.icone-roxa{
+  color:#9e6fff
+}
+.text-top{
+  text-align: start;
+}
+/* Estilo padrão para mobile */
+@media (max-width: 991.98px) {
+
+.navbar:not(.navbar-scrolled) {
+      background-color: transparent !important;
+  }
+  /* Navbar azul quando tem scroll OU quando o menu está aberto */
+  .navbar-scrolled,
+  .navbar.show {
+      background-color: #1F529F !important;
+  }
+  /* Botão do menu transparente no topo */
+  .navbar:not(.navbar-scrolled) .navbar-toggler {
+      background-color: transparent !important;
+      border-color: rgba(255,255,255,0.5) !important;
+  }
+
+  /* Quando o menu está aberto OU quando tem scroll */
+  .navbar.show .navbar-toggler,
+  .navbar-scrolled .navbar-toggler {
+      background-color: #1F529F !important;
+      border-color: #1F529F !important;
+  }
+
+  /* Estilo do menu expandido */
+  .navbar-collapse {
+      background-color: #1F529F !important;
+      margin: 8px -15px 0 !important;
+      padding: 0 15px 15px !important;
+  }
+
+  .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+  }
+}
+
+/* Mantém o que já tem para esconder mobile em desktop */
+@media (min-width: 992px) {
+  .mobile-only {
+      display: none !important;
+  }
+}
+      
+      
+      /* Esconde a seção mobile em desktop */
+      @media (min-width: 992px) {
+          .mobile-only {
+              display: none !important;
+          }
+      }
+    
+      @media (max-width: 991.98px) {
+        .navbar-nav {
+      width: 100%;
+  }
+
+            /* Ajusta o container do menu para ocupar toda a largura */
+  .navbar > .container-fluid {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+  .navbar-nav {
+      width: 100%;
+      padding-top: 10px;
+  }
+  .navbar-toggler {
+      background-color: #1F529F !important;
+      border-color: #1F529F !important;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.25rem;
+      margin-right: 15px;
+  }
+  
+  .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+  }
+  
+  .navbar-collapse {
+      background-color: #1F529F !important;
+      margin-left: -15px !important;
+      margin-right: -15px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      margin-top: 8px !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+  }
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+#loadMoreBtn, #showLessBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+  background-color: #18c387;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  min-width: 200px;
+  text-align: center;
+  height: 48px;
+}
+
+#showLessBtn {
+  display: none;
+}
+
+#loadMoreBtn:hover, #showLessBtn:hover {
+  background-color: #15a877;
+  transform: translateY(-2px);
+}
+
+</style>
+
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/user.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Adicione isso no head do seu documento -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
+<style>
+  /* ESTILOS EXISTENTES MANTIDOS... */
+
+  /* ========== NOVOS ESTILOS PARA O FORMULÁRIO RESPONSIVO ========== */
+  @media (max-width: 768px) {
+    /* Ajuste do container do formulário */
+    .container.position-absolute {
+      position: relative !important;
+      top: auto !important;
+      left: auto !important;
+      transform: none !important;
+      width: 100% !important;
+      margin-top: 20px !important;
+      margin-bottom: 20px;
+    }
+    
+    /* Ajuste do fundo do formulário */
+    .text-white.bg-dark {
+      padding: 20px 15px !important;
+      background-color: rgba(0, 0, 0, 0.7) !important;
+    }
+    
+    /* Ajuste das colunas para empilhar */
+    .row.g-3 {
+      flex-direction: column;
+    }
+    
+    .col-md-6 {
+      width: 100% !important;
+    }
+    
+    /* Ajuste dos campos do formulário */
+    .form-group {
+      margin-bottom: 15px;
+    }
+    
+    /* Ajuste dos itens de benefícios */
+    .position-absolute.bottom-0 {
+      position: relative !important;
+      padding-top: 30px !important;
+    }
+    
+    .d-flex.align-items-start {
+      flex-direction: column;
+      align-items: flex-start !important;
+      margin-bottom: 20px;
+    }
+    
+    .d-flex.align-items-start i {
+      margin-bottom: 10px;
+      margin-right: 0 !important;
+      font-size: 1.5rem !important;
+    }
+    
+    /* Ajuste do título */
+    h2.fw-bold.text-center {
+      font-size: 1.5rem;
+      margin-bottom: 30px !important;
+    }
+    
+    /* Ajuste do botão enviar */
+    button.btn-primary {
+      width: 100%;
+      padding: 10px !important;
+    }
+    
+    /* Ajuste do termo */
+    .form-check-label {
+      font-size: 0.8rem;
+    }
+  }
+
+  /* Ajustes para telas muito pequenas (menos de 400px) */
+  @media (max-width: 400px) {
+    /* Reduzir padding do formulário */
+    .text-white.bg-dark {
+      padding: 15px 10px !important;
+    }
+    
+    /* Reduzir tamanho da fonte */
+    h3.text-white.text-center {
+      font-size: 1.2rem;
+    }
+    
+    .form-label {
+      font-size: 0.9rem;
+    }
+    
+    /* Ajustar inputs */
+    .form-control {
+      padding: 10px !important;
+    }
+  }
+</style>
+<style>
+  
+ /* Estilo do botão flutuante */
+  /* Reset de espaçamentos */
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Botão flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: pulse 20s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translateY(0); }
+            2% { transform: translateY(-10px); }
+            4% { transform: translateY(0); }
+        }
+        
+        .whatsapp-button {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-button img {
+            width: 35px;
+            height: 35px;
+        }
+        
+        /* Chat container */
+        .whatsapp-chat {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 300px;
+            height: 400px;
+            background: #e5ddd5;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+            z-index: 101;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Cabeçalho */
+        .chat-header {
+            background: #075e54;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .chat-status {
+            font-size: 11px;
+            font-weight: normal;
+            opacity: 0.8;
+            display: block;
+            margin-top: 2px;
+        }
+        
+        /* Área de mensagens */
+        .chat-messages {
+            height: 280px;
+            padding: 10px;
+            overflow-y: auto;
+            background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png');
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Estilo das mensagens - CORREÇÃO DO ESPAÇAMENTO */
+        .message {
+            max-width: 80%;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            border-radius: 7.5px;
+            position: relative;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            line-height: 1.4;
+            font-size: 14.2px;
+            box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+        }
+        
+        .received {
+            background: white;
+            align-self: flex-start;
+            border-top-left-radius: 0;
+        }
+        
+        .sent {
+            background: #dcf8c6;
+            align-self: flex-end;
+            border-top-right-radius: 0;
+        }
+        
+        /* Área de input - CORREÇÃO DO LAYOUT */
+        .chat-input-area {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 8px;
+            background: #f0f0f0;
+            border-top: 1px solid #ddd;
+            display: flex;
+        }
+        
+        .input-container {
+            flex: 1;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            max-height: 100px;
+            overflow: hidden;
+        }
+        
+        .message-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            padding: 8px 0;
+            resize: none;
+            font-family: inherit;
+            max-height: 84px;
+            line-height: 1.4;
+        }
+        
+        /* Botão de enviar - AGORA VISÍVEL */
+        .send-button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            margin-left: 4px;
+        }
+        
+        .send-icon {
+            width: 24px;
+            height: 24px;
+            color: #075e54;
+        }
+        
+        /* Indicador de digitação */
+        .typing-indicator {
+            display: none;
+            font-size: 12px;
+            color: #888;
+            padding: 4px 12px;
+            font-style: italic;
+            align-self: flex-start;
+        }
+</style>
+  </head>
+
+
+  <body>
+     <!-- Botão flutuante -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-button" id="whatsappButton">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+    </div>
+</div>
+
+<!-- Chat -->
+<div class="whatsapp-chat" id="whatsappChat">
+    <div class="chat-header">
+        Suporte Cuidar Mais
+        <span class="chat-status">Online</span>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <div class="message received">Olá! Somos o suporte da Cuidar Mais. Como podemos te ajudar hoje?</div>
+        <div class="typing-indicator" id="typingIndicator">Suporte está digitando...</div>
+    </div>
+    <div class="chat-input-area">
+        <div class="input-container">
+            <textarea class="message-input" id="messageInput" placeholder="Digite sua mensagem..." rows="1"></textarea>
+            <button class="send-button" id="sendButton">
+                <svg class="send-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top pt-3 mb-0" data-navbar-on-scroll="light">
+        <div class="container-fluid px-5">
+          <!-- Logo alinhada à esquerda -->
+          <a class="navbar-brand me-auto" href="index.html#top">
+            <img src="assets/img/illustration/logo-cuidar.PNG" height="50" alt="logo" />
+          </a>
+    
+          <!-- Botão de menu para mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Itens centrais e botão na direita -->
+          <div class="collapse navbar-collapse justify-content-center" style="margin-left: 15vh;" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto d-flex gap-4 align-items-center">
+            
+              <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="quem-somos.html">Quem Somos</a></li>
+              
+              <!-- Dropdown Nossos Serviços melhorado -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #ffffff; font-size: 20px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Nossos Serviços
+                </a>
+                <ul class="dropdown-menu p-3" aria-labelledby="navbarDropdown" style="width: 280px; border-radius: 15px;">
+                  <li class="mb-2">
+                    <a class="dropdown-item d-flex align-items-center py-2" href="consultas.html" style="font-size: 18px;">
+                      <i class="fas fa-calendar-check me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                      Consultas
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="dropdown-item d-flex align-items-center py-2" href="exames.html" style="font-size: 18px;">
+                      <i class="fas fa-flask me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                      Exames
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center py-2" href="cirurgias.html" style="font-size: 18px;">
+                      <i class="fas fa-procedures me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                      Cirurgias
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="parceiros.html">Quero ser Parceiro</a></li>
+            </ul>
+            <!-- Botão na extrema direita -->
+            <button id="meuBotaoModal" class="btn btn-primary" style="background-color: #18C387; color: white;">
+              Fazer Agendamento
+            </button>
+
+<!-- Estrutura do Modal -->
+<div id="meuModal" class="modal-custom">
+  <div class="modal-custom-content">
+    <div class="modal-custom-header">
+      <div class="logo-container">
+        <img src="assets/img/illustration/ajudda-logo-branca (1).png" alt="Ajudda Card Logo" class="logo">
+      </div>
+      <span class="modal-custom-close">&times;</span>
+    </div>
+    <div class="modal-custom-body">
+      <form id="formDemonstracao">
+        <div class="form-group">
+          <label for="nomeRepresentante">Nome do Representante</label>
+          <input type="text" class="form-control" id="nomeRepresentante" placeholder="Seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" class="form-control" id="empresa" placeholder="Nome da sua empresa" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+        </div>
+      </form>
+    </div>
+    <div class="modal-custom-footer">
+      <button class="btn btn-secondary" id="btnCancelar">Cancelar</button>
+      <button class="btn btn-primary" id="btnEnviar">Enviar</button>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Cores personalizadas no tema roxo */
+:root {
+  --roxo-primario: #6a0dad;
+  --roxo-secundario: #8a2be2;
+  --roxo-claro: #e6e6fa;
+  --roxo-escuro: #4b0082;
+  --cinza-claro: #f8f9fa;
+  --cinza-medio: #e9ecef;
+  --branco: #ffffff;
+}
+
+/* Estilos personalizados para o modal */
+.modal-custom {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-custom-content {
+  background-color: var(--branco);
+  width: 90%;
+  max-width: 600px; /* Aumentei a largura máxima */
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  animation: modalFadeIn 0.3s;
+  overflow: hidden;
+}
+
+@keyframes modalFadeIn {
+  from {opacity: 0; transform: translateY(-20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.modal-custom-header {
+  padding: 20px 25px; /* Aumentei o padding */
+  background-color: var(--roxo-primario);
+  color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  height: 50px; /* Altura fixa para a logo */
+}
+
+.logo {
+  height: 100%;
+  width: auto;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+.modal-custom-close {
+  font-size: 32px; /* Aumentei o tamanho */
+  cursor: pointer;
+  color: var(--branco);
+  transition: color 0.3s;
+}
+
+.modal-custom-close:hover {
+  color: var(--roxo-claro);
+}
+
+.modal-custom-body {
+  padding: 30px; /* Aumentei o padding */
+  background-color: var(--cinza-claro);
+}
+
+.modal-custom-footer {
+  padding: 20px 25px; /* Aumentei o padding */
+  background-color: var(--cinza-medio);
+  text-align: right;
+}
+
+/* Estilos para os campos do formulário - AUMENTADOS */
+.form-group {
+  margin-bottom: 25px; /* Aumentei o espaçamento */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px; /* Aumentei o espaçamento */
+  font-weight: 600;
+  color: var(--roxo-escuro);
+  font-size: 16px; /* Aumentei a fonte */
+}
+
+.form-control {
+  width: 100%;
+  padding: 14px; /* Aumentei o padding */
+  border: 2px solid var(--cinza-medio);
+  border-radius: 8px; /* Aumentei o border-radius */
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+  font-size: 16px;
+  height: 50px; /* Altura fixa maior */
+}
+
+.form-control:focus {
+  border-color: var(--roxo-secundario);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.2); /* Aumentei a sombra */
+}
+
+/* Estilos para os botões - AUMENTADOS */
+.btn {
+  padding: 12px 24px; /* Aumentei o padding */
+  border: none;
+  border-radius: 8px; /* Aumentei o border-radius */
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  height: 50px; /* Altura fixa */
+}
+
+.btn-primary {
+  background-color: var(--roxo-primario);
+  color: var(--branco);
+}
+
+.btn-primary:hover {
+  background-color: var(--roxo-escuro);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--cinza-medio);
+  color: var(--roxo-escuro);
+  margin-right: 15px; /* Aumentei o espaçamento */
+}
+
+.btn-secondary:hover {
+  background-color: #d1d7dc;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const modal = document.getElementById('meuModal');
+  const btn = document.getElementById('meuBotaoModal');
+  const span = document.querySelector('.modal-custom-close');
+  const btnCancelar = document.getElementById('btnCancelar');
+  const btnEnviar = document.getElementById('btnEnviar');
+  
+  // Abre o modal
+  btn.onclick = function() {
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+  
+  // Fecha o modal
+  function fecharModal() {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+  }
+  
+  // Fecha o modal ao clicar no X
+  span.onclick = fecharModal;
+  
+  // Fecha o modal ao clicar no botão Cancelar
+  btnCancelar.onclick = fecharModal;
+  
+  // Fecha o modal ao clicar fora do conteúdo
+  modal.onclick = function(event) {
+    if (event.target === modal) {
+      fecharModal();
+    }
+  }
+  
+  // Fecha o modal ao pressionar ESC
+  document.onkeydown = function(event) {
+    if (event.key === 'Escape') {
+      fecharModal();
+    }
+  }
+  
+  // Envia os dados para o WhatsApp
+  btnEnviar.onclick = function() {
+    const nome = document.getElementById('nomeRepresentante').value;
+    const empresa = document.getElementById('empresa').value;
+    const email = document.getElementById('email').value;
+    
+    if (!nome || !empresa || !email) {
+      alert('Por favor, preencha todos os campos!');
+      return;
+    }
+    
+    // Formata a mensagem para o WhatsApp
+    const mensagem = `Olá, gostaria de agendar uma demonstração do Ajudda Card:\n\n` +
+                    `*Nome do Representante:* ${nome}\n` +
+                    `*Empresa:* ${empresa}\n` +
+                    `*E-mail:* ${email}\n\n` +
+                    `Por favor, informe os horários disponíveis.`;
+    
+    // Codifica a mensagem para URL
+    const mensagemCodificada = encodeURIComponent(mensagem);
+    
+    // Cria o link do WhatsApp
+    const urlWhatsApp = `https://wa.me/5585984415490?text=${mensagemCodificada}`;
+    
+    // Abre o WhatsApp em uma nova aba
+    window.open(urlWhatsApp, '_blank');
+    
+    // Fecha o modal
+    fecharModal();
+    
+    // Limpa o formulário
+    document.getElementById('formDemonstracao').reset();
+  }
+});
+</script>
+
+<style>
+  .navbar {
+    background-color: transparent;
+    transition: background-color 0.4s ease;
+    
+  }
+
+  .navbar-scrolled {
+    background-color: #1F529F !important;
+    transition: background-color 1.0s ease;
+  }
+</style>
+
+<script>
+// Controle do scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    // Só aplica o azul se tiver scroll > 50 E não estiver com menu aberto
+    navbar.classList.toggle('navbar-scrolled', window.scrollY > 50 && !navbar.classList.contains('show'));
+});
+
+// Controle do clique no menu
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('show');
+    
+    // Força o azul enquanto o menu estiver aberto
+    if(navbar.classList.contains('show')) {
+        navbar.classList.add('navbar-scrolled');
+    } else if(window.scrollY <= 50) {
+        navbar.classList.remove('navbar-scrolled');
+    }
+});
+
+// Detecta quando o menu é fechado via clique fora
+document.addEventListener('click', function(e) {
+    const navbar = document.querySelector('.navbar');
+    if(!navbar.contains(e.target) && !e.target.classList.contains('navbar-toggler')) {
+        if(window.scrollY <= 50) {
+            navbar.classList.remove('navbar-scrolled');
+        }
+    }
+});
+</script>
+          </div>
+        </div>
+      </nav>
+   
+    
+    
+      <style>
+        .navbar {
+          background-color: transparent;
+          transition: background-color 0.4s ease;
+        }
+    
+        .navbar-scrolled {
+          background-color: #002db6 !important;
+          transition: background-color 1.0s ease;
+        }
+              /* Estilos específicos para mobile */
+              @media (max-width: 991.98px) {
+            .mobile-hero {
+                background: linear-gradient(#4e20b0, #cfa3f4);
+                padding: 100px 20px 50px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .mobile-hero-image {
+                max-height: 300px;
+                margin: 0 auto 30px;
+                display: block;
+            }
+            
+            .mobile-hero h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: white;
+                margin-bottom: 15px;
+                line-height: 1.2;
+            }
+            
+            .mobile-hero p {
+                font-size: 1.1rem;
+                color: white;
+                margin-bottom: 30px;
+            }
+            
+            .mobile-hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .mobile-hero-buttons .btn-link {
+                color: white;
+                text-decoration: underline;
+                font-size: 1rem;
+            }
+            
+            .mobile-hero-buttons .btn-primary {
+                background-color: #9e6fff;
+                border-color: #9e6fff;
+                font-size: 1rem;
+                padding: 8px 20px;
+            }
+            /* Ajustes para a seção mobile */
+.mobile-hero {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 100px); /* Considera a altura da navbar */
+}
+
+/* Aumenta o celular e ajusta posicionamento */
+.mobile-hero img {
+  transform: scale(1.1);
+  transform-origin: left center;
+  margin-left: -15px;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 576px) {
+  .mobile-hero {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  
+  .mobile-hero img {
+    max-height: 320px;
+    transform: scale(1);
+    margin-left: 0;
+  }
+  
+  .mobile-hero h1 {
+    font-size: 1.6rem !important;
+  }
+  
+  .mobile-hero p {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Ajuste para quando o texto fica muito próximo */
+@media (max-width: 400px) {
+  .mobile-hero .row.align-items-center {
+    flex-direction: column;
+    text-align: center !important;
+  }
+  
+  .mobile-hero .col-6 {
+    width: 100%;
+  }
+  
+  .mobile-hero img {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 320px;
+  }
+  
+  .mobile-hero .text-start {
+    text-align: center !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+            /* Esconde a seção desktop em mobile */
+@media (max-width: 991.98px) {
+    #home.desktop-only {
+        display: none !important;
+    }
+}
+
+/* Mantém o que já tem para esconder mobile em desktop */
+@media (min-width: 992px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+        }
+        
+        /* Esconde a seção mobile em desktop */
+        @media (min-width: 992px) {
+            .mobile-only {
+                display: none !important;
+            }
+        }
+      </style>
+      <style>
+        /* Estilos para validação */
+        .was-validated .form-control:invalid,
+        .was-validated .form-control:invalid:focus {
+          border-color: #dc3545;
+          box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+        }
+        
+        .was-validated .form-check-input:invalid {
+          border-color: #dc3545;
+        }
+        
+        .was-validated .form-check-input:invalid ~ .form-check-label {
+          color: #dc3545;
+        }
+        
+        .invalid-feedback {
+          display: none;
+          color: #dc3545;
+          font-size: 0.875em;
+        }
+        
+        .was-validated .form-control:invalid ~ .invalid-feedback,
+        .was-validated .form-control:invalid ~ .invalid-tooltip,
+        .was-validated .form-check-input:invalid ~ .invalid-feedback,
+        .was-validated .form-check-input:invalid ~ .invalid-tooltip,
+        .was-validated .form-select:invalid ~ .invalid-feedback,
+        .was-validated .form-select:invalid ~ .invalid-tooltip {
+          display: block;
+        }
+        
+        /* Melhorar aparência dos placeholders */
+        .form-control::placeholder {
+          color: #6c757d;
+          opacity: 0.7;
+        }
+        </style>
+    
+      <script>
+        window.addEventListener('scroll', () => {
+          const navbar = document.querySelector('.navbar');
+          if (window.scrollY > 50) {
+            navbar.classList.add('navbar-scrolled');
+          } else {
+            navbar.classList.remove('navbar-scrolled');
+          }
+        });
+      </script>
+  
+        <!-- Imagem de fundo para desktop -->
+        
+        
+       
+      
+<!-- Banner Hero Section -->
+<section class="position-relative bg-roxo" style="background: url('assets/img/illustration/cirurgias.PNG') no-repeat center center/cover; min-height: 150vh; padding-bottom: 50vh;">
+  
+  <!-- Overlay gradiente -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, #00000050, #000000ee);"></div>
+  
+ <!-- Container do Formulário Centralizado -->
+<!-- Container do Formulário Centralizado -->
+<div class="container position-absolute start-50 translate-middle z-1" style="max-width: 1000px; width: 90%; margin-top: 32vh;">
+  <div class="text-white bg-dark p-5 rounded-3" style="background-color: rgba(0, 0, 0, 0.452) !important; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+    <form id="agendamentoForm" class="d-flex flex-column gap-3" onsubmit="enviarParaWhatsApp(event)">
+      <h3 class="text-white text-center mb-4">Preencha e nossa equipe entra em contato com você:</h3>
+      
+      <!-- Campos do formulário em 2 colunas -->
+      <div class="row g-3">
+        <!-- Coluna 1 -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="nome" class="form-label text-white mb-1">Nome Completo*</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required
+                     pattern="[A-Za-zÀ-ú\s]{5,}">
+              <span class="input-group-text d-none" id="nome-valid">
+                <i class="bi bi-check-circle-fill text-success"></i>
+              </span>
+              <span class="input-group-text d-none" id="nome-invalid">
+                <i class="bi bi-x-circle-fill text-danger"></i>
+              </span>
+            </div>
+            <div class="invalid-tooltip">Por favor, digite seu nome completo (mínimo 5 caracteres).</div>
+          </div>
+          
+          <div class="form-group mt-3">
+            <label for="cpf" class="form-label text-white mb-1">CPF*</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+              <span class="input-group-text d-none" id="cpf-valid">
+                <i class="bi bi-check-circle-fill text-success"></i>
+              </span>
+              <span class="input-group-text d-none" id="cpf-invalid">
+                <i class="bi bi-x-circle-fill text-danger"></i>
+              </span>
+            </div>
+            <div class="invalid-tooltip">Por favor, digite um CPF válido.</div>
+          </div>
+          
+          <div class="form-group mt-3">
+            <label for="telefone" class="form-label text-white mb-1">Telefone*</label>
+            <div class="input-group">
+              <input type="tel" class="form-control" id="telefone" placeholder="(85) 99999-9999" required>
+              <span class="input-group-text d-none" id="telefone-valid">
+                <i class="bi bi-check-circle-fill text-success"></i>
+              </span>
+              <span class="input-group-text d-none" id="telefone-invalid">
+                <i class="bi bi-x-circle-fill text-danger"></i>
+              </span>
+            
+            </div>
+            <div class="invalid-tooltip">Por favor, digite um telefone válido.</div>
+            <div id="telefonesAdicionais" class="mt-2"></div>
+          </div>
+        </div>
+        
+        <!-- Coluna 2 -->
+        <div class="col-md-6">
+          <div class="form-group">
+            <label for="cidade" class="form-label text-white mb-1">Cidade/Estado*</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade" required
+                     list="cidades-list">
+              <span class="input-group-text d-none" id="cidade-valid">
+                <i class="bi bi-check-circle-fill text-success"></i>
+              </span>
+              <span class="input-group-text d-none" id="cidade-invalid">
+                <i class="bi bi-x-circle-fill text-danger"></i>
+              </span>
+            </div>
+            <datalist id="cidades-list">
+              <!-- Opções serão preenchidas pelo JavaScript -->
+            </datalist>
+            <div class="invalid-tooltip">Por favor, selecione sua cidade.</div>
+          </div>
+          
+          <div class="form-group mt-3">
+            <label for="cirurgia" class="form-label text-white mb-1">Cirurgia Eletiva*</label>
+            <div class="input-group">
+              <input type="text" class="form-control" id="cirurgia" placeholder="Digite o nome da cirurgia" required>
+              <span class="input-group-text d-none" id="cirurgia-valid">
+                <i class="bi bi-check-circle-fill text-success"></i>
+              </span>
+              <span class="input-group-text d-none" id="cirurgia-invalid">
+                <i class="bi bi-x-circle-fill text-danger"></i>
+              </span>
+            </div>
+            <div class="invalid-tooltip">Por favor, informe qual cirurgia deseja agendar.</div>
+          </div>
+          
+          <div class="form-group mt-3">
+            <label class="form-label text-white mb-1">Possui pedido médico*</label>
+            <div class="d-flex gap-3">
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pedido" id="pedido_sim" value="Sim" required
+                       onclick="mostrarCampoPedidoMedico(false)">
+                <label class="form-check-label text-white" for="pedido_sim">Sim</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="pedido" id="pedido_nao" value="Não"
+                       onclick="mostrarCampoPedidoMedico(false)">
+                <label class="form-check-label text-white" for="pedido_nao">Não</label>
+              </div>
+            </div>
+            <div class="invalid-tooltip">Por favor, selecione uma opção.</div>
+            
+            <div id="pedido-medico-container" class="mt-3 d-none">
+              <label for="pedido-medico" class="form-label text-white mb-1">Pedido Médico (PDF ou imagem)*</label>
+              <input type="file" class="form-control" id="pedido-medico" accept=".pdf,.jpg,.jpeg,.png">
+              <small class="text-white-50">Tamanho máximo: 5MB</small>
+              <div class="invalid-tooltip">Por favor, anexe o pedido médico.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Termo e botão (largura total) -->
+      <div class="mt-4">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="termo" required>
+          <label class="form-check-label text-white" for="termo" style="font-size: 0.9rem;">
+            Concordo com os <a href="politicas-privacidade.html" target="_blank" class="text-primary">Termos de Uso</a>*
+          </label>
+          <div class="invalid-tooltip">Você deve concordar com os termos para continuar.</div>
+        </div>
+        
+        <div class="d-flex justify-content-between align-items-center mt-3">
+          <small class="text-white-50">* campo obrigatório</small>
+          <button type="submit" class="btn btn-primary px-5 py-2">Enviar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+  
+  <!-- Seção de Benefícios (mantida igual) -->
+  <div class="position-absolute bottom-0 start-0 end-0 z-1">
+    <div class="container py-5">
+      <h2 class="fw-bold text-center mb-3 text-white">Conheça as cirurgias disponíveis na Cuidar Mais </h2>
+      <div class="row g-4 justify-content-center">
+        
+        <!-- Linha 1 -->
+        <div class="col-lg-5 col-md-6">
+          <div class="d-flex align-items-start fs-1">
+            <i class="bi bi-bandaid-fill fs-1 me-4" style="color: #ffffff;"></i>
+            <div>
+              <h4 class="text-white mb-2">Geral</h4>
+              <p class="text-light mb-0">Procedimentos simples e seguros para diferentes condições do corpo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-6">
+          <div class="d-flex align-items-start fs-1">
+            <i class="bi bi-eye-fill fs-1 me-4" style="color: #ffffff;"></i>
+            <div>
+              <h4 class="text-white mb-2">Oftalmologia</h4>
+              <p class="text-light mb-0">Corrija ou trate problemas de visão com acompanhamento especializado.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Linha 2 -->
+        <div class="col-lg-5 col-md-6">
+          <div class="d-flex align-items-start fs-1">
+            <i class="fa-solid fa-bone" style="color: #ffffff; margin-right: 25px;"></i>
+            <div>
+              <h4 class="text-white mb-2">Ortopedia</h4>
+              <p class="text-light mb-0">Tratamentos cirúrgicos para ossos, articulações e coluna.
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-6">
+          <div class="d-flex align-items-start fs-1">
+            <i class="bi bi-ear-fill fs-1 me-4" style="color: #ffffff;"></i>
+            <div>
+              <h4 class="text-white mb-2">Otorrinolaringologia
+              </h4>
+              <p class="text-light mb-0">Cirurgias para melhorar respiração, audição ou voz.</p>
+            </div>
+          </div>
+        </div>
+                  <!-- Linha 3 -->
+                  <div class="col-lg-5 col-md-6">
+                    <div class="d-flex align-items-start fs-1">
+                      <i class="bi bi-heart-pulse fs-1 me-4" style="color: #ffffff;"></i>
+                      <div>
+                        <h4 class="text-white mb-2">Vascular</h4>
+                        <p class="text-light mb-0">Procedimentos voltados à circulação e varizes, com conforto e segurança.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-lg-5 col-md-6">
+                    <div class="d-flex align-items-start fs-1">
+                      <i class="bi bi-droplet-fill fs-1 me-4" style="color: #ffffff;"></i>
+                      <div>
+                        <h4 class="text-white mb-2">Urologia</h4>
+                        <p class="text-light mb-0">Cuidamos da saúde urinária e reprodutiva com atenção individualizada.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Linha 4 -->
+                  <div class="col-lg-5 col-md-6">
+                    <div class="d-flex align-items-start fs-1">
+                      <i class="bi bi-gender-female fs-1 me-4" style="color: #ffffff;"></i>
+                      <div>
+                        <h4 class="text-white mb-2"> Ginecologista</h4>
+                        <p class="text-light mb-0">Cuidados cirúrgicos com foco na saúde e bem-estar da mulher.</p>
+                      </div>
+                    </div>
+                  </div>
+          
+                  <div class="col-lg-5 col-md-6">
+                    <div class="d-flex align-items-start fs-1">
+                      <i class="bi bi-headset fs-2 me-4" style="color: #ffffff;"></i>
+                      <div>
+                        <h4 class="text-white mb-2">Dermatologia</h4>
+                        <p class="text-light mb-0">Cirurgias para remoção de sinais, cistos e cuidados com a saúde da pele.</p>
+                      </div>
+                    </div>
+                  </div>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+
+
+  
+
+
+<style>
+/* Estilo para campos inválidos */
+.is-invalid {
+  border-color: #dc3545 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.is-invalid:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+.footer{
+  background-color: #002db6;
+}
+</style>
+<style>
+  .footer{
+      background-color: #002db6;
+      
+  }
+  /* Adicione isso ao seu CSS existente */
+  .footer .row.py-5.py-lg-7 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* Distribui o espaço entre as colunas */
+  }
+  
+  .footer .col-lg-6 {
+      flex: 0 0 50%; /* Ocupa metade da linha no desktop */
+      max-width: 50%;
+  }
+  
+  .footer .col-lg-2 {
+      flex: 0 0 16.666667%; /* Ocupa 2 colunas cada (total 6 colunas) */
+      max-width: 16.666667%;
+  }
+  
+  /* Ajustes para mobile */
+  @media (max-width: 991.98px) {
+      .footer .col-lg-6,
+      .footer .col-lg-2 {
+          flex: 0 0 100%;
+          max-width: 100%;
+      }
+      
+      .footer .col-6 {
+          flex: 0 0 50%;
+          max-width: 50%;
+      }
+  }
+  
+  /* Garante que os itens de contato fiquem alinhados */
+  .contact-info p {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+  }
+         </style>
+        
+  
+        <section class="py-0 footer">
+          <div class="container">
+            <div class="row py-5 py-lg-7">
+              <!-- Coluna da Logo e Contatos (esquerda no desktop, topo no mobile) -->
+              <div class="col-12 col-lg-6 mb-4 mb-lg-0">
+                <div class="mb-4">
+                  <a class="text-decoration-none" href="index.html">
+                    <img src="assets/img/illustration/logo-cuidar.PNG" height="60" alt="logo" class="img-fluid" style="max-width: 200px;">
+                  </a>
+                </div>
+                <div class="contact-info">
+                  <p class="text-light mb-2"><i class="bi bi-phone me-2"></i> 85 99816-0208</p>
+                  <p class="text-light mb-2"><i class="bi bi-telephone me-2"></i> 3254-4440</p>
+                  <p class="text-light mb-0"><i class="bi bi-envelope me-2"></i> cuidarmais@gmail.com</p>
+                </div>
+              </div>
+              
+              <!-- Colunas de Links (direita no desktop, abaixo no mobile) -->
+              <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+                <h4 class="lh-lg fw-bold text-light font-sans-serif mb-3">Sobre a Cuidar Mais</h4>
+                <ul class="list-unstyled text-light">
+                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="quem-somos.html">Quem Somos</a></li>
+                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="clientes.html">Clientes</a></li>
+                  <li class="lh-lg"><a class="footer-link text-light" href="parceiros.html">Quero virar parceiro</a></li>
+                </ul>
+              </div>
+              
+              <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
+                <h4 class="lh-lg fw-bold text-light font-sans-serif mb-3">Serviços</h4>
+                <ul class="list-unstyled text-light">
+                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="consultas.html">Consultas</a></li>
+                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="exames.html">Exames</a></li>
+                  <li class="lh-lg"><a class="footer-link text-light" href="cirurgias.html">Cirurgias</a></li>
+                </ul>
+              </div>
+              
+              <div class="col-6 col-md-4 col-lg-2">
+                <h4 class="lh-lg fw-bold text-light font-sans-serif mb-3">Ajuda</h4>
+                <ul class="list-unstyled text-light">
+                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="faq.html">Perguntas Frequentes</a></li>
+                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20acessar%20o%20suporte%20pelo%20whatssap.%20Podem%20me%20ajudar?">Suporte via WhatsApp</a></li>
+                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="politicas-privacidade.html">Política de Privacidade</a></li>
+                  <li class="lh-lg"><a class="footer-link text-light" href="termosuso.html">Termos de Uso</a></li>
+                </ul>
+              </div>
+            </div>
+            
+            <!-- Rodapé inferior -->
+            <div class="row border-top border-light border-opacity-10 pt-3 mt-3">
+              <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+                <p class="fs--1 my-2 fw-bold text-200">&copy; 2025 Cuidar Mais</p>
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                <p class="fs--1 my-2 text-200">
+                  Feito por <a class="fw-bold text-info text-200" href="https://www.linkedin.com/in/trajanoluan" target="_blank">LuanDev</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>   <!-- ============================================-->
+
+
+  </section>
+    </main>
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap Bundle com Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- Inicialização do Owl Carousel -->
+<script>
+        $(document).ready(function(){
+          $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        loop: true,
+        margin: 30,
+        dots: true,
+        nav: false,
+        responsive:{
+          0:{ items:1 },
+          576:{ items:2 },
+          768:{ items:3 },
+          992:{ items:4 }
+        }
+      });
+  });
+</script>
+<script>
+  // Lista de cidades para autocompletar (pode ser substituída por uma chamada API)
+  const cidadesBrasil = [
+    "Fortaleza/CE", "São Paulo/SP", "Rio de Janeiro/RJ", "Belo Horizonte/MG",
+    "Salvador/BA", "Brasília/DF", "Curitiba/PR", "Manaus/AM", "Recife/PE",
+    "Porto Alegre/RS", "Belém/PA", "Goiânia/GO", "Campinas/SP", "São Luís/MA"
+  ];
+  
+  // Armazenamento temporário do pedido médico
+  let pedidoMedicoFile = null;
+  
+  document.addEventListener('DOMContentLoaded', function() {
+    // Inicializa o datalist de cidades
+    const datalist = document.getElementById('cidades-list');
+    cidadesBrasil.forEach(cidade => {
+      const option = document.createElement('option');
+      option.value = cidade;
+      datalist.appendChild(option);
+    });
+  
+    // Configura validação em tempo real para todos os campos
+    configurarValidacaoEmTempoReal();
+  });
+  
+  function configurarValidacaoEmTempoReal() {
+    // Validação do CPF com máscara
+    const cpf = document.getElementById('cpf');
+    cpf.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length > 3) value = value.replace(/^(\d{3})/, '$1.');
+      if (value.length > 7) value = value.replace(/^(\d{3})\.(\d{3})/, '$1.$2.');
+      if (value.length > 11) value = value.replace(/^(\d{3})\.(\d{3})\.(\d{3})/, '$1.$2.$3-');
+      e.target.value = value.substring(0, 14);
+      
+      validarCampo(cpf, validarCPF(value));
+    });
+  
+    // Validação do telefone com máscara
+    const telefone = document.getElementById('telefone');
+    telefone.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length > 0) value = '(' + value;
+      if (value.length > 3) value = value.substring(0, 3) + ') ' + value.substring(3);
+      if (value.length > 10) value = value.substring(0, 10) + '-' + value.substring(10);
+      e.target.value = value.substring(0, 15);
+      
+      validarCampo(telefone, value.replace(/\D/g, '').length === 11);
+    });
+  
+    // Validação dos outros campos
+    document.getElementById('nome').addEventListener('input', function(e) {
+      validarCampo(e.target, e.target.value.length >= 5);
+    });
+  
+    document.getElementById('cidade').addEventListener('input', function(e) {
+      const cidadeValida = cidadesBrasil.some(cidade => 
+        cidade.toLowerCase().includes(e.target.value.toLowerCase())
+      );
+      validarCampo(e.target, cidadeValida && e.target.value.includes('/'));
+    });
+  
+    document.getElementById('cirurgia').addEventListener('input', function(e) {
+      validarCampo(e.target, e.target.value.length >= 3);
+    });
+  
+    // Validação do arquivo do pedido médico
+    document.getElementById('pedido-medico')?.addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        if (file.size > 5 * 1024 * 1024) { // 5MB
+          validarCampo(e.target, false);
+          alert('O arquivo é muito grande. Tamanho máximo permitido: 5MB');
+          e.target.value = '';
+        } else {
+          pedidoMedicoFile = file;
+          validarCampo(e.target, true);
+        }
+      }
+    });
+  }
+  
+  function validarCampo(campo, valido) {
+    const grupo = campo.closest('.form-group') || campo.closest('.form-check');
+    const id = campo.id || campo.name;
+    
+    if (valido) {
+      campo.classList.remove('is-invalid');
+      campo.classList.add('is-valid');
+      
+      // Mostra ícone de válido
+      if (id) {
+        document.getElementById(`${id}-valid`)?.classList.remove('d-none');
+        document.getElementById(`${id}-invalid`)?.classList.add('d-none');
+      }
+    } else {
+      campo.classList.remove('is-valid');
+      campo.classList.add('is-invalid');
+      
+      // Mostra ícone de inválido
+      if (id) {
+        document.getElementById(`${id}-invalid`)?.classList.remove('d-none');
+        document.getElementById(`${id}-valid`)?.classList.add('d-none');
+      }
+    }
+  }
+  
+  function validarCPF(cpf) {
+    cpf = cpf.replace(/\D/g, '');
+    
+    // Verifica se tem 11 dígitos e não é uma sequência repetida
+    if (cpf.length !== 11 || /^(\d)\1+$/.test(cpf)) return false;
+    
+    // Validação dos dígitos verificadores
+    let soma = 0;
+    let resto;
+    
+    for (let i = 1; i <= 9; i++) {
+      soma += parseInt(cpf.substring(i-1, i)) * (11 - i);
+    }
+    resto = (soma * 10) % 11;
+    
+    if ((resto === 10) || (resto === 11)) resto = 0;
+    if (resto !== parseInt(cpf.substring(9, 10))) return false;
+    
+    soma = 0;
+    for (let i = 1; i <= 10; i++) {
+      soma += parseInt(cpf.substring(i-1, i)) * (12 - i);
+    }
+    resto = (soma * 10) % 11;
+    
+    if ((resto === 10) || (resto === 11)) resto = 0;
+    if (resto !== parseInt(cpf.substring(10, 11))) return false;
+    
+    return true;
+  }
+  
+  function mostrarCampoPedidoMedico(mostrar) {
+    const container = document.getElementById('pedido-medico-container');
+    const input = document.getElementById('pedido-medico');
+    
+    if (mostrar) {
+      container.classList.remove('d-none');
+      input.required = true;
+    } else {
+      container.classList.add('d-none');
+      input.required = false;
+      input.value = '';
+      pedidoMedicoFile = null;
+      validarCampo(input, true); // Remove a validação
+    }
+  }
+  
+  function adicionarTelefone() {
+    const container = document.getElementById('telefonesAdicionais');
+    const novoTelefone = document.createElement('div');
+    novoTelefone.className = 'form-group d-flex gap-2 mt-2';
+    novoTelefone.innerHTML = `
+      <div class="input-group">
+        <input type="tel" class="form-control telefone-adicional" placeholder="Outro telefone (opcional)" 
+               pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}">
+        <button class="btn btn-outline-danger" type="button" style="width: 40px;" onclick="removerTelefone(this)">-</button>
+      </div>
+    `;
+    container.appendChild(novoTelefone);
+    
+    // Aplica máscara ao novo campo
+    const input = novoTelefone.querySelector('input');
+    input.addEventListener('input', function(e) {
+      let value = e.target.value.replace(/\D/g, '');
+      if (value.length > 0) value = '(' + value;
+      if (value.length > 3) value = value.substring(0, 3) + ') ' + value.substring(3);
+      if (value.length > 10) value = value.substring(0, 10) + '-' + value.substring(10);
+      e.target.value = value.substring(0, 15);
+    });
+  }
+  
+  function removerTelefone(btn) {
+    btn.closest('.form-group').remove();
+  }
+  
+  async function enviarParaWhatsApp(event) {
+    event.preventDefault();
+    const form = event.target;
+    
+    // Validação final do formulário
+    if (!form.checkValidity()) {
+      event.stopPropagation();
+      form.classList.add('was-validated');
+      
+      // Mostra todos os erros
+      document.querySelectorAll('.is-invalid').forEach(campo => {
+        const tooltip = campo.nextElementSibling;
+        if (tooltip && tooltip.classList.contains('invalid-tooltip')) {
+          tooltip.style.display = 'block';
+          setTimeout(() => tooltip.style.display = 'none', 3000);
+        }
+      });
+      
+      return;
+    }
+    
+    // Coletar dados do formulário
+    const nome = document.getElementById('nome').value;
+    const cpf = document.getElementById('cpf').value;
+    const telefone = document.getElementById('telefone').value;
+    const cidade = document.getElementById('cidade').value;
+    const cirurgia = document.getElementById('cirurgia').value;
+    const pedidoMedico = document.querySelector('input[name="pedido"]:checked').value;
+    
+    // Coletar telefones adicionais
+    const telefonesAdicionais = Array.from(document.querySelectorAll('.telefone-adicional'))
+      .map(tel => tel.value)
+      .filter(tel => tel);
+    
+    // Construir mensagem para WhatsApp
+    let mensagem = `*NOVO AGENDAMENTO DE CIRURGIA*\n\n`;
+    mensagem += `*Nome:* ${nome}\n`;
+    mensagem += `*CPF:* ${cpf}\n`;
+    mensagem += `*Telefone Principal:* ${telefone}\n`;
+    
+    if (telefonesAdicionais.length > 0) {
+      mensagem += `*Telefones Adicionais:* ${telefonesAdicionais.join(', ')}\n`;
+    }
+    
+    mensagem += `*Cidade/Estado:* ${cidade}\n`;
+    mensagem += `*Cirurgia Eletiva:* ${cirurgia}\n`;
+    mensagem += `*Possui Pedido Médico:* ${pedidoMedico}\n\n`;
+    mensagem += `_Este agendamento foi solicitado através do site._`;
+    
+    // Codificar mensagem para URL
+    const mensagemCodificada = encodeURIComponent(mensagem);
+    
+    // Número de WhatsApp
+    const numeroWhatsApp = '5585998160208';
+    
+    // Se tiver pedido médico, tentar enviar por WhatsApp Business API
+    if (pedidoMedico === 'Sim' && pedidoMedicoFile) {
+      try {
+        // Aqui você precisaria integrar com uma API que suporte envio de arquivos
+        // Esta é uma implementação simulada
+        alert('Seu pedido médico será enviado após você confirmar no WhatsApp.');
+      } catch (error) {
+        console.error('Erro ao enviar arquivo:', error);
+        alert('O pedido médico não pode ser enviado automaticamente. Por favor, envie-o manualmente no WhatsApp.');
+      }
+    }
+    
+    // Abrir WhatsApp com a mensagem
+    window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagemCodificada}`, '_blank');
+    
+    // Limpar formulário
+    form.reset();
+    form.classList.remove('was-validated');
+    document.getElementById('telefonesAdicionais').innerHTML = '';
+    pedidoMedicoFile = null;
+    
+    // Resetar ícones de validação
+    document.querySelectorAll('.input-group-text').forEach(icon => {
+      icon.classList.add('d-none');
+    });
+  }
+  </script>
+  <script>
+    // Elementos
+    const whatsappButton = document.getElementById('whatsappButton');
+    const whatsappChat = document.getElementById('whatsappChat');
+    const messageInput = document.getElementById('messageInput');
+    const sendButton = document.getElementById('sendButton');
+    const chatMessages = document.getElementById('chatMessages');
+    const typingIndicator = document.getElementById('typingIndicator');
+    const whatsappNumber = '5585998160208';
+    
+    // Abrir/fechar chat
+    whatsappButton.addEventListener('click', function() {
+        whatsappChat.style.display = whatsappChat.style.display === 'block' ? 'none' : 'block';
+        if (whatsappChat.style.display === 'block') {
+            messageInput.focus();
+        }
+    });
+    
+    // Auto-ajuste da altura do textarea
+    messageInput.addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight > 84 ? 84 : this.scrollHeight) + 'px';
+    });
+    
+    // Adicionar mensagem
+    function addMessage(text, isReceived) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', isReceived ? 'received' : 'sent');
+        messageElement.textContent = text;
+        chatMessages.insertBefore(messageElement, typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    // Enviar mensagem
+    function sendMessage() {
+        const message = messageInput.value.trim();
+        if (message) {
+            addMessage(message, false);
+            messageInput.value = '';
+            messageInput.style.height = 'auto';
+            
+            // Resposta automática
+            typingIndicator.style.display = 'block';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            setTimeout(() => {
+                typingIndicator.style.display = 'none';
+                addMessage("Recebemos sua mensagem. Iremos te direcionar para o WhatsApp responsável para podermos te ajudar.", true);
+                
+                // Redireciona para o WhatsApp
+                setTimeout(() => {
+                    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá, vim pelo chat do site: ' + message)}`, '_blank');
+                }, 1500);
+            }, 1000);
+        }
+    }
+    
+    // Eventos
+    sendButton.addEventListener('click', sendMessage);
+    messageInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+  </script>
+</body>
+</html>

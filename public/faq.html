@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Cuidar Mais</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --azul-primario: #1F529F;
+            --azul-escuro: #002db6;
+            --verde-destaque: #18C387;
+            --branco: #ffffff;
+            --cinza-claro: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--cinza-claro);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .btn-voltar {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1000;
+            background-color: var(--azul-primario);
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        
+        .btn-voltar:hover {
+            background-color: var(--azul-escuro);
+            transform: translateY(-2px);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--azul-primario) 0%, var(--azul-escuro) 100%);
+            color: white;
+            padding: 100px 0 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('assets/img/illustration/fundo-faq.jpg') no-repeat center center/cover;
+            opacity: 0.1;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: -50px auto 50px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            padding: 40px;
+            position: relative;
+        }
+        
+        .accordion-button {
+            font-weight: 600;
+            padding: 15px 20px;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(31, 82, 159, 0.1);
+            color: var(--azul-primario);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: 0 0 0 0.25rem rgba(31, 82, 159, 0.25);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 30px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background-color: var(--azul-escuro);
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-link {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-link:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .faq-container {
+                margin: -30px 15px 30px;
+                padding: 25px;
+            }
+            
+            .hero-section {
+                padding: 80px 0 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Botão Voltar -->
+    <a href="index.html" class="btn-voltar" title="Voltar para página inicial">
+        <i class="fas fa-arrow-left"></i>
+    </a>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container hero-content">
+            <div class="row justify-content-center text-center">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold mb-4">Perguntas Frequentes</h1>
+                    <p class="lead">Encontre respostas para as dúvidas mais comuns sobre nossos serviços</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <div class="container">
+        <div class="faq-container">
+            <div class="accordion" id="faqAccordion">
+                <!-- Item 1 -->
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                            Como agendar uma consulta?
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Você pode agendar consultas através do nosso portal online, pelo telefone (85) 3254-4440 ou diretamente em nossa unidade. Para agendamento online, acesse nosso Portal do Paciente.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 2 -->
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                            Quais documentos são necessários para o atendimento?
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            É necessário apresentar: documento de identidade com foto (RG ou CNH), CPF, comprovante de residência e carteirinha do convênio (se houver). Para menores de idade, é obrigatória a presença do responsável com documentos.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 3 -->
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                            Qual o prazo para remarcação de consultas?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            As consultas podem ser remarcadas com até 24 horas de antecedência sem custos adicionais. Para cancelamentos com menos de 24 horas, pode ser cobrada uma taxa administrativa.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 4 -->
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                            Como funciona o atendimento por telemedicina?
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            O atendimento é realizado via plataforma online segura. Após o agendamento, você receberá um link de acesso por e-mail ou SMS. É necessário ter um dispositivo com câmera, microfone e conexão à internet. As prescrições e atestados são enviados digitalmente.
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Item 5 -->
+                <div class="accordion-item mb-3 border-0 shadow-sm">
+                    <h2 class="accordion-header" id="headingFive">
+                        <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                            Quais convênios são aceitos?
+                        </button>
+                    </h2>
+                    <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Atendemos os principais convênios médicos da região. Entre eles: Amil, Bradesco Saúde, SulAmérica, Unimed, Hapvida e muitos outros. Para verificar se seu convênio está na lista completa, consulte nossa página de convênios ou entre em contato conosco.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <p class="mb-4">Não encontrou o que procurava?</p>
+                <a href="https://wa.me/5585998160208" class="btn btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Fale conosco via WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-4">Cuidar Mais</h5>
+                    <p>Sua saúde em primeiro lugar. Oferecemos atendimento humanizado e de qualidade.</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-4">Contato</h5>
+                    <p><i class="fas fa-phone-alt me-2"></i> (85) 3254-4440</p>
+                    <p><i class="fas fa-mobile-alt me-2"></i> (85) 99816-0208</p>
+                    <p><i class="fas fa-envelope me-2"></i> cuidarmais@gmail.com</p>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <h5 class="mb-4">Links Rápidos</h5>
+                    <p><a href="consultas.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i> Consultas</a></p>
+                    <p><a href="exames.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i> Exames</a></p>
+                    <p><a href="parceiros.html" class="footer-link"><i class="fas fa-chevron-right me-2"></i> Seja Parceiro</a></p>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">© 2025 Cuidar Mais. Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Desenvolvido por <a href="https://www.linkedin.com/in/trajanoluan" target="_blank" class="footer-link">LuanDev</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Efeito suave de rolagem para os itens do accordion
+        document.querySelectorAll('.accordion-button').forEach(button => {
+            button.addEventListener('click', () => {
+                const collapseTarget = document.querySelector(button.getAttribute('data-bs-target'));
+                collapseTarget.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            });
+        });
+    </script>
+</body>
+</html>

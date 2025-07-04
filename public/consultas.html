@@ -1,0 +1,3083 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Cuidar Mais | Sua Clínica Gerando Valor Além da Consulta</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+      <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+/* ===== ANIMAÇÕES GLOBAIS ===== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes blurIn {
+    from { opacity: 0; filter: blur(5px); }
+    to { opacity: 1; filter: blur(0); }
+}
+
+@keyframes flipIn {
+    from { opacity: 0; transform: rotateX(90deg); }
+    to { opacity: 1; transform: rotateX(0); }
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* Classes aplicáveis */
+.animate-fade { animation: fadeIn 0.6s ease-out forwards; }
+.animate-slide { animation: slideIn 0.7s ease-out forwards; }
+.animate-zoom { animation: zoomIn 0.5s ease-out forwards; }
+.animate-blur { animation: blurIn 0.8s ease-out forwards; }
+.animate-flip { animation: flipIn 0.6s ease-out forwards; }
+.animate-bounce { animation: bounceIn 0.7s ease-out forwards; }
+.animate-glitch { animation: glitch 0.4s linear forwards; }
+
+/* Remove animação ao sair da tela */
+section:not(.is-visible) {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    #showLessBtn {
+        display: none;
+        background-color: #6c757d;
+    }
+    
+    #showLessBtn:hover {
+        background-color: #3494dd;
+    }
+
+/* Ajustes para a seção hero em telas pequenas */
+@media (max-width: 768px) {
+    #home .bg-holder.hero-bg {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    #home .container {
+      order: 2;
+      margin-top: 20px;
+    }
+    
+    #home .row {
+      flex-direction: column;
+    }
+  }
+
+  /* Ajustes para o carrossel de feedbacks em telas pequenas */
+  @media (max-width: 768px) {
+    #feedbacks .row.align-items-center {
+      flex-direction: column;
+    }
+    
+    #feedbacks .col-lg-5 {
+      order: -1;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    
+    #feedbacks .col-lg-6 {
+      width: 100%;
+    }
+  }
+      .feature-card {
+  background-color: #6970dd;
+  color: #000000;
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+.text-light{
+  color: #ffffff !important;
+}
+
+.feature-card:hover {
+  background-color: #9e6fff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.backgroundcolorfim{
+  background-color: #ffffff;
+}
+
+.feature-card:hover h4,
+.feature-card:hover p {
+  color: #ffffff;
+}
+
+.feature-icon {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.bg-roxo {
+  background-color: #9e6fff !important;
+}
+
+  .hover-scale-card {
+  background-color: #b183ff;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  min-height: 330px; /* altura mínima para padronizar */
+  margin-bottom: 24px; /* espaçamento entre os cards */
+}
+
+.hover-scale-card h4,
+.hover-scale-card p {
+  color: #ffffff;
+}
+/* Impede quebra de linha dos elementos lado a lado */
+#feedbacks .row.align-items-center {
+  flex-wrap: nowrap;
+}
+
+
+/* Ajusta altura dos quadrados dos feedbacks */
+#feedbacks .carousel .p-4 {
+  min-height: 280px;
+}
+
+/* Ajusta a altura do carrossel */
+#carouselFeedbacks {
+  min-height: 600px;
+}
+
+/* Força o carrossel a ocupar o espaço da coluna */
+#carouselFeedbacks .carousel-inner {
+  height: 100%;
+}
+
+       /* Estilos existentes... */
+
+        /* ========== NOVOS ESTILOS PARA RESPONSIVIDADE ========== */
+        
+        /* 1. Centralizar botão "Agendar Demonstração" no mobile */
+        @media (max-width: 768px) {
+            .navbar-collapse .btn-primary {
+                margin-left: 0 !important;
+                margin-top: 15px;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+            
+            .navbar-collapse {
+                text-align: center;
+            }
+            
+            .navbar-nav {
+                width: 100%;
+            }
+        }
+
+/* Alinha verticalmente os feedbacks para ficarem uniformes */
+#carouselFeedbacks .row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.hover-scale-card:hover {
+  transform: translateY(-5px);
+  background-color: #9e6fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+  .services-card-shadow {
+  background-color: #ffffff; /* fundo branco */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* sem sombra inicial */
+  margin-right: 30px !important; /* espaçamento entre os cards */
+}
+
+.services-card-shadow:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* sombra suave no hover */
+  transform: translateY(-9px); /* levanta levemente o card */
+}
+.color-white-inicio{
+  color: #ffffff;
+}
+.icone-roxa{
+  color:#9e6fff
+}
+.text-top{
+  text-align: start;
+}
+
+        .navbar {
+          background-color: transparent;
+          transition: background-color 0.4s ease;
+        }
+    
+        .navbar-scrolled {
+          background-color: #002db6 !important;
+          transition: background-color 1.0s ease;
+        }
+              /* Estilos específicos para mobile */
+              @media (max-width: 991.98px) {
+            .mobile-hero {
+                background: linear-gradient(#4e20b0, #cfa3f4);
+                padding: 100px 20px 50px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .mobile-hero-image {
+                max-height: 300px;
+                margin: 0 auto 30px;
+                display: block;
+            }
+            
+            .mobile-hero h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: white;
+                margin-bottom: 15px;
+                line-height: 1.2;
+            }
+            
+            .mobile-hero p {
+                font-size: 1.1rem;
+                color: white;
+                margin-bottom: 30px;
+            }
+            
+            .mobile-hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .mobile-hero-buttons .btn-link {
+                color: white;
+                text-decoration: underline;
+                font-size: 1rem;
+            }
+            
+            .mobile-hero-buttons .btn-primary {
+                background-color: #9e6fff;
+                border-color: #9e6fff;
+                font-size: 1rem;
+                padding: 8px 20px;
+            }
+            /* Ajustes para a seção mobile */
+.mobile-hero {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 100px); /* Considera a altura da navbar */
+}
+
+/* Aumenta o celular e ajusta posicionamento */
+.mobile-hero img {
+  transform: scale(1.1);
+  transform-origin: left center;
+  margin-left: -15px;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 576px) {
+  .mobile-hero {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  
+  .mobile-hero img {
+    max-height: 320px;
+    transform: scale(1);
+    margin-left: 0;
+  }
+  
+  .mobile-hero h1 {
+    font-size: 1.6rem !important;
+  }
+  
+  .mobile-hero p {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Ajuste para quando o texto fica muito próximo */
+@media (max-width: 400px) {
+  .mobile-hero .row.align-items-center {
+    flex-direction: column;
+    text-align: center !important;
+  }
+  
+  .mobile-hero .col-6 {
+    width: 100%;
+  }
+  
+  .mobile-hero img {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 320px;
+  }
+  
+  .mobile-hero .text-start {
+    text-align: center !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+            /* Esconde a seção desktop em mobile */
+@media (max-width: 991.98px) {
+    #home.desktop-only {
+        display: none !important;
+    }
+}
+/* Estilo padrão para mobile */
+@media (max-width: 991.98px) {
+
+  .navbar:not(.navbar-scrolled) {
+        background-color: transparent !important;
+    }
+    /* Navbar azul quando tem scroll OU quando o menu está aberto */
+    .navbar-scrolled,
+    .navbar.show {
+        background-color: #1F529F !important;
+    }
+    /* Botão do menu transparente no topo */
+    .navbar:not(.navbar-scrolled) .navbar-toggler {
+        background-color: transparent !important;
+        border-color: rgba(255,255,255,0.5) !important;
+    }
+
+    /* Quando o menu está aberto OU quando tem scroll */
+    .navbar.show .navbar-toggler,
+    .navbar-scrolled .navbar-toggler {
+        background-color: #1F529F !important;
+        border-color: #1F529F !important;
+    }
+
+    /* Estilo do menu expandido */
+    .navbar-collapse {
+        background-color: #1F529F !important;
+        margin: 8px -15px 0 !important;
+        padding: 0 15px 15px !important;
+    }
+
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+    }
+}
+
+/* Mantém o que já tem para esconder mobile em desktop */
+@media (min-width: 992px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+        }
+        
+        /* Esconde a seção mobile em desktop */
+        @media (min-width: 992px) {
+            .mobile-only {
+                display: none !important;
+            }
+        }
+      
+        @media (max-width: 991.98px) {
+          .navbar-nav {
+        width: 100%;
+    }
+
+              /* Ajusta o container do menu para ocupar toda a largura */
+    .navbar > .container-fluid {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    .navbar-nav {
+        width: 100%;
+        padding-top: 10px;
+    }
+    .navbar-toggler {
+        background-color: #1F529F !important;
+        border-color: #1F529F !important;
+        padding: 0.5rem 0.75rem;
+        border-radius: 0.25rem;
+        margin-right: 15px;
+    }
+    
+    .navbar-toggler-icon {
+        filter: brightness(0) invert(1);
+    }
+    
+    .navbar-collapse {
+        background-color: #1F529F !important;
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        margin-top: 8px !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+}
+.btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+#loadMoreBtn, #showLessBtn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    background-color: #18c387;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    min-width: 200px;
+    text-align: center;
+    height: 48px;
+}
+
+#showLessBtn {
+    display: none;
+}
+
+#loadMoreBtn:hover, #showLessBtn:hover {
+    background-color: #15a877;
+    transform: translateY(-2px);
+}
+@media (max-width: 767.98px) {
+    .footer .row.py-7 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .footer .col-lg-6 {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .footer .logo {
+        margin: 0 auto 1.5rem;
+        display: block;
+    }
+    
+    .footer .col-3, .footer .col-6 {
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .footer h4 {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
+    
+    .footer ul {
+        padding-left: 0;
+    }
+    
+    .footer .row.justify-content-md-between {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer .text-center.text-md-start, 
+    .footer .text-center.text-md-end {
+        text-align: center !important;
+        margin-bottom: 1rem;
+    }
+}
+</style>
+<style>
+ /* Estilo do botão flutuante */
+  /* Reset de espaçamentos */
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        /* Botão flutuante */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 100;
+            animation: pulse 20s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translateY(0); }
+            2% { transform: translateY(-10px); }
+            4% { transform: translateY(0); }
+        }
+        
+        .whatsapp-button {
+            width: 60px;
+            height: 60px;
+            background-color: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .whatsapp-button:hover {
+            transform: scale(1.1);
+        }
+        
+        .whatsapp-button img {
+            width: 35px;
+            height: 35px;
+        }
+        
+        /* Chat container */
+        .whatsapp-chat {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 30px;
+            width: 300px;
+            height: 400px;
+            background: #e5ddd5;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            overflow: hidden;
+            z-index: 101;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        /* Cabeçalho */
+        .chat-header {
+            background: #075e54;
+            color: white;
+            padding: 12px 16px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .chat-status {
+            font-size: 11px;
+            font-weight: normal;
+            opacity: 0.8;
+            display: block;
+            margin-top: 2px;
+        }
+        
+        /* Área de mensagens */
+        .chat-messages {
+            height: 280px;
+            padding: 10px;
+            overflow-y: auto;
+            background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png');
+            display: flex;
+            flex-direction: column;
+        }
+        
+        /* Estilo das mensagens - CORREÇÃO DO ESPAÇAMENTO */
+        .message {
+            max-width: 80%;
+            padding: 8px 12px;
+            margin-bottom: 10px;
+            border-radius: 7.5px;
+            position: relative;
+            word-wrap: break-word;
+            white-space: pre-wrap;
+            line-height: 1.4;
+            font-size: 14.2px;
+            box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+        }
+        
+        .received {
+            background: white;
+            align-self: flex-start;
+            border-top-left-radius: 0;
+        }
+        
+        .sent {
+            background: #dcf8c6;
+            align-self: flex-end;
+            border-top-right-radius: 0;
+        }
+        
+        /* Área de input - CORREÇÃO DO LAYOUT */
+        .chat-input-area {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding: 8px;
+            background: #f0f0f0;
+            border-top: 1px solid #ddd;
+            display: flex;
+        }
+        
+        .input-container {
+            flex: 1;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            padding: 0 12px;
+            max-height: 100px;
+            overflow: hidden;
+        }
+        
+        .message-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 14px;
+            padding: 8px 0;
+            resize: none;
+            font-family: inherit;
+            max-height: 84px;
+            line-height: 1.4;
+        }
+        
+        /* Botão de enviar - AGORA VISÍVEL */
+        .send-button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+            margin-left: 4px;
+        }
+        
+        .send-icon {
+            width: 24px;
+            height: 24px;
+            color: #075e54;
+        }
+        
+        /* Indicador de digitação */
+        .typing-indicator {
+            display: none;
+            font-size: 12px;
+            color: #888;
+            padding: 4px 12px;
+            font-style: italic;
+            align-self: flex-start;
+        }
+</style>
+
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/user.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+
+
+  </head>
+
+
+  <body>
+  <!-- Botão flutuante -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-button" id="whatsappButton">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+    </div>
+</div>
+
+<!-- Chat -->
+<div class="whatsapp-chat" id="whatsappChat">
+    <div class="chat-header">
+        Suporte Cuidar Mais
+        <span class="chat-status">Online</span>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <div class="message received">Olá! Somos o suporte da Cuidar Mais. Como podemos te ajudar hoje?</div>
+        <div class="typing-indicator" id="typingIndicator">Suporte está digitando...</div>
+    </div>
+    <div class="chat-input-area">
+        <div class="input-container">
+            <textarea class="message-input" id="messageInput" placeholder="Digite sua mensagem..." rows="1"></textarea>
+            <button class="send-button" id="sendButton">
+                <svg class="send-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top pt-3 mb-0" data-navbar-on-scroll="light">
+          <div class="container-fluid px-5">
+            <!-- Logo alinhada à esquerda -->
+            <a class="navbar-brand me-auto" href="index.html#top">
+              <img src="assets/img/illustration/logo-cuidar.PNG" height="50" alt="logo" />
+            </a>
+      
+            <!-- Botão de menu para mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <!-- Itens centrais e botão na direita -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto d-flex gap-4 align-items-center">
+                
+                <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="quem-somos.html">Quem Somos</a></li>
+                
+                <!-- Dropdown Nossos Serviços melhorado -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" style="color: #ffffff; font-size: 20px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Nossos Serviços
+                  </a>
+                  <ul class="dropdown-menu p-3" aria-labelledby="navbarDropdown" style="width: 280px; border-radius: 15px;">
+                    <li class="mb-2">
+                      <a class="dropdown-item d-flex align-items-center py-2" href="consultas.html" style="font-size: 18px;">
+                        <i class="fas fa-calendar-check me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                        Consultas
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a class="dropdown-item d-flex align-items-center py-2" href="exames.html" style="font-size: 18px;">
+                        <i class="fas fa-flask me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                        Exames
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-flex align-items-center py-2" href="cirurgias.html" style="font-size: 18px;">
+                        <i class="fas fa-procedures me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                        Cirurgias
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="parceiros.html">Quero ser Parceiro</a></li>
+              </ul>
+              <!-- Botão na extrema direita -->
+              <button id="meuBotaoModal" class="btn btn-primary" style="background-color: #18C387; color: white;">
+                Fazer Agendamento
+              </button>
+  
+ <!-- Estrutura do Modal de Escolha -->
+ <div id="modalEscolha" class="modal-custom">
+  <div class="modal-custom-content">
+    <div class="modal-custom-header">
+      <div class="logo-container">
+        <img src="assets/img/illustration/logo-cuidarmais1.PNG" alt="Ajudda Card Logo" class="logo">
+      </div>
+      <span class="modal-custom-close">&times;</span>
+    </div>
+    <div class="modal-custom-body">
+      <h3 style="color: var(--azul-primario); margin-bottom: 20px; text-align: center;">Como deseja fazer seu agendamento?</h3>
+      <div class="escolha-container">
+        <button class="btn-escolha" id="btnWhatsApp">
+          <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 10px;"></i>
+          WhatsApp
+        </button>
+        <button class="btn-escolha" id="btnPortal">
+          <i class="fas fa-laptop" style="font-size: 24px; margin-right: 10px;"></i>
+          Portal do Paciente
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Estrutura do Modal do Formulário WhatsApp (mantido igual) -->
+<div id="meuModal" class="modal-custom">
+  <div class="modal-custom-content">
+    <div class="modal-custom-header">
+      <div class="logo-container">
+        <img src="assets/img/illustration/logo-cuidarmais1.PNG" alt="Ajudda Card Logo" class="logo">
+      </div>
+      <span class="modal-custom-close">&times;</span>
+    </div>
+    <div class="modal-custom-body">
+      <form id="formDemonstracao">
+        <div class="form-group">
+          <label for="nomeRepresentante">Nome do Representante</label>
+          <input type="text" class="form-control" id="nomeRepresentante" placeholder="Seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" class="form-control" id="empresa" placeholder="Nome da sua empresa" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+        </div>
+      </form>
+    </div>
+    <div class="modal-custom-footer">
+      <button class="btn btn-secondary" id="btnCancelar">Cancelar</button>
+      <button class="btn btn-primary" id="btnEnviar">Enviar</button>
+    </div>
+  </div>
+</div>
+  
+<style>
+    /* Estilo para o container de especialidades */
+    .especialidades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.initially-hidden {
+    display: none ;
+}
+
+#loadMoreBtn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 40px;
+    background-color: #2A5C99;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+#loadMoreBtn:hover {
+    background-color: #1E456E;
+}
+
+/* Esconde o botão quando não há mais cards para carregar */
+#loadMoreBtn.hidden {
+    display: none;
+}
+      .additional-cards {
+        display: none;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+        width: 100%;
+    }
+    
+    #verMaisBtn {
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+    
+    #verMaisBtn:hover {
+        background-color: #6a0dad;
+        color: white !important;
+    }
+      /* Estilo para a barra de pesquisa no banner */
+      .search-box-banner input:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(158, 111, 255, 0.3);
+    }
+    
+    /* Ajuste para a seção principal de busca */
+    .search-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+    
+    .search-box {
+        position: relative;
+        width: 300px;
+        margin-top: 15px; /* Adicionado para espaçamento em mobile */
+    }
+    
+    .search-box input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
+    
+    .search-box button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--roxo-principal);
+        cursor: pointer;
+    }
+    :root {
+        --roxo-principal: #6a0dad;
+        --roxo-claro: #9e6fff;
+        --cinza-texto: #555;
+    }
+    .footer{
+      background-color:#00348c;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+    
+    /* Banner Topo */
+    .banner-topo {
+        background: linear-gradient(135deg, #6a0dad 0%, #8a2be2 100%);
+        color: white;
+        padding: 60px 0;
+        margin-bottom: 40px;
+    }
+    
+    .banner-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .banner-titulo {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    
+    .banner-titulo span {
+        font-weight: 300;
+    }
+    
+    .banner-icon {
+        width: 120px;
+        height: auto;
+    }
+    
+    /* Barra de Pesquisa */
+    .search-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #00348c;
+        margin: 0;
+    }
+    
+    .search-box {
+        position: relative;
+        width: 300px;
+    }
+    
+    .search-box input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
+    
+    .search-box input:focus {
+        border-color: var(--roxo-claro);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(158, 111, 255, 0.2);
+    }
+    
+    .search-box button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--roxo-principal);
+        cursor: pointer;
+    }
+    
+    /* Cards de Especialidades */
+    .especialidades-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+    
+    .especialidade-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: none;
+    }
+    
+    .especialidade-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .especialidade-img {
+        height: 180px;
+        object-fit: cover;
+        width: 100%;
+    }
+    
+    .especialidade-body {
+        padding: 20px;
+    }
+    
+    .especialidade-titulo {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color:  #00348c;
+        margin-bottom: 15px;
+    }
+    
+    .especialidade-precos {
+        color: var(--cinza-texto);
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    
+    .especialidade-precos span {
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .saiba-mais {
+        display: inline-block;
+        color: black;
+        font-weight: 600;
+        margin-bottom: 15px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .saiba-mais:hover {
+        text-decoration: underline;
+    }
+    
+    .btn-agendar {
+        background-color: #00348c;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        width: 100%;
+        transition: background-color 0.3s;
+    }
+    
+    .btn-agendar:hover {
+        background-color:  #00348c;;
+        color: white;
+    }
+    
+    /* Modal */
+    .modal-content {
+        border-radius: 15px;
+        border: none;
+    }
+    
+    .modal-header {
+        background-color: #00348c;
+        color: white;
+        border-bottom: none;
+        border-radius: 15px 15px 0 0 !important;
+    }
+    
+    .modal-title {
+        color: white;
+        font-size: 2vh;
+    }
+    
+    .btn-close {
+        filter: invert(1);
+    }
+    
+    .modal-body {
+        padding: 25px;
+    }
+    
+    .modal-footer {
+        border-top: none;
+        justify-content: center;
+        padding-bottom: 25px;
+    }
+    
+    /* Responsivo */
+    @media (max-width: 768px) {
+        .banner-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .banner-icon {
+            margin-top: 20px;
+        }
+        
+        .search-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .search-box {
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .especialidades-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<style>
+  /* Adicionei estilos para os novos elementos */
+  .escolha-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-escolha {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    background-color: var(--azul-primario);
+    color: var(--branco);
+  }
+  
+  .btn-escolha:hover {
+    background-color: var(--azul-primario);
+    transform: translateY(-2px);
+  }
+  
+  /* Mantenha todos os outros estilos existentes */
+  /* Cores personalizadas no tema roxo */
+  :root {
+    --azul-primario: #002db6;
+    --azul-claro:#456eeadd;
+    --roxo-primario: #6a0dad;
+    --roxo-secundario: #8a2be2;
+    --roxo-claro: #e6e6fa;
+    --roxo-escuro: #4b0082;
+    --cinza-claro: #f8f9fa;
+    --cinza-medio: #e9ecef;
+    --branco: #ffffff;
+  }
+  
+  /* Estilos personalizados para o modal */
+  .modal-custom {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-custom-content {
+    background-color: var(--branco);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s;
+    overflow: hidden;
+  }
+  
+  @keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  
+  .modal-custom-header {
+    padding: 20px 25px;
+    background-color: var(--azul-primario);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .logo {
+    height: 100%;
+    width: auto;
+    max-width: 600px;
+    object-fit: contain;
+  }
+  
+  .modal-custom-close {
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--branco);
+    transition: color 0.3s;
+  }
+  
+  .modal-custom-close:hover {
+    color: var(--azul-claro);
+  }
+  
+  .modal-custom-body {
+    padding: 30px;
+    background-color: var(--cinza-claro);
+  }
+  
+  .modal-custom-footer {
+    padding: 20px 25px;
+    background-color: var(--cinza-medio);
+    text-align: right;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--azul-primario);
+    font-size: 16px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--cinza-medio);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    font-size: 16px;
+    height: 50px;
+  }
+  
+  .form-control:focus {
+    border-color: var(--azul-primario);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.2);
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    height: 50px;
+  }
+  
+  .btn-primary {
+    background-color: var(--azul-primario);
+    color: var(--branco);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--azul-primario);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: var(--cinza-medio);
+    color: var(--roxo-escuro);
+    margin-right: 15px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #d1d7dc;
+  }
+  </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Elementos dos modais
+    const modalEscolha = document.getElementById('modalEscolha');
+    const modalForm = document.getElementById('meuModal');
+    const btnModal = document.getElementById('meuBotaoModal');
+    const btnWhatsApp = document.getElementById('btnWhatsApp');
+    const btnPortal = document.getElementById('btnPortal');
+    
+    // Elementos do modal de formulário (mantidos do código original)
+    const span = document.querySelectorAll('.modal-custom-close');
+    const btnCancelar = document.getElementById('btnCancelar');
+    const btnEnviar = document.getElementById('btnEnviar');
+    
+    // Função para abrir qualquer modal
+    function abrirModal(modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    // Função para fechar qualquer modal
+    function fecharModal(modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Abre o modal de escolha ao clicar no botão principal
+    btnModal.onclick = function() {
+      abrirModal(modalEscolha);
+    }
+    
+    // Fecha os modais ao clicar no X
+    span.forEach(function(element) {
+      element.onclick = function() {
+        const modal = this.closest('.modal-custom');
+        fecharModal(modal);
+      };
+    });
+    
+    // Fecha os modais ao clicar fora do conteúdo
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal-custom')) {
+        fecharModal(event.target);
+      }
+    }
+    
+    // Fecha os modais ao pressionar ESC
+    document.onkeydown = function(event) {
+      if (event.key === 'Escape') {
+        const modals = document.querySelectorAll('.modal-custom');
+        modals.forEach(function(modal) {
+          if (modal.style.display === 'flex') {
+            fecharModal(modal);
+          }
+        });
+      }
+    }
+    
+    // Botão WhatsApp no modal de escolha
+    btnWhatsApp.onclick = function() {
+      fecharModal(modalEscolha);
+      abrirModal(modalForm);
+    }
+    
+    // Botão Portal no modal de escolha
+    btnPortal.onclick = function() {
+      fecharModal(modalEscolha);
+      window.open('https://clinicas.gees.com.br/cuidarmais/portal/portalpaciente', '_blank');
+    }
+    
+    // Fecha o modal de formulário ao clicar no botão Cancelar
+    btnCancelar.onclick = function() {
+      fecharModal(modalForm);
+    }
+    
+    // Envia os dados para o WhatsApp (mantido do código original)
+    btnEnviar.onclick = function() {
+      const nome = document.getElementById('nomeRepresentante').value;
+      const empresa = document.getElementById('empresa').value;
+      const email = document.getElementById('email').value;
+      
+      if (!nome || !empresa || !email) {
+        alert('Por favor, preencha todos os campos!');
+        return;
+      }
+      
+      const mensagem = `Olá, gostaria de agendar uma demonstração do Ajudda Card:\n\n` +
+                      `*Nome do Representante:* ${nome}\n` +
+                      `*Empresa:* ${empresa}\n` +
+                      `*E-mail:* ${email}\n\n` +
+                      `Por favor, informe os horários disponíveis.`;
+      
+      const mensagemCodificada = encodeURIComponent(mensagem);
+      const urlWhatsApp = `https://wa.me/5585984415490?text=${mensagemCodificada}`;
+      
+      window.open(urlWhatsApp, '_blank');
+      fecharModal(modalForm);
+      document.getElementById('formDemonstracao').reset();
+    }
+  });
+  
+  // Adicionando Font Awesome para os ícones
+  document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">');
+  </script>
+          </div>
+        </div>
+      </nav>
+</div>
+   
+    
+    
+      <style>
+        .navbar {
+          background-color: transparent;
+          transition: background-color 0.4s ease;
+          
+        }
+    
+        .navbar-scrolled {
+          background-color: #1F529F !important;
+          transition: background-color 1.0s ease;
+        }
+      </style>
+    
+    <script>
+      // Controle do scroll
+      window.addEventListener('scroll', () => {
+          const navbar = document.querySelector('.navbar');
+          // Só aplica o azul se tiver scroll > 50 E não estiver com menu aberto
+          navbar.classList.toggle('navbar-scrolled', window.scrollY > 50 && !navbar.classList.contains('show'));
+      });
+      
+      // Controle do clique no menu
+      document.querySelector('.navbar-toggler').addEventListener('click', function() {
+          const navbar = document.querySelector('.navbar');
+          navbar.classList.toggle('show');
+          
+          // Força o azul enquanto o menu estiver aberto
+          if(navbar.classList.contains('show')) {
+              navbar.classList.add('navbar-scrolled');
+          } else if(window.scrollY <= 50) {
+              navbar.classList.remove('navbar-scrolled');
+          }
+      });
+      
+      // Detecta quando o menu é fechado via clique fora
+      document.addEventListener('click', function(e) {
+          const navbar = document.querySelector('.navbar');
+          if(!navbar.contains(e.target) && !e.target.classList.contains('navbar-toggler')) {
+              if(window.scrollY <= 50) {
+                  navbar.classList.remove('navbar-scrolled');
+              }
+          }
+      });
+      </script>
+    </main>
+  
+        <!-- Imagem de fundo para desktop -->
+        
+        
+       
+      
+<!-- Banner Hero Section - Atualizado com busca funcional -->
+<section class="py-7  animate-slide position-relative bg-roxo" style="background: url('assets/img/illustration/bannerbanner1.PNG') no-repeat center center/cover; margin-bottom: 20px; margin-top: 0vh; height: 50vh;">
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.554);"></div>
+    <div class="container text-white position-relative z-1 text-center py-7" style="margin-top: 5vh;">
+      <h1 class="display-4 fw-bold mt-3" style="color: #ffffff; ">Agende consultas médicas
+         com <br>especialistas
+        sem sair de casa.</h1>
+        
+         
+         <!-- Barra de Pesquisa no Banner - AGORA FUNCIONAL -->
+         <div class="d-flex justify-content-center mt-4">
+            <div class="search-box-banner" style="width: 100%; max-width: 600px; position: relative;">
+                <input type="text" id="searchInput" placeholder="Buscar área de atuação..." class="form-control py-3 px-4" 
+                       style="border-radius: 50px; border: none; padding-right: 50px;">
+                <button type="button" id="searchButton" class="btn" 
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none;">
+                    <i class="fas fa-search" style="color: #9e6fff; font-size: 1.2rem;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- JavaScript para a funcionalidade de busca -->
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const showLessBtn = document.getElementById('showLessBtn');
+    
+    // Seleciona APENAS os cards da seção "Demais áreas" que estão ocultos
+    const hiddenCards = document.querySelectorAll('#demaisEspecialidades .initially-hidden');
+    let currentlyShowing = 0;
+    const cardsToShow = 6;
+    
+    // Função para restaurar o estado inicial dos cards
+    function restoreInitialState() {
+        // Mostra todos os cards principais
+        document.querySelectorAll('#principaisEspecialidades .especialidade-card').forEach(card => {
+            card.style.display = 'block';
+        });
+        
+        // Mostra apenas os 6 primeiros cards das demais áreas
+        document.querySelectorAll('#demaisEspecialidades .especialidade-card').forEach((card, index) => {
+            card.style.display = index < 6 ? 'block' : 'none';
+        });
+        
+        // Reseta o contador
+        currentlyShowing = 0;
+        loadMoreBtn.style.display = 'inline-block';
+        showLessBtn.style.display = 'none';
+    }
+    
+    // Função para filtrar os exames
+    function filterExams() {
+        const searchTerm = searchInput.value.toLowerCase();
+        
+        if (searchTerm === '') {
+            restoreInitialState();
+            return;
+        }
+        
+        const examCards = document.querySelectorAll('.especialidade-card');
+        let hasResults = false;
+        
+        examCards.forEach(card => {
+            const title = card.querySelector('.especialidade-titulo').textContent.toLowerCase();
+            if (title.includes(searchTerm)) {
+                card.style.display = 'block';
+                hasResults = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Esconde os botões de paginação durante a busca
+        loadMoreBtn.style.display = 'none';
+        showLessBtn.style.display = 'none';
+        
+        // Mostrar mensagem se não encontrar resultados
+        const noResultsMsg = document.getElementById('noResultsMessage');
+        if (!hasResults) {
+            if (!noResultsMsg) {
+                const msg = document.createElement('div');
+                msg.id = 'noResultsMessage';
+                msg.className = 'alert alert-info mt-4';
+                msg.textContent = 'Nenhum exame encontrado com esse termo.';
+                document.querySelector('#demaisEspecialidades').parentNode.insertBefore(msg, document.querySelector('#demaisEspecialidades').nextSibling);
+            }
+        } else if (noResultsMsg) {
+            noResultsMsg.remove();
+        }
+    }
+    
+    // Mostra mais cards
+    loadMoreBtn.addEventListener('click', function() {
+        const remainingCards = hiddenCards.length - currentlyShowing;
+        const nextBatch = Math.min(cardsToShow, remainingCards);
+        
+        for (let i = 0; i < nextBatch; i++) {
+            if (hiddenCards[currentlyShowing + i]) {
+                hiddenCards[currentlyShowing + i].style.display = 'block';
+            }
+        }
+        
+        currentlyShowing += nextBatch;
+        
+        if (currentlyShowing > 0) {
+            showLessBtn.style.display = 'inline-block';
+        }
+        
+        if (currentlyShowing >= hiddenCards.length) {
+            loadMoreBtn.style.display = 'none';
+        }
+    });
+    
+    // Mostra menos cards
+    showLessBtn.addEventListener('click', function() {
+        hiddenCards.forEach(card => {
+            card.style.display = 'none';
+        });
+        
+        currentlyShowing = 0;
+        loadMoreBtn.style.display = 'inline-block';
+        showLessBtn.style.display = 'none';
+        
+        document.querySelector('#demaisEspecialidades').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+    
+    // Event listeners para busca
+    searchButton.addEventListener('click', filterExams);
+    searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+            filterExams();
+        }
+    });
+    
+    // Restaura o estado inicial se o usuário apagar a busca
+    searchInput.addEventListener('input', function() {
+        if (searchInput.value === '') {
+            restoreInitialState();
+        }
+    });
+    
+    // Esconde o botão "Carregar mais" se não houver cards ocultos
+    if (hiddenCards.length === 0) {
+        loadMoreBtn.style.display = 'none';
+    }
+});
+    </script>
+  
+<div class="container">
+     <!-- Seção de Principais Áreas -->
+     <div class="search-container">
+      <h2 class="section-title">Consultas Gerais</h2>
+  </div>
+  
+  <div class="especialidades-container" id="principaisEspecialidades">
+      <!-- Card 1 - Alergologista -->
+      <div class="card especialidade-card" style="height: 360px;">
+          <img src="assets/img/illustration/alergologista.PNG" alt="Alergologista" class="especialidade-img">
+          <div class="especialidade-body">
+              <h5 class="especialidade-titulo">Alergologista</h5>
+              <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalAlergologista">+ saiba mais</a>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+            
+          </div>
+      </div>
+      
+      <!-- Card 2 - Cardiologista -->
+      <div class="card especialidade-card" style="height: 360px;">
+          <img src="assets/img/illustration/cardiologia.PNG" alt="Cardiologista" class="especialidade-img">
+          <div class="especialidade-body">
+              <h5 class="especialidade-titulo">Cardiologista</h5>
+              <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalCardiologista">+ saiba mais</a>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>          </div>
+      </div>
+      
+      <!-- Card 3 - Clínico Geral -->
+      <div class="card especialidade-card" style="height: 360px;">
+          <img src="assets/img/illustration/clinico-geral.PNG" alt="Clínico Geral" class="especialidade-img">
+          <div class="especialidade-body">
+              <h5 class="especialidade-titulo">Clínico Geral</h5>
+              <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalClinicoGeral">+ saiba mais</a>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>          </div>
+      </div>
+      
+      <!-- Card 4 - Dermatologia -->
+      <div class="card especialidade-card" style="height: 360px;">
+          <img src="assets/img/illustration/dermatologia.PNG" alt="Dermatologia" class="especialidade-img">
+          <div class="especialidade-body">
+              <h5 class="especialidade-titulo">Dermatologia</h5>
+              <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalDermatologia">+ saiba mais</a>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>          </div>
+      </div>
+      
+      <!-- Card 5 - Gastroenterologista -->
+      <div class="card especialidade-card" style="height: 360px;">
+          <img src="assets/img/illustration/gastro.PNG" alt="Gastroenterologista" class="especialidade-img">
+          <div class="especialidade-body">
+              <h5 class="especialidade-titulo">Gastro</h5>
+              <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalGastroenterologista">+ saiba mais</a>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>          </div>
+      </div>
+      
+      <!-- Card 6 - Ginecologista -->
+      <div class="card especialidade-card" style="height: 360px;">
+          <img src="assets/img/illustration/ginecologia.PNG" alt="Ginecologista" class="especialidade-img">
+          <div class="especialidade-body">
+              <h5 class="especialidade-titulo">Ginecologista (com prevenção)</h5>
+              <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalGinecologista">+ saiba mais</a>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>          </div>
+      </div>
+      
+      <!-- Card 7 - Neurologista -->
+      <div class="card especialidade-card" style="height: 360px;">
+          <img src="assets/img/illustration/neurologia.PNG" alt="Neurologista" class="especialidade-img">
+          <div class="especialidade-body">
+              <h5 class="especialidade-titulo">Neurologista</h5>
+              <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalNeurologista">+ saiba mais</a>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>          </div>
+      </div>
+      
+      <!-- Card 8 - Ortopedista -->
+      <div class="card especialidade-card" style="height: 360px;">
+          <img src="assets/img/illustration/ortopedia.PNG" alt="Ortopedista" class="especialidade-img">
+          <div class="especialidade-body">
+              <h5 class="especialidade-titulo">Ortopedista</h5>
+              <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalOrtopedista">+ saiba mais</a>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>          </div>
+      </div>
+      
+      <!-- Card 9 - Otorrino -->
+      <div class="card especialidade-card" style="height: 360px;">
+          <img src="assets/img/illustration/otorrino.PNG" alt="Otorrinolaringologista" class="especialidade-img">
+          <div class="especialidade-body">
+              <h5 class="especialidade-titulo">Otorrino</h5>
+              <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalOtorrino">+ saiba mais</a>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>          </div>
+      </div>
+      <!-- Modais Saiba Mais -->
+<!-- Modal Alergologista -->
+<div class="modal fade" id="modalAlergologista" tabindex="-1" aria-labelledby="modalAlergologistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalAlergologistaLabel">Alergologista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Identifica e trata alergias respiratórias, alimentares, dermatites e reações a medicamentos. Ideal para quem sofre com rinites, asma ou coceiras inexplicáveis.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Cardiologista -->
+<div class="modal fade" id="modalCardiologista" tabindex="-1" aria-labelledby="modalCardiologistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalCardiologistaLabel">Cardiologista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Especialista no coração e sistema cardiovascular. Realiza exames como eletrocardiograma e ecocardiograma, essenciais para prevenir infartos e hipertensão.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Clínico Geral -->
+<div class="modal fade" id="modalClinicoGeral" tabindex="-1" aria-labelledby="modalClinicoGeralLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalClinicoGeralLabel">Clínico Geral</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>O primeiro passo para qualquer sintoma! Faz diagnósticos iniciais, encaminhamentos e acompanha pacientes com doenças crônicas (diabetes, pressão alta).</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Dermatologia -->
+<div class="modal fade" id="modalDermatologia" tabindex="-1" aria-labelledby="modalDermatologiaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalDermatologiaLabel">Dermatologia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Cuida da pele, cabelos e unhas. Trata acne, eczema, câncer de pele e realiza procedimentos estéticos com segurança.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Gastroenterologista -->
+<div class="modal fade" id="modalGastroenterologista" tabindex="-1" aria-labelledby="modalGastroenterologistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalGastroenterologistaLabel">Gastroenterologista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Diagnóstica e trata problemas digestivos (azia, gastrite, intestino irritável) e realiza exames como endoscopia e colonoscopia.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Ginecologista -->
+<div class="modal fade" id="modalGinecologista" tabindex="-1" aria-labelledby="modalGinecologistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalGinecologistaLabel">Ginecologista (com prevenção)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Oferece consultas de rotina, exames preventivos (como Papanicolau) e acompanhamento da saúde íntima feminina.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Neurologista -->
+<div class="modal fade" id="modalNeurologista" tabindex="-1" aria-labelledby="modalNeurologistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalNeurologistaLabel">Neurologista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Trata doenças do sistema nervoso, como enxaquecas, Alzheimer, Parkinson e epilepsia.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Ortopedista -->
+<div class="modal fade" id="modalOrtopedista" tabindex="-1" aria-labelledby="modalOrtopedistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalOrtopedistaLabel">Ortopedista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Trata fraturas, lesões esportivas, dores nas articulações (coluna, joelhos) e doenças como artrose e osteoporose.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Otorrino -->
+<div class="modal fade" id="modalOtorrino" tabindex="-1" aria-labelledby="modalOtorrinoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalOtorrinoLabel">Otorrinolaringologista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Cuida de ouvidos, nariz e garganta. Trata sinusites, zumbidos, apneia do sono e perda auditiva.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+        
+        
+        
+        
+    </div>
+    
+    <!-- Seção de Demais Áreas -->
+    <div class="search-container mt-5">
+        <h2 class="section-title">Demais Consultas</h2>
+    </div>
+    
+    <div class="especialidades-container" id="demaisEspecialidades">
+           <!-- Card 1 - Pediatria -->
+    <div class="card especialidade-card demais-card" style="height: 360px;">
+      <img src="assets/img/illustration/pediatria.PNG" alt="Pediatria" class="especialidade-img">
+      <div class="especialidade-body">
+          <h5 class="especialidade-titulo">Pediatria</h5>
+          <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPediatria">+ saiba mais</a>
+          <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+          class="btn btn-agendar" 
+          target="_blank">
+          Agendar Consultas
+       </a>
+            </div>
+  </div>
+           <!-- Card 2 - Psiquiatra -->
+    <div class="card especialidade-card demais-card" style="height: 360px;">
+      <img src="assets/img/illustration/psiquiatria.PNG" alt="Psiquiatra" class="especialidade-img">
+      <div class="especialidade-body">
+          <h5 class="especialidade-titulo">Psiquiatra</h5>
+          <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPsiquiatra">+ saiba mais</a>
+          <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+          class="btn btn-agendar" 
+          target="_blank">
+          Agendar Consultas
+       </a>      </div>
+  </div>
+          <!-- Card 3 - Urologia -->
+    <div class="card especialidade-card demais-card" style="height: 360px;">
+      <img src="assets/img/illustration/urologia.PNG" alt="Urologia" class="especialidade-img">
+      <div class="especialidade-body">
+          <h5 class="especialidade-titulo">Urologia</h5>
+          <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalUrologia">+ saiba mais</a>
+          <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+          class="btn btn-agendar" 
+          target="_blank">
+          Agendar Consultas
+       </a>      </div>
+  </div>
+
+    
+    <!-- Card 5 - Cirurgião Cabeça e Pescoço -->
+    <div class="card especialidade-card demais-card" style="height: 360px;">
+      <img src="assets/img/illustration/cabeça-pescoço.PNG" alt="Cirurgião Cabeça e Pescoço" class="especialidade-img">
+      <div class="especialidade-body">
+          <h5 class="especialidade-titulo">Cirurgião cabeça e pescoço</h5>
+          <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalCirurgiaoCabecaPescoco">+ saiba mais</a>
+          <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+          class="btn btn-agendar" 
+          target="_blank">
+          Agendar Consultas
+       </a>      </div>
+  </div>
+    <!-- Card 6 - Endocrinologia -->
+    <div class="card especialidade-card demais-card" style="height: 360px;">
+      <img src="assets/img/illustration/endocrino.PNG" alt="Endocrinologia" class="especialidade-img">
+      <div class="especialidade-body">
+          <h5 class="especialidade-titulo">Endocrinologia</h5>
+          <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalEndocrinologia">+ saiba mais</a>
+          <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+          class="btn btn-agendar" 
+          target="_blank">
+          Agendar Consultas
+       </a>      </div>
+  </div>
+
+  <div class="card especialidade-card demais-card" style="height: 360px;">
+    <img src="assets/img/illustration/ginecologia.PNG" alt="Ginecologista sem prevenção" class="especialidade-img">
+    <div class="especialidade-body">
+        <h5 class="especialidade-titulo">Ginecologista sem prevenção</h5>
+        <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalGinecologistaSemPrevencao">+ saiba mais</a>
+        <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+        class="btn btn-agendar" 
+     target="_blank">
+     Agendar Consultas
+  </a>
+    </div>
+  </div>
+
+  <!-- Modais Saiba Mais para Demais Especialidades -->
+<!-- Modal Pediatria -->
+<div class="modal fade" id="modalPediatria" tabindex="-1" aria-labelledby="modalPediatriaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalPediatriaLabel">Pediatria</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Acompanha o crescimento e desenvolvimento infantil, desde recém-nascidos até adolescentes, com vacinas e orientações nutricionais.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Psiquiatra -->
+<div class="modal fade" id="modalPsiquiatra" tabindex="-1" aria-labelledby="modalPsiquiatraLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalPsiquiatraLabel">Psiquiatra</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Diagnóstica e trata transtornos mentais (TDAH, bipolaridade), com prescrição de medicamentos quando necessário.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Urologia -->
+<div class="modal fade" id="modalUrologia" tabindex="-1" aria-labelledby="modalUrologiaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalUrologiaLabel">Urologia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Cuida da saúde do trato urinário masculino e feminino, incluindo próstata, infecções urinárias e cálculos renais.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Cirurgião Cabeça e Pescoço -->
+<div class="modal fade" id="modalCirurgiaoCabecaPescoco" tabindex="-1" aria-labelledby="modalCirurgiaoCabecaPescocoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalCirurgiaoCabecaPescocoLabel">Cirurgião Cabeça e Pescoço</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Atua em problemas como nódulos na tireoide, sinusites crônicas e tumores na região. Também trata distúrbios de deglutição ou voz.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Endocrinologia -->
+<div class="modal fade" id="modalEndocrinologia" tabindex="-1" aria-labelledby="modalEndocrinologiaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalEndocrinologiaLabel">Endocrinologia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Especializado em hormônios e metabolismo. Acompanha diabetes, distúrbios da tireoide, obesidade e reposição hormonal.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+          </div>
+      </div>
+  </div>
+</div>
+        
+        <!-- Repita mais 5 cards visíveis inicialmente -->
+        
+        <!-- Cards ocultos inicialmente -->
+<!-- Cards Adicionais (inicialmente ocultos) -->
+
+      
+
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/nutricionista.PNG" alt="Nutricionista" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Nutricionista</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalNutricionista">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/oftalmologista.PNG" alt="Oftalmologista" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Oftalmologista</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalOftalmologista">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/oncologista.PNG" alt="Oncologista" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Oncologista</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalOncologista">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+
+
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/procto.PNG" alt="Proctologista" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Proctologista</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalProctologista">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+
+
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/pneumolo.PNG" alt="Pneumologista" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Pneumologista</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPneumologista">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/psicologia.PNG" alt="Psicologia" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Psicologia</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPsicologia">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/neuropediatra.PNG" alt="Psicologia" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Neuropediatra</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPsicologia">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/vascular.PNG" alt="Psicologia" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Vascular</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPsicologia">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/geriatra.PNG" alt="Psicologia" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Geriatra</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPsicologia">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/nefrologista.PNG" alt="Psicologia" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Nefrologista</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPsicologia">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/cirurgiao-geral.PNG" alt="Psicologia" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Fonodiólogo</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPsicologia">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+<div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+  <img src="assets/img/illustration/fono.PNG" alt="Psicologia" class="especialidade-img">
+  <div class="especialidade-body">
+      <h5 class="especialidade-titulo">Cirurgião geral</h5>
+      <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPsicologia">+ saiba mais</a>
+      <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" 
+      class="btn btn-agendar" 
+   target="_blank">
+   Agendar Consultas
+</a>
+  </div>
+</div>
+
+
+<!-- MODAIS-->
+<!-- MODAIS CORRIGIDOS E AJUSTADOS -->
+<div class="modal fade" id="modalNeuropediatra" tabindex="-1" aria-labelledby="modalNeuropediatraLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalNeuropediatraLabel">Neuropediatra</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Atendimento neurológico especializado para crianças e adolescentes. Ideal para avaliação do desenvolvimento neuropsicomotor, diagnósticos e tratamentos específicos.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalVascular" tabindex="-1" aria-labelledby="modalVascularLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalVascularLabel">Angiologista/Vascular</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Atendimento vascular especializado para avaliação circulatória. Ideal para diagnóstico e tratamento de varizes, tromboses e alterações vasculares.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalGeriatra" tabindex="-1" aria-labelledby="modalGeriatraLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalGeriatraLabel">Geriatra</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Atendimento geriátrico especializado para a saúde do idoso. Ideal para acompanhamento, prevenção e tratamento de condições relacionadas ao envelhecimento.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalNefrologista" tabindex="-1" aria-labelledby="modalNefrologistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalNefrologistaLabel">Nefrologista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Atendimento nefrológico especializado para saúde dos rins. Ideal para diagnóstico, prevenção e tratamento de doenças renais e hipertensão arterial.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalFonoaudiologo" tabindex="-1" aria-labelledby="modalFonoaudiologoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalFonoaudiologoLabel">Fonoaudiólogo</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Atendimento fonoaudiológico especializado em comunicação e deglutição. Ideal para avaliação, reabilitação e orientação em distúrbios da fala, voz e linguagem.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>          </div>
+      </div>
+  </div>
+</div>
+
+<div class="modal fade" id="modalCirurgiaoGeral" tabindex="-1" aria-labelledby="modalCirurgiaoGeralLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalCirurgiaoGeralLabel">Cirurgião Geral</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Atendimento cirúrgico geral para avaliação e tratamento de diversas condições. Ideal para diagnóstico, orientação pré-operatória e acompanhamento pós-cirúrgico.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modais correspondentes -->
+<!-- Modal Ginecologista sem Prevenção -->
+<div class="modal fade" id="modalGinecologistaSemPrevencao" tabindex="-1" aria-labelledby="modalGinecologistaSemPrevencaoLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalGinecologistaSemPrevencaoLabel">Ginecologista sem Prevenção</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Atendimento ginecológico geral sem incluir exames preventivos. Ideal para consultas sobre saúde íntima, orientações e tratamentos específicos.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Nutricionista -->
+<div class="modal fade" id="modalNutricionista" tabindex="-1" aria-labelledby="modalNutricionistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalNutricionistaLabel">Nutricionista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Elabora planos alimentares personalizados para emagrecimento, ganho de massa muscular ou controle de doenças (diabetes, colesterol alto).</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Oftalmologista -->
+<div class="modal fade" id="modalOftalmologista" tabindex="-1" aria-labelledby="modalOftalmologistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalOftalmologistaLabel">Oftalmologista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Cuida da saúde ocular. Realiza exames de vista, trata catarata, glaucoma e prescreve óculos/lentes.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Oncologista -->
+<div class="modal fade" id="modalOncologista" tabindex="-1" aria-labelledby="modalOncologistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalOncologistaLabel">Oncologista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Especializado no diagnóstico e tratamento do câncer, com abordagem multidisciplinar (quimioterapia, radioterapia).</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Proctologista -->
+<div class="modal fade" id="modalProctologista" tabindex="-1" aria-labelledby="modalProctologistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalProctologistaLabel">Proctologista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Especialista em doenças do reto e ânus, como hemorroidas, fissuras e câncer colorretal.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Pneumologista -->
+<div class="modal fade" id="modalPneumologista" tabindex="-1" aria-labelledby="modalPneumologistaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalPneumologistaLabel">Pneumologista</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Trata doenças respiratórias (asma, bronquite, pneumonia) e realiza exames como espirometria.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Psicologia -->
+<div class="modal fade" id="modalPsicologia" tabindex="-1" aria-labelledby="modalPsicologiaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalPsicologiaLabel">Psicologia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Auxilia no equilíbrio emocional, tratando ansiedade, depressão e auxiliando em conflitos pessoais ou profissionais.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://www.clinicas.gees.com.br/cuidarmais/portal/portalpaciente" class="btn btn-agendar" target="_blank">Agendar Consulta</a>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+      
+        <!-- Adicione os demais cards ocultos aqui -->
+        
+    </div>
+    
+    <div class="btn-container">
+        <button id="loadMoreBtn" class="btn animate-bounce" style="background-color: #18c387;">Carregar mais especialidades</button>
+        <button id="showLessBtn" class="btn animate-bounce" style="background-color: #18c387; color: white;">Mostrar menos</button>
+    </div>
+</div>
+    
+    <!-- Adicione os outros modais seguindo o mesmo padrão -->
+    
+    <!-- Bootstrap JS -->
+   <!-- JavaScript atualizado -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        const showLessBtn = document.getElementById('showLessBtn');
+        const hiddenCards = document.querySelectorAll('#demaisEspecialidades .initially-hidden');
+        let currentlyShowing = 0;
+        const cardsToShow = 6;
+        
+        // Mostra mais cards
+        loadMoreBtn.addEventListener('click', function() {
+            const remainingCards = hiddenCards.length - currentlyShowing;
+            const nextBatch = Math.min(cardsToShow, remainingCards);
+            
+            for (let i = 0; i < nextBatch; i++) {
+                if (hiddenCards[currentlyShowing + i]) {
+                    hiddenCards[currentlyShowing + i].classList.remove('initially-hidden');
+                }
+            }
+            
+            currentlyShowing += nextBatch;
+            
+            // Mostra o botão "Mostrar menos" quando algum card adicional é exibido
+            if (currentlyShowing > 0) {
+                showLessBtn.style.display = 'inline-block';
+            }
+            
+            // Esconde o botão "Carregar mais" se não houver mais cards
+            if (currentlyShowing >= hiddenCards.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
+        
+        // Mostra menos cards (retorna ao estado inicial)
+        showLessBtn.addEventListener('click', function() {
+            // Oculta todos os cards extras
+            hiddenCards.forEach(card => {
+                card.classList.add('initially-hidden');
+            });
+            
+            // Reseta o contador
+            currentlyShowing = 0;
+            
+            // Mostra o botão "Carregar mais" e esconde o "Mostrar menos"
+            loadMoreBtn.style.display = 'inline-block';
+            showLessBtn.style.display = 'none';
+            
+            // Rolagem suave para a seção de "Demais áreas"
+            document.querySelector('#demaisEspecialidades').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        
+        // Esconde o botão "Carregar mais" se não houver cards ocultos
+        if (hiddenCards.length === 0) {
+            loadMoreBtn.style.display = 'none';
+        }
+    });
+    </script>
+
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+      <style>
+        /* Estilos Gerais do Footer */
+        .footer {
+            background-color: #002db6;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        .footer h4 {
+            color: white; /* Garantindo que os títulos fiquem brancos */
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer ul {
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .footer li {
+            margin-bottom: 10px;
+        }
+        
+        /* Seção de Contato */
+        .contact-info {
+            margin-top: 20px;
+        }
+        
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+            min-width: 20px;
+            color: white;
+        }
+        
+        /* Logo */
+        .footer-logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        /* Rodapé Inferior */
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+        
+        /* Layout Responsivo */
+        @media (min-width: 992px) {
+            /* Desktop - 2 colunas principais */
+            .footer-main {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .footer-brand {
+                flex: 0 0 40%;
+                max-width: 40%;
+                padding-right: 30px;
+            }
+            
+            .footer-links {
+                flex: 0 0 60%;
+                max-width: 60%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .footer-column {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 991.98px) {
+            /* Tablet - 1 coluna */
+            .footer-brand {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            
+            .footer-logo {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .footer-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            .footer-column {
+                flex: 0 0 48%;
+                max-width: 48%;
+                margin-bottom: 30px;
+            }
+            
+            .contact-info {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .contact-info p {
+                margin-bottom: 0;
+                flex: 0 0 auto;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            /* Mobile - ajuste dos contatos */
+            .footer-column {
+                flex: 0 0 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+            
+            .footer-links {
+                display: block;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .contact-info p {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    </style>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <!-- Coluna da Logo e Contatos -->
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="assets/img/illustration/logo-cuidar.PNG" alt="Cuidar Mais" class="footer-logo">
+                    </a>
+                    <div class="contact-info">
+                        <p><i class="fas fa-mobile-alt"></i> 85 99816-0208</p>
+                        <p><i class="fas fa-phone-alt"></i> 3254-4440</p>
+                        <p><i class="fas fa-envelope"></i> cuidarmais@gmail.com</p>
+                    </div>
+                </div>
+                
+                <!-- Colunas de Links -->
+                <div class="footer-links">
+                    <!-- Coluna 1 -->
+                    <div class="footer-column">
+                        <h4>Sobre a Cuidar Mais</h4>
+                        <ul>
+                            <li><a href="quem-somos.html">Quem Somos</a></li>
+                            <li><a href="clientes.html">Clientes</a></li>
+                            <li><a href="parceiros.html">Quero virar parceiro</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Coluna 2 -->
+                    <div class="footer-column">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><a href="consultas.html">Consultas</a></li>
+                            <li><a href="exames.html">Exames</a></li>
+                            <li><a href="cirurgias.html">Cirurgias</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Coluna 3 -->
+                    <div class="footer-column">
+                        <h4>Ajuda</h4>
+                        <ul>
+                            <li><a href="faq.html">Perguntas Frequentes</a></li>
+                            <li><a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20acessar%20o%20suporte%20pelo%20whatssap.%20Podem%20me%20ajudar?">Suporte via WhatsApp</a></li>
+                            <li><a href="politicas-privacidade.html">Política de Privacidade</a></li>
+                            <li><a href="termosuso.html">Termos de Uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Rodapé Inferior -->
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <p class="mb-0">&copy; 2025 Cuidar Mais. Todos os direitos reservados.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="mb-0">Desenvolvido por <a href="https://www.linkedin.com/in/trajanoluan" target="_blank">LuanDev</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </main>
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap Bundle com Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- Inicialização do Owl Carousel -->
+<script>
+        $(document).ready(function(){
+          $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        loop: true,
+        margin: 30,
+        dots: true,
+        nav: false,
+        responsive:{
+          0:{ items:1 },
+          576:{ items:2 },
+          768:{ items:3 },
+          992:{ items:4 }
+        }
+      });
+  });
+</script>
+<script>
+  // Elementos
+  const whatsappButton = document.getElementById('whatsappButton');
+  const whatsappChat = document.getElementById('whatsappChat');
+  const messageInput = document.getElementById('messageInput');
+  const sendButton = document.getElementById('sendButton');
+  const chatMessages = document.getElementById('chatMessages');
+  const typingIndicator = document.getElementById('typingIndicator');
+  const whatsappNumber = '5585998160208';
+  
+  // Abrir/fechar chat
+  whatsappButton.addEventListener('click', function() {
+      whatsappChat.style.display = whatsappChat.style.display === 'block' ? 'none' : 'block';
+      if (whatsappChat.style.display === 'block') {
+          messageInput.focus();
+      }
+  });
+  
+  // Auto-ajuste da altura do textarea
+  messageInput.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = (this.scrollHeight > 84 ? 84 : this.scrollHeight) + 'px';
+  });
+  
+  // Adicionar mensagem
+  function addMessage(text, isReceived) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', isReceived ? 'received' : 'sent');
+      messageElement.textContent = text;
+      chatMessages.insertBefore(messageElement, typingIndicator);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+  
+  // Enviar mensagem
+  function sendMessage() {
+      const message = messageInput.value.trim();
+      if (message) {
+          addMessage(message, false);
+          messageInput.value = '';
+          messageInput.style.height = 'auto';
+          
+          // Resposta automática
+          typingIndicator.style.display = 'block';
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+          
+          setTimeout(() => {
+              typingIndicator.style.display = 'none';
+              addMessage("Recebemos sua mensagem. Iremos te direcionar para o WhatsApp responsável para podermos te ajudar.", true);
+              
+              // Redireciona para o WhatsApp
+              setTimeout(() => {
+                  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá, vim pelo chat do site: ' + message)}`, '_blank');
+              }, 1500);
+          }, 1000);
+      }
+  }
+  
+  // Eventos
+  sendButton.addEventListener('click', sendMessage);
+  messageInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+      }
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const sections = document.querySelectorAll('section');
+    const animateOnScroll = () => {
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (sectionTop < windowHeight * 0.75) {
+                section.classList.add('is-visible');
+                
+                // Adiciona diferentes animações baseadas na classe da seção
+                if (section.classList.contains('slide-section')) {
+                    section.style.animation = 'slideIn 0.7s ease-out forwards';
+                } else if (section.classList.contains('zoom-section')) {
+                    section.style.animation = 'zoomIn 0.5s ease-out forwards';
+                } else {
+                    section.style.animation = 'fadeIn 0.6s ease-out forwards';
+                }
+            } else {
+                section.classList.remove('is-visible');
+                section.style.animation = 'fadeOut 0.3s ease-out forwards';
+            }
+        });
+    };
+
+    // Ativa no carregamento e no scroll
+    animateOnScroll();
+    window.addEventListener('scroll', animateOnScroll);
+});
+</script>
+
+
+</body>
+</html>

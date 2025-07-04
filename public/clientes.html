@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Cuidar Mais | Sua Clínica Gerando Valor Além da Consulta</title>
+
+
+  
+<!-- Bootstrap Icons (versão mais recente) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+<!-- Owl Carousel CSS (apenas uma vez) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+
+
+<!-- Favicons -->
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+<link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+<link rel="manifest" href="assets/img/favicons/manifest.json">
+<meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+<meta name="theme-color" content="#ffffff">
+<style>
+  /* Estilo do botão flutuante */
+   /* Reset de espaçamentos */
+   * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+         
+         /* Botão flutuante */
+         .whatsapp-float {
+             position: fixed;
+             bottom: 30px;
+             right: 30px;
+             z-index: 100;
+             animation: pulse 20s infinite;
+         }
+         
+         @keyframes pulse {
+             0%, 100% { transform: translateY(0); }
+             2% { transform: translateY(-10px); }
+             4% { transform: translateY(0); }
+         }
+         
+         .whatsapp-button {
+             width: 60px;
+             height: 60px;
+             background-color: #25D366;
+             border-radius: 50%;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+             cursor: pointer;
+             transition: all 0.3s;
+         }
+         
+         .whatsapp-button:hover {
+             transform: scale(1.1);
+         }
+         
+         .whatsapp-button img {
+             width: 35px;
+             height: 35px;
+         }
+         
+         /* Chat container */
+         .whatsapp-chat {
+             display: none;
+             position: fixed;
+             bottom: 90px;
+             right: 30px;
+             width: 300px;
+             height: 400px;
+             background: #e5ddd5;
+             border-radius: 10px;
+             box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+             overflow: hidden;
+             z-index: 101;
+             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         }
+         
+         /* Cabeçalho */
+         .chat-header {
+             background: #075e54;
+             color: white;
+             padding: 12px 16px;
+             font-size: 16px;
+             font-weight: bold;
+         }
+         
+         .chat-status {
+             font-size: 11px;
+             font-weight: normal;
+             opacity: 0.8;
+             display: block;
+             margin-top: 2px;
+         }
+         
+         /* Área de mensagens */
+         .chat-messages {
+             height: 280px;
+             padding: 10px;
+             overflow-y: auto;
+             background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png');
+             display: flex;
+             flex-direction: column;
+         }
+         
+         /* Estilo das mensagens - CORREÇÃO DO ESPAÇAMENTO */
+         .message {
+             max-width: 80%;
+             padding: 8px 12px;
+             margin-bottom: 10px;
+             border-radius: 7.5px;
+             position: relative;
+             word-wrap: break-word;
+             white-space: pre-wrap;
+             line-height: 1.4;
+             font-size: 14.2px;
+             box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+         }
+         
+         .received {
+             background: white;
+             align-self: flex-start;
+             border-top-left-radius: 0;
+         }
+         
+         .sent {
+             background: #dcf8c6;
+             align-self: flex-end;
+             border-top-right-radius: 0;
+         }
+         
+         /* Área de input - CORREÇÃO DO LAYOUT */
+         .chat-input-area {
+             position: absolute;
+             bottom: 0;
+             width: 100%;
+             padding: 8px;
+             background: #f0f0f0;
+             border-top: 1px solid #ddd;
+             display: flex;
+         }
+         
+         .input-container {
+             flex: 1;
+             background: white;
+             border-radius: 20px;
+             display: flex;
+             align-items: center;
+             padding: 0 12px;
+             max-height: 100px;
+             overflow: hidden;
+         }
+         
+         .message-input {
+             flex: 1;
+             border: none;
+             outline: none;
+             font-size: 14px;
+             padding: 8px 0;
+             resize: none;
+             font-family: inherit;
+             max-height: 84px;
+             line-height: 1.4;
+         }
+         
+         /* Botão de enviar - AGORA VISÍVEL */
+         .send-button {
+             background: transparent;
+             border: none;
+             cursor: pointer;
+             padding: 8px;
+             margin-left: 4px;
+         }
+         
+         .send-icon {
+             width: 24px;
+             height: 24px;
+             color: #075e54;
+         }
+         
+         /* Indicador de digitação */
+         .typing-indicator {
+             display: none;
+             font-size: 12px;
+             color: #888;
+             padding: 4px 12px;
+             font-style: italic;
+             align-self: flex-start;
+         }
+ </style>
+    <style>
+
+
+ 
+
+  .social-section {
+    padding: 80px 0;
+    background: linear-gradient(#eceef8, #ffffff);
+  }
+  
+  .social-carousel {
+    position: relative;
+    padding: 0 50px;
+  }
+  
+  .social-card {
+    padding: 0 15px;
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
+  }
+  
+  .social-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .social-link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    height: 450px;
+    width: 100%;
+  }
+  
+  .social-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .social-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(3, 61, 99, 0.925);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .social-link:hover .social-overlay {
+    opacity: 1;
+  }
+  
+  .social-content {
+    text-align: center;
+    max-width: 90%;
+  }
+  
+  .social-content p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .social-media-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+  
+  .social-media-icon i {
+    color: #333;
+    font-size: 14px;
+  }
+  
+  /* Estilos do Slick Carousel */
+  .social-carousel .slick-list {
+    padding: 10px 0;
+  }
+  
+  .social-carousel .slick-slide {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+  
+  .social-carousel .slick-prev,
+  .social-carousel .slick-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    z-index: 1;
+    background: rgba(255,255,255,0.8);
+    border-radius: 50%;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 0;
+    line-height: 0;
+  }
+  
+  .social-carousel .slick-prev {
+    left: 0;
+  }
+  
+  .social-carousel .slick-next {
+    right: 0;
+  }
+  
+  .social-carousel .slick-prev:before,
+  .social-carousel .slick-next:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 20px;
+    color: #00348c;
+    opacity: 1;
+  }
+  
+  .social-carousel .slick-prev:before {
+    content: '\f104';
+  }
+  
+  .social-carousel .slick-next:before {
+    content: '\f105';
+  }
+  
+  .social-carousel .slick-dots {
+    position: absolute;
+    bottom: -30px !important;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  
+  .social-carousel .slick-dots li {
+    margin: 0 5px;
+  }
+  
+  .social-carousel .slick-dots li button {
+    font-size: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #00348c !important;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    opacity: 0.3;
+  }
+  
+  .social-carousel .slick-dots li.slick-active button {
+    opacity: 1 !important;
+    background: #00348c;
+  }
+  
+  /* Layout temporário antes do JS carregar */
+  .social-carousel:not(.slick-initialized) {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .social-carousel:not(.slick-initialized)::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .social-carousel:not(.slick-initialized) > * {
+    scroll-snap-align: start;
+    flex: 0 0 auto;
+    width: calc(33.333% - 30px);
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 992px) {
+    .social-carousel:not(.slick-initialized) > * {
+      width: calc(50% - 30px);
+    }
+    
+    .social-carousel .slick-slide {
+      padding: 0 10px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .social-carousel {
+      padding: 0 30px;
+    }
+    
+    .social-carousel:not(.slick-initialized) > * {
+      width: calc(100% - 30px);
+    }
+    
+    .social-link {
+      height: 400px;
+    }
+    
+    .social-carousel .slick-slide {
+      padding: 0 5px;
+    }
+  }
+
+
+
+    /* Adicionando classes para animações */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    
+    .animate-on-scroll.animated {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    /* Animação específica para a imagem do celular */
+    .animate-phone {
+      opacity: 0;
+      transform: translateX(100px);
+      transition: all 1s ease-out;
+    }
+    
+    .animate-phone.animated {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    
+    /* Animação para cards */
+    .animate-card {
+      opacity: 0;
+      transform: scale(0.9);
+      transition: all 0.6s ease-out;
+    }
+    
+    .animate-card.animated {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    /* Efeito de atraso para cards */
+    .animate-card-delay-1 { transition-delay: 0.2s; }
+    .animate-card-delay-2 { transition-delay: 0.4s; }
+    .animate-card-delay-3 { transition-delay: 0.6s; }
+    .animate-card-delay-4 { transition-delay: 0.8s; }
+  
+      
+      .testimonial-carousel .testimonial-item {
+  margin: 15px;
+  transition: transform 0.3s ease;
+  opacity: 0.5;
+  transform: scale(0.85);
+}
+
+.testimonial-carousel .owl-item.center .testimonial-item {
+  opacity: 1;
+  transform: scale(1);
+  z-index: 2;
+}
+
+
+/* Ajustes para a seção hero em telas pequenas */
+@media (max-width: 768px) {
+    #home .bg-holder.hero-bg {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    #home .container {
+      order: 2;
+      margin-top: 20px;
+    }
+    
+    #home .row {
+      flex-direction: column;
+    }
+  }
+
+
+  /* Ajustes para o carrossel de feedbacks em telas pequenas */
+  @media (max-width: 768px) {
+    #feedbacks .row.align-items-center {
+      flex-direction: column;
+    }
+    
+    #feedbacks .col-lg-5 {
+      order: -1;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    
+    #feedbacks .col-lg-6 {
+      width: 100%;
+    }
+  }
+      .feature-card {
+  background-color: #6970dd;
+  color: #000000;
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+.text-light{
+  color: #ffffff !important;
+}
+
+.feature-card:hover {
+  background-color: #9e6fff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.backgroundcolorfim{
+  background-color: #ffffff;
+}
+
+.feature-card:hover h4,
+.feature-card:hover p {
+  color: #ffffff;
+}
+
+.feature-icon {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.bg-roxo {
+  background-color: #002db6 !important;
+}
+
+  .hover-scale-card {
+  background-color: #b183ff;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  min-height: 330px; /* altura mínima para padronizar */
+  margin-bottom: 24px; /* espaçamento entre os cards */
+}
+
+.hover-scale-card h4,
+.hover-scale-card p {
+  color: #ffffff;
+}
+/* Impede quebra de linha dos elementos lado a lado */
+#feedbacks .row.align-items-center {
+  flex-wrap: nowrap;
+}
+
+
+/* Ajusta altura dos quadrados dos feedbacks */
+#feedbacks .carousel .p-4 {
+  min-height: 280px;
+}
+
+/* Ajusta a altura do carrossel */
+#carouselFeedbacks {
+  min-height: 600px;
+}
+
+/* Força o carrossel a ocupar o espaço da coluna */
+#carouselFeedbacks .carousel-inner {
+  height: 100%;
+}
+
+       /* Estilos existentes... */
+
+        /* ========== NOVOS ESTILOS PARA RESPONSIVIDADE ========== */
+        
+        /* 1. Centralizar botão "Agendar Demonstração" no mobile */
+        @media (max-width: 768px) {
+            .navbar-collapse .btn-primary {
+                margin-left: 0 !important;
+                margin-top: 15px;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+            
+            .navbar-collapse {
+                text-align: center;
+            }
+            
+            .navbar-nav {
+                width: 100%;
+            }
+        }
+
+/* Alinha verticalmente os feedbacks para ficarem uniformes */
+#carouselFeedbacks .row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.hover-scale-card:hover {
+  transform: translateY(-5px);
+  background-color: #9e6fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+  .services-card-shadow {
+  background-color: #ffffff; /* fundo branco */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* sem sombra inicial */
+  margin-right: 30px !important; /* espaçamento entre os cards */
+}
+
+.services-card-shadow:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* sombra suave no hover */
+  transform: translateY(-9px); /* levanta levemente o card */
+}
+.color-white-inicio{
+  color: #ffffff;
+}
+.icone-roxa{
+  color:#9e6fff
+}
+.text-top{
+  text-align: start;
+}
+
+</style>
+
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/user.css" rel="stylesheet" />
+
+  </head>
+
+
+  <body>
+     <!-- Botão flutuante -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-button" id="whatsappButton">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+    </div>
+</div>
+
+<!-- Chat -->
+<div class="whatsapp-chat" id="whatsappChat">
+    <div class="chat-header">
+        Suporte Cuidar Mais
+        <span class="chat-status">Online</span>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <div class="message received">Olá! Somos o suporte da Cuidar Mais. Como podemos te ajudar hoje?</div>
+        <div class="typing-indicator" id="typingIndicator">Suporte está digitando...</div>
+    </div>
+    <div class="chat-input-area">
+        <div class="input-container">
+            <textarea class="message-input" id="messageInput" placeholder="Digite sua mensagem..." rows="1"></textarea>
+            <button class="send-button" id="sendButton">
+                <svg class="send-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top pt-3 " data-navbar-on-scroll="light">
+        <div class="container-fluid px-5">
+          <!-- Logo alinhada à esquerda -->
+          <a class="navbar-brand me-auto" href="index.html">
+            <img src="assets/img/illustration/logo-cuidar.PNG" height="50" alt="logo" />
+          </a>
+    
+          <!-- Botão de menu para mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Itens centrais e botão na direita -->
+          <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto d-flex gap-4 align-items-center">
+              
+              <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="quem-somos.html">Quem Somos</a></li>
+              
+              <!-- Dropdown Nossos Serviços melhorado -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #ffffff; font-size: 20px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Nossos Serviços
+                </a>
+                <ul class="dropdown-menu p-3" aria-labelledby="navbarDropdown" style="width: 280px; border-radius: 15px;">
+                  <li class="mb-2">
+                    <a class="dropdown-item d-flex align-items-center py-2" href="consultas.html" style="font-size: 18px;">
+                      <i class="fas fa-calendar-check me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                      Consultas
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="dropdown-item d-flex align-items-center py-2" href="exames.html" style="font-size: 18px;">
+                      <i class="fas fa-flask me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                      Exames
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center py-2" href="cirurgias.html" style="font-size: 18px;">
+                      <i class="fas fa-procedures me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                      Cirurgias
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="parceiros.html">Quero ser Parceiro</a></li>
+            </ul>
+            <!-- Botão na extrema direita -->
+            <button id="meuBotaoModal" class="btn" style="background-color: #18C387; color: white;">
+              Fazer Agendamento
+            </button>
+<!-- Estrutura do Modal de Escolha -->
+<div id="modalEscolha" class="modal-custom">
+  <div class="modal-custom-content">
+    <div class="modal-custom-header">
+      <div class="logo-container">
+        <img src="assets/img/illustration/logo-cuidarmais1.PNG" alt="Ajudda Card Logo" class="logo">
+      </div>
+      <span class="modal-custom-close">&times;</span>
+    </div>
+    <div class="modal-custom-body">
+      <h3 style="color: var(--azul-primario); margin-bottom: 20px; text-align: center;">Como deseja fazer seu agendamento?</h3>
+      <div class="escolha-container">
+        <button class="btn-escolha" id="btnWhatsApp">
+          <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 10px;"></i>
+          WhatsApp
+        </button>
+        <button class="btn-escolha" id="btnPortal">
+          <i class="fas fa-laptop" style="font-size: 24px; margin-right: 10px;"></i>
+          Portal do Paciente
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Estrutura do Modal do Formulário WhatsApp (mantido igual) -->
+<div id="meuModal" class="modal-custom">
+  <div class="modal-custom-content">
+    <div class="modal-custom-header">
+      <div class="logo-container">
+        <img src="assets/img/illustration/logo-cuidarmais1.PNG" alt="Ajudda Card Logo" class="logo">
+      </div>
+      <span class="modal-custom-close">&times;</span>
+    </div>
+    <div class="modal-custom-body">
+      <form id="formDemonstracao">
+        <div class="form-group">
+          <label for="nomeRepresentante">Nome do Representante</label>
+          <input type="text" class="form-control" id="nomeRepresentante" placeholder="Seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" class="form-control" id="empresa" placeholder="Nome da sua empresa" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+        </div>
+      </form>
+    </div>
+    <div class="modal-custom-footer">
+      <button class="btn btn-secondary" id="btnCancelar">Cancelar</button>
+      <button class="btn btn-primary" id="btnEnviar">Enviar</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Adicionei estilos para os novos elementos */
+  .escolha-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-escolha {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    background-color: var(--azul-primario);
+    color: var(--branco);
+  }
+  
+  .btn-escolha:hover {
+    background-color: var(--azul-primario);
+    transform: translateY(-2px);
+  }
+  
+  /* Mantenha todos os outros estilos existentes */
+  /* Cores personalizadas no tema roxo */
+  :root {
+    --azul-primario: #002db6;
+    --azul-claro:#456eeadd;
+    --roxo-primario: #6a0dad;
+    --roxo-secundario: #8a2be2;
+    --roxo-claro: #e6e6fa;
+    --roxo-escuro: #4b0082;
+    --cinza-claro: #f8f9fa;
+    --cinza-medio: #e9ecef;
+    --branco: #ffffff;
+  }
+  
+  /* Estilos personalizados para o modal */
+  .modal-custom {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-custom-content {
+    background-color: var(--branco);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s;
+    overflow: hidden;
+  }
+  
+  @keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  
+  .modal-custom-header {
+    padding: 20px 25px;
+    background-color: var(--azul-primario);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .logo {
+    height: 100%;
+    width: auto;
+    max-width: 600px;
+    object-fit: contain;
+  }
+  
+  .modal-custom-close {
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--branco);
+    transition: color 0.3s;
+  }
+  
+  .modal-custom-close:hover {
+    color: var(--azul-claro);
+  }
+  
+  .modal-custom-body {
+    padding: 30px;
+    background-color: var(--cinza-claro);
+  }
+  
+  .modal-custom-footer {
+    padding: 20px 25px;
+    background-color: var(--cinza-medio);
+    text-align: right;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--azul-primario);
+    font-size: 16px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--cinza-medio);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    font-size: 16px;
+    height: 50px;
+  }
+  
+  .form-control:focus {
+    border-color: var(--azul-primario);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.2);
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    height: 50px;
+  }
+  
+  .btn-primary {
+    background-color: var(--azul-primario);
+    color: var(--branco);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--azul-primario);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: var(--cinza-medio);
+    color: var(--roxo-escuro);
+    margin-right: 15px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #d1d7dc;
+  }
+  </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Elementos dos modais
+    const modalEscolha = document.getElementById('modalEscolha');
+    const modalForm = document.getElementById('meuModal');
+    const btnModal = document.getElementById('meuBotaoModal');
+    const btnWhatsApp = document.getElementById('btnWhatsApp');
+    const btnPortal = document.getElementById('btnPortal');
+    
+    // Elementos do modal de formulário (mantidos do código original)
+    const span = document.querySelectorAll('.modal-custom-close');
+    const btnCancelar = document.getElementById('btnCancelar');
+    const btnEnviar = document.getElementById('btnEnviar');
+    
+    // Função para abrir qualquer modal
+    function abrirModal(modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    // Função para fechar qualquer modal
+    function fecharModal(modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Abre o modal de escolha ao clicar no botão principal
+    btnModal.onclick = function() {
+      abrirModal(modalEscolha);
+    }
+    
+    // Fecha os modais ao clicar no X
+    span.forEach(function(element) {
+      element.onclick = function() {
+        const modal = this.closest('.modal-custom');
+        fecharModal(modal);
+      };
+    });
+    
+    // Fecha os modais ao clicar fora do conteúdo
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal-custom')) {
+        fecharModal(event.target);
+      }
+    }
+    
+    // Fecha os modais ao pressionar ESC
+    document.onkeydown = function(event) {
+      if (event.key === 'Escape') {
+        const modals = document.querySelectorAll('.modal-custom');
+        modals.forEach(function(modal) {
+          if (modal.style.display === 'flex') {
+            fecharModal(modal);
+          }
+        });
+      }
+    }
+    
+    // Botão WhatsApp no modal de escolha
+    btnWhatsApp.onclick = function() {
+      fecharModal(modalEscolha);
+      abrirModal(modalForm);
+    }
+    
+    // Botão Portal no modal de escolha
+    btnPortal.onclick = function() {
+      fecharModal(modalEscolha);
+      window.open('https://clinicas.gees.com.br/cuidarmais/portal/portalpaciente', '_blank');
+    }
+    
+    // Fecha o modal de formulário ao clicar no botão Cancelar
+    btnCancelar.onclick = function() {
+      fecharModal(modalForm);
+    }
+    
+    // Envia os dados para o WhatsApp (mantido do código original)
+    btnEnviar.onclick = function() {
+      const nome = document.getElementById('nomeRepresentante').value;
+      const empresa = document.getElementById('empresa').value;
+      const email = document.getElementById('email').value;
+      
+      if (!nome || !empresa || !email) {
+        alert('Por favor, preencha todos os campos!');
+        return;
+      }
+      
+      const mensagem = `Olá, gostaria de agendar uma demonstração da Cuidar mais:\n\n` +
+                      `*Nome do Representante:* ${nome}\n` +
+                      `*Empresa:* ${empresa}\n` +
+                      `*E-mail:* ${email}\n\n` +
+                      `Por favor, informe os horários disponíveis.`;
+      
+      const mensagemCodificada = encodeURIComponent(mensagem);
+      const urlWhatsApp = `https://wa.me/5585998160208?text=${mensagemCodificada}`;
+      
+      window.open(urlWhatsApp, '_blank');
+      fecharModal(modalForm);
+      document.getElementById('formDemonstracao').reset();
+    }
+  });
+  
+  // Adicionando Font Awesome para os ícones
+  document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">');
+  </script>
+          </div>
+        </div>
+      </nav>
+   
+    
+    
+      <style>
+        .navbar {
+            background-color: #002db6 !important;
+          transition: background-color 0.4s ease;
+        }
+    
+        .navbar-scrolled {
+          background-color: #002db6 !important;
+          transition: background-color 1.0s ease;
+        }
+              /* Estilos específicos para mobile */
+              @media (max-width: 991.98px) {
+            .mobile-hero {
+                background: linear-gradient(#4e20b0, #cfa3f4);
+                padding: 100px 20px 50px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .mobile-hero-image {
+                max-height: 300px;
+                margin: 0 auto 30px;
+                display: block;
+            }
+            
+            .mobile-hero h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: white;
+                margin-bottom: 15px;
+                line-height: 1.2;
+            }
+            
+            .mobile-hero p {
+                font-size: 1.1rem;
+                color: white;
+                margin-bottom: 30px;
+            }
+            
+            .mobile-hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .mobile-hero-buttons .btn-link {
+                color: white;
+                text-decoration: underline;
+                font-size: 1rem;
+            }
+            
+            .mobile-hero-buttons .btn-primary {
+                background-color: #9e6fff;
+                border-color: #9e6fff;
+                font-size: 1rem;
+                padding: 8px 20px;
+            }
+            /* Ajustes para a seção mobile */
+.mobile-hero {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 100px); /* Considera a altura da navbar */
+}
+
+/* Aumenta o celular e ajusta posicionamento */
+.mobile-hero img {
+  transform: scale(1.1);
+  transform-origin: left center;
+  margin-left: -15px;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 576px) {
+  .mobile-hero {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  
+  .mobile-hero img {
+    max-height: 320px;
+    transform: scale(1);
+    margin-left: 0;
+  }
+  
+  .mobile-hero h1 {
+    font-size: 1.6rem !important;
+  }
+  
+  .mobile-hero p {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Ajuste para quando o texto fica muito próximo */
+@media (max-width: 400px) {
+  .mobile-hero .row.align-items-center {
+    flex-direction: column;
+    text-align: center !important;
+  }
+  
+  .mobile-hero .col-6 {
+    width: 100%;
+  }
+  
+  .mobile-hero img {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 320px;
+  }
+  
+  .mobile-hero .text-start {
+    text-align: center !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+            /* Esconde a seção desktop em mobile */
+@media (max-width: 991.98px) {
+    #home.desktop-only {
+        display: none !important;
+    }
+}
+
+/* Mantém o que já tem para esconder mobile em desktop */
+@media (min-width: 992px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+        }
+        
+        /* Esconde a seção mobile em desktop */
+        @media (min-width: 992px) {
+            .mobile-only {
+                display: none !important;
+            }
+        }
+      </style>
+    
+      <script>
+        window.addEventListener('scroll', () => {
+          const navbar = document.querySelector('.navbar');
+          if (window.scrollY > 50) {
+            navbar.classList.add('navbar-scrolled');
+          } else {
+            navbar.classList.remove('navbar-scrolled');
+          }
+        });
+      </script>
+    </main>
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuidar Mais - Saúde Acessível</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Bootstrap Icons (para o ícone de check-up) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <style>
+        /* Estilos globais */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        /* Estilos dos Cards de Serviços */
+        .service-card {
+            flex: 1;
+            min-width: 150px;
+            max-width: 225px;
+            background-color: #e2dffa;
+            border-radius: 8px;
+            padding: 16px;
+            cursor: pointer;
+            border: 1px solid #f2f2f0;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        /* Estilos do Slideshow de Estatísticas */
+        .stats-slide {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            transition: opacity 0.5s ease;
+        }
+        
+        /* Estilos do Banner Slider */
+        .banner-slide {
+            width: 25%;
+            position: relative;
+            display: none;
+        }
+        
+        .banner-slide.active {
+            display: block;
+        }
+        
+        .banner-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        /* Estilos dos botões */
+        .btn-portal {
+            background-color: #6a0dad;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-portal:hover {
+            background-color: #5a0c9d;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        /* Estilos dos cards de benefícios */
+        .feature-card {
+            height: 100%;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            border-radius: 10px;
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+  <style>
+    /* Estilos para os cards clicáveis */
+    .service-card-link {
+        text-decoration: none;
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    
+    .service-card-link:hover {
+        transform: translateY(-5px);
+    }
+    
+    .service-card {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        width: 250px;
+        height: 160px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+    
+    .service-card:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    }
+</style>
+<!-- Seção de Cards de Serviços -->
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slider = document.querySelector('[style*="display: flex; transition: transform"]');
+            const slides = document.querySelectorAll('[style*="min-width: 100%"]');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const dots = document.querySelectorAll('.dot');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+            
+            // Atualiza a posição do slider
+            function updateSlider() {
+                slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                
+                // Atualiza os dots
+                dots.forEach((dot, index) => {
+                    dot.style.background = index === currentIndex ? '#fff' : 'rgba(255,255,255,0.5)';
+                });
+            }
+            
+            // Avança para o próximo slide
+            function nextSlide() {
+                currentIndex = (currentIndex + 1) % slideCount;
+                updateSlider();
+            }
+            
+            // Volta para o slide anterior
+            function prevSlide() {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                updateSlider();
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            // Navegação por dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    updateSlider();
+                });
+            });
+            
+            // Auto-play
+            let autoplay = setInterval(nextSlide, 5000);
+            
+            // Pausa ao interagir
+            slider.addEventListener('mouseenter', () => clearInterval(autoplay));
+            slider.addEventListener('mouseleave', () => {
+                autoplay = setInterval(nextSlide, 5000);
+            });
+            
+            // Inicializa o slider
+            updateSlider();
+        });
+    </script>
+ 
+ 
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Slideshow de Estatísticas
+            const statSlides = document.querySelectorAll('.stats-slide');
+            let currentStatSlide = 0;
+            
+            function showStatSlide(index) {
+                statSlides.forEach(slide => slide.style.opacity = '0');
+                statSlides[index].style.opacity = '1';
+            }
+            
+            function nextStatSlide() {
+                currentStatSlide = (currentStatSlide + 1) % statSlides.length;
+                showStatSlide(currentStatSlide);
+            }
+            
+            showStatSlide(currentStatSlide);
+            setInterval(nextStatSlide, 2000);
+            
+            // Slideshow de Banners
+            const bannerContainer = document.querySelector('.banner-slider > div');
+            const bannerSlides = document.querySelectorAll('.banner-slide');
+            const prevBtn = document.querySelector('.prev-btn');
+            const nextBtn = document.querySelector('.next-btn');
+            const dots = document.querySelectorAll('.dot');
+            
+            let currentBannerSlide = 0;
+            const totalBannerSlides = bannerSlides.length;
+            
+            function showBannerSlide(index) {
+                // Esconde todos os slides
+                bannerSlides.forEach(slide => {
+                    slide.classList.remove('active');
+                });
+                
+                // Mostra o slide atual
+                bannerSlides[index].classList.add('active');
+                
+                // Atualiza a posição do container
+                bannerContainer.style.transform = `translateX(-${index * 25}%)`;
+                
+                // Atualiza dots
+                dots.forEach((dot, i) => {
+                    dot.style.background = i === index ? '#fff' : 'rgba(255,255,255,0.5)';
+                });
+            }
+            
+            function nextBannerSlide() {
+                currentBannerSlide = (currentBannerSlide + 1) % totalBannerSlides;
+                showBannerSlide(currentBannerSlide);
+            }
+            
+            function prevBannerSlide() {
+                currentBannerSlide = (currentBannerSlide - 1 + totalBannerSlides) % totalBannerSlides;
+                showBannerSlide(currentBannerSlide);
+            }
+            
+            // Navegação
+            nextBtn.addEventListener('click', nextBannerSlide);
+            prevBtn.addEventListener('click', prevBannerSlide);
+            
+            // Navegação por dots
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentBannerSlide = index;
+                    showBannerSlide(currentBannerSlide);
+                });
+            });
+            
+            // Auto-play
+            let autoplay = setInterval(nextBannerSlide, 5000);
+            
+            // Pausa auto-play quando interagir
+            bannerContainer.addEventListener('mouseenter', () => clearInterval(autoplay));
+            bannerContainer.addEventListener('mouseleave', () => {
+                autoplay = setInterval(nextBannerSlide, 5000);
+            });
+            
+            // Inicializa o slider
+            showBannerSlide(currentBannerSlide);
+        });
+    </script>
+
+
+
+
+
+
+
+
+     
+  
+
+<style>
+  /* Estilos adicionais para as abas */
+  .nav-tabs .nav-link {
+      color: #6a0dad;
+      font-weight: 500;
+      border: none;
+      padding: 0.5rem 1.5rem;
+  }
+  
+  .nav-tabs .nav-link.active {
+      color: #6a0dad;
+      background-color: transparent;
+      border-bottom: 3px solid #6a0dad;
+  }
+  
+  .nav-tabs .nav-link:not(.active):hover {
+      color: #9e6fff;
+  }
+  
+  /* Melhorias nos cards de QR Code */
+  .card {
+      border-radius: 12px;
+      transition: transform 0.2s;
+  }
+  
+  .card:hover {
+      transform: translateY(-5px);
+  }
+</style>
+
+<!-- Script para a modal -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+      // Você pode adicionar os links dinamicamente aqui quando tiver os URLs
+      // document.getElementById('btnIos').href = "SEU_LINK_IOS_AQUI";
+      // document.getElementById('btnAndroid').href = "SEU_LINK_ANDROID_AQUI";
+      
+      // Ou pode adicionar diretamente no HTML quando souber os links
+  });
+</script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <style>
+        /* Estilo inicial para a imagem - completamente escondida à esquerda */
+        .card-animation {
+            opacity: 0;
+            transform: translateX(-100%);
+            will-change: transform, opacity;
+            clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%); /* Corta a imagem inicialmente */
+        }
+    </style>
+    
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          // Verifica se a seção está visível no viewport
+          function isElementInViewport(el) {
+              const rect = el.getBoundingClientRect();
+              return (
+                  rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.75 &&
+                  rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) * 0.25
+              );
+          }
+          
+          // Variáveis para controlar as animações
+          let cardAnimation;
+          let floatAnimation;
+          let isVisible = false;
+          
+          // Elementos da seção
+          const section = document.getElementById('ajudda-baixar');
+          const card = document.querySelector('.card-animation');
+          const texts = document.querySelectorAll('#ajudda-baixar h1, #ajudda-baixar p, #ajudda-baixar li');
+          
+          // Prepara os elementos para animação (configuração inicial)
+          function setupElements() {
+              if (card) {
+                  gsap.set(card, {
+                      opacity: 0,
+                      x: -50,
+                      clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)"
+                  });
+              }
+              
+              gsap.set(texts, {
+                  opacity: 0,
+                  y: 20
+              });
+          }
+          
+          // Animação de entrada
+          function animateIn() {
+              // Limpa animações existentes
+              if (cardAnimation) cardAnimation.kill();
+              if (floatAnimation) floatAnimation.kill();
+              
+              // Animação do card
+              cardAnimation = gsap.to(card, {
+                  opacity: 1,
+                  x: 0,
+                  clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                  duration: 1.5,
+                  ease: "power2.out"
+              });
+              
+              // Animação dos textos (entrada escalonada)
+              gsap.to(texts, {
+                  opacity: 1,
+                  y: 0,
+                  duration: 1,
+                  stagger: 0.15,
+                  ease: "power2.out"
+              });
+              
+              // Animação flutuante contínua (após a entrada)
+              floatAnimation = gsap.to(card, {
+                  y: -5,
+                  duration: 4,
+                  repeat: -1,
+                  yoyo: true,
+                  ease: "sine.inOut",
+                  delay: 1
+              });
+              
+              isVisible = true;
+          }
+          
+          // Animação de saída
+          function animateOut() {
+              // Limpa animações existentes
+              if (cardAnimation) cardAnimation.kill();
+              if (floatAnimation) floatAnimation.kill();
+              
+              // Animação de saída do card
+              cardAnimation = gsap.to(card, {
+                  opacity: 0,
+                  x: -50,
+                  clipPath: "polygon(0 0, 0 0, 0 100%, 0 100%)",
+                  duration: 0.7,
+                  ease: "power2.in"
+              });
+              
+              // Animação de saída dos textos
+              gsap.to(texts, {
+                  opacity: 0,
+                  y: 20,
+                  duration: 0.5,
+                  stagger: 0.1,
+                  ease: "power2.in"
+              });
+              
+              isVisible = false;
+          }
+          
+          // Verifica o estado da seção
+          function checkVisibility() {
+              const currentlyVisible = isElementInViewport(section);
+              
+              if (currentlyVisible && !isVisible) {
+                  animateIn();
+              } else if (!currentlyVisible && isVisible) {
+                  animateOut();
+              }
+          }
+          
+          // Configuração inicial
+          setupElements();
+          
+          // Verifica ao carregar, scrollar e redimensionar
+          window.addEventListener('load', checkVisibility);
+          window.addEventListener('scroll', checkVisibility);
+          window.addEventListener('resize', checkVisibility);
+          
+          // Verificação inicial
+          checkVisibility();
+      });
+  </script>
+
+<!-- Testimonial Section Start -->
+<section class="testimonial-section py-5 bg-light mt-4" id="testimonial" style="background: linear-gradient(#eceef8, #ffffff);margin-top: 8vh !important;">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="display-5" style="color: #00348c;">O que dizem nossos pacientes!</h2>
+      
+    </div>
+
+    <div class="owl-carousel owl-theme testimonial-carousel">
+      <!-- Depoimento 1 -->
+      <div class="item text-align p-4 bg-white rounded shadow-sm">
+        <h4 class="mb-0">Ana Paula M.</h4>
+        <small class="text-primary fst-italic">Fortaleza/CE</small>
+
+        <p class="text-muted" >“Consegui marcar pelo site sem dificuldade e fui atendida no horário. Atendimento excelente, desde a recepção<br> até a médica.”</p>
+        
+      </div>
+
+      <!-- Depoimento 2 -->
+      <div class="item text-align p-4 bg-white rounded shadow-sm">
+        <h4 class="mb-0"> Rafael Souza</h4>
+        <small class="text-primary fst-italic">Fortaleza/CE</small>       
+         <p class="text-muted">“Fui muito bem atendido. A médica super atenciosa e explicou tudo com calma. Clínica limpa e organizada. Voltarei sempre.”
+        </p>
+        
+      </div>
+
+      <!-- Depoimento 3 -->
+      <div class="item text-align p-4 bg-white rounded shadow-sm">
+        <h4 class="mb-0">Juliana Barros</h4>
+        <small class="text-primary fst-italic">Fortaleza/CE</small>   
+           <p class="text-muted">“Ambiente acolhedor, profissionais simpáticos e eficientes. Só achei a recepção um pouco cheia, mas fui atendida rápido mesmo assim.”</p>
+       
+      </div>
+      <!-- Depoimento 4 -->
+      <div class="item text-align p-4 bg-white rounded shadow-sm">
+        <h4 class="mb-0">Carlos Henrique L.</h4>
+        <small class="text-primary fst-italic">Fortaleza/CE</small>        
+            <p class="text-muted">“Fiz meu check-up completo na clínica. Tudo funcionou direitinho, desde o agendamento até os exames. Muito satisfeito!”</p>
+        
+      </div>
+      <!-- Depoimento 5 -->
+      <div class="item text-align p-4 bg-white rounded shadow-sm">
+        <h4 class="mb-0">Mariana Ferreira</h4>
+        <small class="text-primary fst-italic">Fortaleza/CE</small>  
+           <p class="text-muted">“Atendimento humanizado de verdade. A equipe escutou minhas queixas com paciência e cuidado. Indico de olhos fechados.”</p>
+       
+      </div>
+     
+
+      <!-- (Opcional) Mais depoimentos -->
+    </div>
+  </div>
+</section>
+<!-- Testimonial Section End -->
+
+
+
+
+
+
+
+  
+  <!-- Seção de Redes Sociais -->
+  <section class="social-section py-5">
+    <div class="container">
+      <!-- Título -->
+      <div class="row mb-5">
+        <div class="col-12 text-center">
+          <h2 class="display-6 fw-bold" style="color: #00348c;">Confira nossas redes sociais:</h2>
+        </div>
+      </div>
+      
+      <!-- Carrossel -->
+      <div class="row">
+        <div class="col-12">
+          <div class="social-carousel">
+            <!-- Item 1 -->
+            <div class="social-card">
+              <a href="https://www.instagram.com/p/DHHheUby-y6/?igsh=eXhwMTY4a2Uwc2Vp" target="_blank" class="social-link">
+                <div class="social-media-icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <img src="assets/img/illustration/insta1.PNG" alt="Post sobre doação de sangue" class="social-image" >
+                <div class="social-overlay">
+                  <div class="social-content">
+                    <p>Cuidar está no nosso sangue! Você já parou para pensar que um simples gesto pode transformar vidas? A campanha deste ano incentiva a doação de sangue como ato de esperança.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+            <!-- Item 2 -->
+            <div class="social-card">
+              <a href="https://www.instagram.com/p/DFJJs0zS6Le/?igsh=emwxMjN5N2ZnYWt4" target="_blank" class="social-link">
+                <div class="social-media-icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <img src="assets/img/illustration/insta2.PNG" alt="Post sobre hepatologia" class="social-image">
+                <div class="social-overlay">
+                  <div class="social-content">
+                    <p>O hepatologista é o profissional especializado na prevenção, diagnóstico e tratamento das doenças relacionadas ao fígado, vesícula biliar e vias biliares.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+            <!-- Item 3 -->
+            <div class="social-card">
+              <a href="https://www.instagram.com/p/DIe1cWQyVVe/?igsh=MXNxZjd3NGpjN3BicQ==" target="_blank" class="social-link">
+                <div class="social-media-icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <img src="assets/img/illustration/insta3.PNG" alt="Post sobre junho laranja" class="social-image">
+                <div class="social-overlay">
+                  <div class="social-content">
+                    <p>Unidades adotaram iluminação laranja para alertar sobre anemia e leucemia. A anemia é um grave problema de saúde pública e a leucemia é um câncer que ocorre no sangue.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+            <!-- Item 4 -->
+            <div class="social-card">
+              <a href="https://www.instagram.com/p/DI2Hsify2s0/?igsh=MTF0enRpMmFyaW02eg==" target="_blank" class="social-link">
+                <div class="social-media-icon">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <img src="assets/img/illustration/insta4.PNG" alt="Post sobre vício em jogos" class="social-image">
+                <div class="social-overlay">
+                  <div class="social-content">
+                    <p>O Brasil tem, em média, 2 milhões de pessoas viciadas em jogos, aponta estudo da USP. A facilidade da tecnologia tem feito muitas pessoas recorrerem a jogos online.</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            
+ 
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+ 
+
+
+
+
+  
+  
+  
+  
+<!-- <section> close ============================-->
+<!-- ============================================-->
+
+      <!-- <section> close ============================-->
+      <!-- ============================================-->
+
+
+      <section class="py-0 footer">
+        <div class="container">
+          <div class="row py-7 align-items-center"> <!-- Adicionei align-items-center aqui -->
+            <div class="col-12 col-sm-12 col-lg-6 mb-4 order-0 order-sm-0 d-flex flex-column"> <!-- Adicionei d-flex flex-column -->
+              <div class="mb-4"> <!-- Container adicional para a logo -->
+                <a class="text-decoration-none" href="index.html">
+                  <img src="assets/img/illustration/logo-cuidar.PNG" height="500" width="200" alt="logo" class="img-fluid" /> <!-- Adicionei img-fluid -->
+                </a>
+              </div>
+              <div> <!-- Container para as informações -->
+                <p class="text-light mb-2"><i class="bi bi-phone me-2"></i> 85 99816-0208</p> <!-- Adicionei ícone -->
+                <p class="text-light mb-2"><i class="bi bi-telephone me-2"></i> 3254-4440</p> <!-- Adicionei ícone -->
+                <p class="text-light mb-0"><i class="bi bi-envelope me-2"></i> cuidarmais@gmail.com</p> <!-- Adicionei ícone -->
+              </div>
+            </div>
+            
+            <!-- Restante do seu código permanece igual -->
+            <div class="col-3 col-sm-4 col-lg-2 mb-3 order-2 order-sm-1">
+              <h4 class="lh-lg fw-bold text-light font-sans-serif">Sobre a Cuidar Mais</h4>
+              <ul class="list-unstyled text-light mb-md-4">
+                <li class="lh-lg"><a class="footer-link text-light" href="quem-somos.html">Quem Somos</a></li>
+                <li class="lh-lg"><a class="footer-link text-light" href="clientes.html">Clientes</a></li>
+                <li class="lh-lg"><a class="footer-link text-light" href="parceiros.html">Quero virar parceiro</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
+              <h4 class="lh-lg fw-bold text-light font-sans-serif">Serviços</h4>
+              <ul class="list-unstyled text-light mb-md-4 mb-lg-0">
+                <li class="lh-lg"><a class="footer-link text-light" href="consultas.html">Consultas</a></li>
+                <li class="lh-lg"><a class="footer-link text-light" href="exames.html">Exames</a></li>
+                <li class="lh-lg"><a class="footer-link text-light" href="cirurgias.html">Cirurgias</a></li>
+              </ul>
+            </div>
+            
+            <div class="col-6 col-sm-4 col-lg-2 mb-3 order-3 order-sm-2">
+              <h4 class="lh-lg fw-bold text-light font-sans-serif">Ajuda</h4>
+              <ul class="list-unstyled text-light mb-md-4 mb-lg-0">
+                <li class="lh-lg"><a class="footer-link text-light" href="faq.html">Perguntas Frequentes</a></li>
+                <li class="lh-lg"><a class="footer-link text-light" href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20acessar%20o%20suporte%20pelo%20whatssap.%20Podem%20me%20ajudar?">Suporte via WhatsApp</a></li>
+                <li class="lh-lg"><a class="footer-link text-light" href="politicas-privacidade.html">Política de Privacidade</a></li>
+                <li class="lh-lg"><a class="footer-link text-light" href="termosuso.html">Termos de Uso</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Rodapé inferior -->
+        <div class="container">
+          <div class="row justify-content-md-between justify-content-evenly py-3">
+            <div class="col-12 col-sm-8 col-md-6 col-lg-auto text-center text-md-start">
+              <p class="fs--1 my-2 fw-bold text-200">&copy; 2025 Cuidar Mais</p>
+            </div>
+            <div class="col-12 col-sm-8 col-md-6">
+              <p class="fs--1 my-2 text-center text-md-end text-200">
+                &nbsp;
+                Feito por&nbsp;<a class="fw-bold text-info text-200" href="https://www.linkedin.com/in/trajanoluan" target="_blank">LuanDev</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+     
+        <!-- <section> close ============================-->
+        <!-- ============================================-->
+
+
+      </section>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+   
+    
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+ <!-- jQuery PRIMEIRO (deve ser o primeiro script JS) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+ <!-- Scripts (deve ser colocado APÓS o jQuery e ANTES do fechamento do </body>) -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ 
+<!-- Depois os outros vendors (em ordem lógica) -->
+<script src="vendors/popper/popper.min.js"></script>
+<script src="vendors/bootstrap/bootstrap.min.js"></script>
+<script src="vendors/anchorjs/anchor.min.js"></script>
+<script src="vendors/is/is.min.js"></script>
+<script src="vendors/fontawesome/all.min.js"></script>
+<script src="vendors/lodash/lodash.min.js"></script>
+<script src="vendors/imagesloaded/imagesloaded.pkgd.js"></script>
+<script src="vendors/gsap/customEase.js"></script>
+<script src="vendors/gsap/scrollToPlugin.js"></script>
+
+<!-- Polyfill (se necessário) -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=window.scroll"></script>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.0/gsap.min.js"></script>
+
+<!-- Owl Carousel (deve vir depois do jQuery) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<!-- Seu theme.js -->
+<script src="assets/js/theme.js"></script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Configura o ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+    
+    // Função para observar elementos e adicionar classe quando visíveis
+    function setupScrollAnimations() {
+      const animateElements = document.querySelectorAll('.animate-on-scroll, .animate-phone, .animate-card');
+      
+      animateElements.forEach(el => {
+        ScrollTrigger.create({
+          trigger: el,
+          start: "top 80%",
+          onEnter: () => el.classList.add('animated'),
+          onLeaveBack: () => el.classList.remove('animated'),
+          onEnterBack: () => el.classList.add('animated')
+        });
+      });
+    }
+    
+    // Configura animação específica para a imagem do celular
+    function setupPhoneAnimation() {
+      const phone = document.querySelector('.animate-phone');
+      if (phone) {
+        ScrollTrigger.create({
+          trigger: phone,
+          start: "top 80%",
+          onEnter: () => phone.classList.add('animated'),
+          onLeaveBack: () => {
+            phone.classList.remove('animated');
+            // Reseta a posição para poder animar novamente
+            setTimeout(() => {
+              phone.style.transform = 'translateX(100px)';
+              phone.style.opacity = '0';
+            }, 100);
+          },
+          onEnterBack: () => phone.classList.add('animated')
+        });
+      }
+    }
+    
+    // Inicializa todas as animações
+    setupScrollAnimations();
+    setupPhoneAnimation();
+    
+    // Configura animações GSAP mais complexas
+    gsap.utils.toArray(".feature-card").forEach((card, i) => {
+      gsap.from(card, {
+        scrollTrigger: {
+          trigger: card,
+          start: "top 80%",
+          toggleActions: "play none none none"
+        },
+        y: 50,
+        opacity: 0,
+        duration: 0.8,
+        delay: i * 0.1,
+        ease: "power2.out"
+      });
+    });
+    
+    // Animação para o carrossel de depoimentos
+    gsap.utils.toArray(".testimonial-item").forEach((item, i) => {
+      gsap.from(item, {
+        scrollTrigger: {
+          trigger: item,
+          start: "top 80%",
+          toggleActions: "play none none none"
+        },
+        x: i % 2 === 0 ? -50 : 50,
+        opacity: 0,
+        duration: 0.8,
+        delay: i * 0.1,
+        ease: "back.out(1.7)"
+      });
+    });
+  });
+</script>
+<!-- Inicialização dos plugins (por último) -->
+<script>
+  $(document).ready(function(){
+    // Inicialização do Owl Carousel
+    $(".testimonial-carousel").owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      dots: true,
+      autoplay: true,
+      autoplayTimeout: 4000,
+      smartSpeed: 800,
+      responsive: {
+        0: { items: 1 },
+        768: { items: 2 },
+        992: { items: 3 }
+      }
+    });
+    
+    // Outras inicializações de plugins podem vir aqui
+  });
+</script>
+
+<!-- Adicione estas linhas antes do fechamento do </body> -->
+
+
+<script>
+  $(document).ready(function(){
+    // Verifica se o Slick Carousel está carregado
+    if(typeof $.fn.slick === 'function') {
+      // Inicializa o carrossel com configurações robustas
+      $('.social-carousel').slick({
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnHover: true,
+        cssEase: 'ease-in-out',
+        prevArrow: '<button type="button" class="slick-prev"><i class="fas fa-chevron-left"></i></button>',
+        nextArrow: '<button type="button" class="slick-next"><i class="fas fa-chevron-right"></i></button>',
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: true,
+              dots: true
+            }
+          }
+        ]
+      }).on('init', function(event, slick){
+        // Callback após inicialização
+        console.log('Carrossel inicializado com sucesso');
+        
+        // Corrige possíveis problemas de layout
+        $(this).find('.social-card').css({
+          'width': '',
+          'margin-right': '',
+          'margin-left': ''
+        });
+      });
+      
+      // Tratamento de erro caso o Slick não inicialize
+      setTimeout(function(){
+        if(!$('.social-carousel').hasClass('slick-initialized')){
+          console.error('Falha ao inicializar o carrossel');
+          // Fallback: mostra os cards em grid
+          $('.social-carousel').css('display', 'flex');
+          $('.social-carousel').css('flex-wrap', 'wrap');
+          $('.social-card').css('width', 'calc(33.33% - 30px)');
+        }
+      }, 1000);
+    } else {
+      console.error('Slick Carousel não está disponível');
+      // Fallback alternativo
+      $('.social-carousel').css('overflow-x', 'auto');
+      $('.social-carousel').css('display', 'flex');
+      $('.social-card').css('min-width', '300px');
+    }
+  });
+  </script>
+  <script>
+    // Elementos
+    const whatsappButton = document.getElementById('whatsappButton');
+    const whatsappChat = document.getElementById('whatsappChat');
+    const messageInput = document.getElementById('messageInput');
+    const sendButton = document.getElementById('sendButton');
+    const chatMessages = document.getElementById('chatMessages');
+    const typingIndicator = document.getElementById('typingIndicator');
+    const whatsappNumber = '5585998160208';
+    
+    // Abrir/fechar chat
+    whatsappButton.addEventListener('click', function() {
+        whatsappChat.style.display = whatsappChat.style.display === 'block' ? 'none' : 'block';
+        if (whatsappChat.style.display === 'block') {
+            messageInput.focus();
+        }
+    });
+    
+    // Auto-ajuste da altura do textarea
+    messageInput.addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = (this.scrollHeight > 84 ? 84 : this.scrollHeight) + 'px';
+    });
+    
+    // Adicionar mensagem
+    function addMessage(text, isReceived) {
+        const messageElement = document.createElement('div');
+        messageElement.classList.add('message', isReceived ? 'received' : 'sent');
+        messageElement.textContent = text;
+        chatMessages.insertBefore(messageElement, typingIndicator);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    // Enviar mensagem
+    function sendMessage() {
+        const message = messageInput.value.trim();
+        if (message) {
+            addMessage(message, false);
+            messageInput.value = '';
+            messageInput.style.height = 'auto';
+            
+            // Resposta automática
+            typingIndicator.style.display = 'block';
+            chatMessages.scrollTop = chatMessages.scrollHeight;
+            
+            setTimeout(() => {
+                typingIndicator.style.display = 'none';
+                addMessage("Recebemos sua mensagem. Iremos te direcionar para o WhatsApp responsável para podermos te ajudar.", true);
+                
+                // Redireciona para o WhatsApp
+                setTimeout(() => {
+                    window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá, vim pelo chat do site: ' + message)}`, '_blank');
+                }, 1500);
+            }, 1000);
+        }
+    }
+    
+    // Eventos
+    sendButton.addEventListener('click', sendMessage);
+    messageInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            sendMessage();
+        }
+    });
+  </script>
+  </body>
+
+</html>
