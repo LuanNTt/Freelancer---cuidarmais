@@ -1,0 +1,1895 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Cuidar Mais | Sua Clínica Gerando Valor Além da Consulta</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+      <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+ 
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+
+/* Estilo padrão para mobile */
+@media (max-width: 991.98px) {
+
+.navbar:not(.navbar-scrolled) {
+      background-color: transparent !important;
+  }
+  /* Navbar azul quando tem scroll OU quando o menu está aberto */
+  .navbar-scrolled,
+  .navbar.show {
+      background-color: #1F529F !important;
+  }
+  /* Botão do menu transparente no topo */
+  .navbar:not(.navbar-scrolled) .navbar-toggler {
+      background-color: transparent !important;
+      border-color: rgba(255,255,255,0.5) !important;
+  }
+
+  /* Quando o menu está aberto OU quando tem scroll */
+  .navbar.show .navbar-toggler,
+  .navbar-scrolled .navbar-toggler {
+      background-color: #1F529F !important;
+      border-color: #1F529F !important;
+  }
+
+  /* Estilo do menu expandido */
+  .navbar-collapse {
+      background-color: #1F529F !important;
+      margin: 8px -15px 0 !important;
+      padding: 0 15px 15px !important;
+  }
+
+  .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+  }
+}
+
+/* Mantém o que já tem para esconder mobile em desktop */
+@media (min-width: 992px) {
+  .mobile-only {
+      display: none !important;
+  }
+}
+      
+      
+      /* Esconde a seção mobile em desktop */
+      @media (min-width: 992px) {
+          .mobile-only {
+              display: none !important;
+          }
+      }
+    
+      @media (max-width: 991.98px) {
+        .navbar-nav {
+      width: 100%;
+  }
+
+            /* Ajusta o container do menu para ocupar toda a largura */
+  .navbar > .container-fluid {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+  .navbar-nav {
+      width: 100%;
+      padding-top: 10px;
+  }
+  .navbar-toggler {
+      background-color: #1F529F !important;
+      border-color: #1F529F !important;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.25rem;
+      margin-right: 15px;
+  }
+  
+  .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+  }
+  
+  .navbar-collapse {
+      background-color: #1F529F !important;
+      margin-left: -15px !important;
+      margin-right: -15px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      margin-top: 8px !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+  }
+}
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+#loadMoreBtn, #showLessBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 30px;
+  background-color: #18c387;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: all 0.3s;
+  min-width: 200px;
+  text-align: center;
+  height: 48px;
+}
+
+#showLessBtn {
+  display: none;
+}
+
+#loadMoreBtn:hover, #showLessBtn:hover {
+  background-color: #15a877;
+  transform: translateY(-2px);
+}
+
+
+    @media (max-width: 767.98px) {
+    .footer .row.py-7 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .footer .col-lg-6 {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .footer .logo {
+        margin: 0 auto 1.5rem;
+        display: block;
+    }
+    
+    .footer .col-3, .footer .col-6 {
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .footer h4 {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
+    
+    .footer ul {
+        padding-left: 0;
+    }
+    
+    .footer .row.justify-content-md-between {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer .text-center.text-md-start, 
+    .footer .text-center.text-md-end {
+        text-align: center !important;
+        margin-bottom: 1rem;
+    }
+  }
+        /* ========== NOVOS ESTILOS PARA RESPONSIVIDADE ========== */
+  
+  /* Ajustes para telas médias e pequenas */
+  @media (max-width: 992px) {
+    /* Banner Hero Section */
+    section.position-relative.bg-roxo {
+      min-height: 100vh !important;
+      padding-bottom: 30vh !important;
+    }
+    
+    /* Container do Título e Botão */
+    .container.position-absolute.start-0 {
+      position: relative !important;
+      padding: 20px !important;
+      margin-top: 30vh !important;
+      text-align: center;
+    }
+    
+    .container.position-absolute.start-0 h1 {
+      font-size: 2rem !important;
+      line-height: 1.2 !important;
+    }
+    
+    .container.position-absolute.start-0 button {
+      font-size: 1.2rem !important;
+      padding: 10px 20px !important;
+    }
+    
+    /* Seção de Benefícios */
+    .position-absolute.bottom-0 {
+      position: relative !important;
+      padding-top: 20px;
+    }
+    
+    .d-flex.align-items-start {
+      flex-direction: column;
+      align-items: flex-start !important;
+      margin-bottom: 20px;
+    }
+    
+    .d-flex.align-items-start i {
+      margin-bottom: 10px;
+      margin-right: 0 !important;
+      font-size: 1.8rem !important;
+    }
+    
+    /* Formulário */
+    section.py-6 {
+      padding: 30px 0 !important;
+    }
+    
+    .row.align-items-center {
+      flex-direction: column-reverse;
+    }
+    
+    .col-lg-6 {
+      width: 100%;
+      padding: 0 15px;
+    }
+    
+    .col-lg-6.text-center {
+      margin-bottom: 30px;
+    }
+    
+    .col-lg-6 img {
+      max-width: 100%;
+      height: auto;
+    }
+    
+    /* Tamanho dos campos do formulário */
+    .form-control {
+      font-size: 16px !important;
+      padding: 12px !important;
+    }
+    
+    /* Footer */
+    .row.py-7 {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .col-12.col-sm-12.col-lg-6 {
+      margin-bottom: 30px;
+    }
+    
+    .col-3, .col-6 {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Ajustes para telas muito pequenas (menos de 576px) */
+  @media (max-width: 576px) {
+    /* Banner Hero Section */
+    section.position-relative.bg-roxo {
+      min-height: 80vh !important;
+      padding-bottom: 20vh !important;
+      background: linear-gradient(#000000, #000000);
+    }
+    
+    /* Container do Título e Botão */
+    .container.position-absolute.start-0 {
+      margin-top: 20vh !important;
+    }
+    
+    .container.position-absolute.start-0 h1 {
+      font-size: 2.8rem !important;
+      text-align: left;
+      letter-spacing: -1px;
+    }
+    
+    .container.position-absolute.start-0 button {
+      font-size: 1rem !important;
+      width: 100%;
+    }
+    
+    /* Seção de Benefícios */
+    h2.fw-bold.text-center {
+      font-size: 1.5rem !important;
+    }
+    
+    /* Formulário */
+    .form-label {
+      font-size: 14px !important;
+    }
+    
+    button.btn.btn-light {
+      width: 100%;
+    }
+    
+    /* Footer */
+    .footer {
+      padding: 30px 0;
+    }
+  }
+  
+  /* Ajustes específicos para o formulário em mobile */
+  @media (max-width: 768px) {
+    #formParceiro {
+      padding: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+    }
+    
+    #formParceiro .form-control {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+    
+    #formParceiro button {
+      background-color: #002db6;
+      color: white;
+      border: none;
+    }
+  }
+      /* Estilo do botão flutuante */
+       /* Reset de espaçamentos */
+       * {
+                 margin: 0;
+                 padding: 0;
+                 box-sizing: border-box;
+             }
+             
+             /* Botão flutuante */
+             .whatsapp-float {
+                 position: fixed;
+                 bottom: 30px;
+                 right: 30px;
+                 z-index: 100;
+                 animation: pulse 20s infinite;
+             }
+             
+             @keyframes pulse {
+                 0%, 100% { transform: translateY(0); }
+                 2% { transform: translateY(-10px); }
+                 4% { transform: translateY(0); }
+             }
+             
+             .whatsapp-button {
+                 width: 60px;
+                 height: 60px;
+                 background-color: #25D366;
+                 border-radius: 50%;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                 cursor: pointer;
+                 transition: all 0.3s;
+             }
+             
+             .whatsapp-button:hover {
+                 transform: scale(1.1);
+             }
+             
+             .whatsapp-button img {
+                 width: 35px;
+                 height: 35px;
+             }
+             
+             /* Chat container */
+             .whatsapp-chat {
+                 display: none;
+                 position: fixed;
+                 bottom: 90px;
+                 right: 30px;
+                 width: 300px;
+                 height: 400px;
+                 background: #e5ddd5;
+                 border-radius: 10px;
+                 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                 overflow: hidden;
+                 z-index: 101;
+                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             }
+             
+             /* Cabeçalho */
+             .chat-header {
+                 background: #075e54;
+                 color: white;
+                 padding: 12px 16px;
+                 font-size: 16px;
+                 font-weight: bold;
+             }
+             
+             .chat-status {
+                 font-size: 11px;
+                 font-weight: normal;
+                 opacity: 0.8;
+                 display: block;
+                 margin-top: 2px;
+             }
+             
+             /* Área de mensagens */
+             .chat-messages {
+                 height: 280px;
+                 padding: 10px;
+                 overflow-y: auto;
+                 background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png');
+                 display: flex;
+                 flex-direction: column;
+             }
+             
+             /* Estilo das mensagens - CORREÇÃO DO ESPAÇAMENTO */
+             .message {
+                 max-width: 80%;
+                 padding: 8px 12px;
+                 margin-bottom: 10px;
+                 border-radius: 7.5px;
+                 position: relative;
+                 word-wrap: break-word;
+                 white-space: pre-wrap;
+                 line-height: 1.4;
+                 font-size: 14.2px;
+                 box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+             }
+             
+             .received {
+                 background: white;
+                 align-self: flex-start;
+                 border-top-left-radius: 0;
+             }
+             
+             .sent {
+                 background: #dcf8c6;
+                 align-self: flex-end;
+                 border-top-right-radius: 0;
+             }
+             
+             /* Área de input - CORREÇÃO DO LAYOUT */
+             .chat-input-area {
+                 position: absolute;
+                 bottom: 0;
+                 width: 100%;
+                 padding: 8px;
+                 background: #f0f0f0;
+                 border-top: 1px solid #ddd;
+                 display: flex;
+             }
+             
+             .input-container {
+                 flex: 1;
+                 background: white;
+                 border-radius: 20px;
+                 display: flex;
+                 align-items: center;
+                 padding: 0 12px;
+                 max-height: 100px;
+                 overflow: hidden;
+             }
+             
+             .message-input {
+                 flex: 1;
+                 border: none;
+                 outline: none;
+                 font-size: 14px;
+                 padding: 8px 0;
+                 resize: none;
+                 font-family: inherit;
+                 max-height: 84px;
+                 line-height: 1.4;
+             }
+             
+             /* Botão de enviar - AGORA VISÍVEL */
+             .send-button {
+                 background: transparent;
+                 border: none;
+                 cursor: pointer;
+                 padding: 8px;
+                 margin-left: 4px;
+             }
+             
+             .send-icon {
+                 width: 24px;
+                 height: 24px;
+                 color: #075e54;
+             }
+             
+             /* Indicador de digitação */
+             .typing-indicator {
+                 display: none;
+                 font-size: 12px;
+                 color: #888;
+                 padding: 4px 12px;
+                 font-style: italic;
+                 align-self: flex-start;
+             }
+     </style>
+    <style>
+
+/* Ajustes para a seção hero em telas pequenas */
+@media (max-width: 768px) {
+    #home .bg-holder.hero-bg {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    #home .container {
+      order: 2;
+      margin-top: 20px;
+    }
+    
+    #home .row {
+      flex-direction: column;
+    }
+  }
+
+  /* Ajustes para o carrossel de feedbacks em telas pequenas */
+  @media (max-width: 768px) {
+    #feedbacks .row.align-items-center {
+      flex-direction: column;
+    }
+    
+    #feedbacks .col-lg-5 {
+      order: -1;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    
+    #feedbacks .col-lg-6 {
+      width: 100%;
+    }
+  }
+      .feature-card {
+  background-color: #6970dd;
+  color: #000000;
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+.text-light{
+  color: #ffffff !important;
+}
+
+.feature-card:hover {
+  background-color: #9e6fff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.backgroundcolorfim{
+  background-color: #ffffff;
+}
+
+.feature-card:hover h4,
+.feature-card:hover p {
+  color: #ffffff;
+}
+
+.feature-icon {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.bg-roxo {
+  background-color: #9e6fff !important;
+}
+
+  .hover-scale-card {
+  background-color: #b183ff;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  min-height: 330px; /* altura mínima para padronizar */
+  margin-bottom: 24px; /* espaçamento entre os cards */
+}
+
+.hover-scale-card h4,
+.hover-scale-card p {
+  color: #ffffff;
+}
+/* Impede quebra de linha dos elementos lado a lado */
+#feedbacks .row.align-items-center {
+  flex-wrap: nowrap;
+}
+
+
+/* Ajusta altura dos quadrados dos feedbacks */
+#feedbacks .carousel .p-4 {
+  min-height: 280px;
+}
+
+/* Ajusta a altura do carrossel */
+#carouselFeedbacks {
+  min-height: 600px;
+}
+
+/* Força o carrossel a ocupar o espaço da coluna */
+#carouselFeedbacks .carousel-inner {
+  height: 100%;
+}
+
+       /* Estilos existentes... */
+
+        /* ========== NOVOS ESTILOS PARA RESPONSIVIDADE ========== */
+        
+        /* 1. Centralizar botão "Agendar Demonstração" no mobile */
+        @media (max-width: 768px) {
+            .navbar-collapse .btn-primary {
+                margin-left: 0 !important;
+                margin-top: 15px;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+            
+            .navbar-collapse {
+                text-align: center;
+            }
+            
+            .navbar-nav {
+                width: 100%;
+            }
+        }
+
+/* Alinha verticalmente os feedbacks para ficarem uniformes */
+#carouselFeedbacks .row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.hover-scale-card:hover {
+  transform: translateY(-5px);
+  background-color: #9e6fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+  .services-card-shadow {
+  background-color: #ffffff; /* fundo branco */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* sem sombra inicial */
+  margin-right: 30px !important; /* espaçamento entre os cards */
+}
+
+.services-card-shadow:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* sombra suave no hover */
+  transform: translateY(-9px); /* levanta levemente o card */
+}
+.color-white-inicio{
+  color: #ffffff;
+}
+.icone-roxa{
+  color:#9e6fff
+}
+.text-top{
+  text-align: start;
+}
+
+</style>
+
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/user.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+
+
+  </head>
+
+
+  <body>
+     <!-- Botão flutuante -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-button" id="whatsappButton">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+    </div>
+</div>
+
+<!-- Chat -->
+<div class="whatsapp-chat" id="whatsappChat">
+    <div class="chat-header">
+        Suporte Cuidar Mais
+        <span class="chat-status">Online</span>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <div class="message received">Olá! Somos o suporte da Cuidar Mais. Como podemos te ajudar hoje?</div>
+        <div class="typing-indicator" id="typingIndicator">Suporte está digitando...</div>
+    </div>
+    <div class="chat-input-area">
+        <div class="input-container">
+            <textarea class="message-input" id="messageInput" placeholder="Digite sua mensagem..." rows="1"></textarea>
+            <button class="send-button" id="sendButton">
+                <svg class="send-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top pt-3 mb-0" data-navbar-on-scroll="light">
+        <div class="container-fluid px-5">
+          <!-- Logo alinhada à esquerda -->
+          <a class="navbar-brand me-auto" href="index.html#top">
+            <img src="assets/img/illustration/logo-cuidar.PNG" height="50" alt="logo" />
+          </a>
+    
+          <!-- Botão de menu para mobile -->
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <!-- Itens centrais e botão na direita -->
+          <div class="collapse navbar-collapse justify-content-center" style="margin-left: 15vh;" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto d-flex gap-4 align-items-center">
+            
+              <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="quem-somos.html">Quem somos</a></li>
+              
+              <!-- Dropdown Nossos Serviços melhorado -->
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" style="color: #ffffff; font-size: 20px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Nossos Serviços
+                </a>
+                <ul class="dropdown-menu p-3" aria-labelledby="navbarDropdown" style="width: 280px; border-radius: 15px;">
+                  <li class="mb-2">
+                    <a class="dropdown-item d-flex align-items-center py-2" href="consultas.html" style="font-size: 18px;">
+                      <i class="fas fa-calendar-check me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                      Consultas
+                    </a>
+                  </li>
+                  <li class="mb-2">
+                    <a class="dropdown-item d-flex align-items-center py-2" href="exames.html" style="font-size: 18px;">
+                      <i class="fas fa-flask me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                      Exames
+                    </a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item d-flex align-items-center py-2" href="cirurgias.html" style="font-size: 18px;">
+                      <i class="fas fa-procedures me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                      Cirurgias
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              
+              <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="parceiros.html">Quero ser Parceiro</a></li>
+            </ul>
+            <!-- Botão na extrema direita -->
+            <button id="meuBotaoModal" class="btn btn-primary" style="background-color: #18C387; color: white;">
+              Fazer Agendamento
+            </button>
+
+ <!-- Estrutura do Modal de Escolha -->
+ <div id="modalEscolha" class="modal-custom">
+  <div class="modal-custom-content">
+    <div class="modal-custom-header">
+      <div class="logo-container">
+        <img src="assets/img/illustration/logo-cuidarmais1.PNG" alt="Ajudda Card Logo" class="logo">
+      </div>
+      <span class="modal-custom-close">&times;</span>
+    </div>
+    <div class="modal-custom-body">
+      <h3 style="color: var(--azul-primario); margin-bottom: 20px; text-align: center;">Como deseja fazer seu agendamento?</h3>
+      <div class="escolha-container">
+        <button class="btn-escolha" id="btnWhatsApp">
+          <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 10px;"></i>
+          WhatsApp
+        </button>
+        <button class="btn-escolha" id="btnPortal">
+          <i class="fas fa-laptop" style="font-size: 24px; margin-right: 10px;"></i>
+          Portal do Paciente
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Estrutura do Modal do Formulário WhatsApp (mantido igual) -->
+<div id="meuModal" class="modal-custom">
+  <div class="modal-custom-content">
+    <div class="modal-custom-header">
+      <div class="logo-container">
+        <img src="assets/img/illustration/logo-cuidarmais1.PNG" alt="Ajudda Card Logo" class="logo">
+      </div>
+      <span class="modal-custom-close">&times;</span>
+    </div>
+    <div class="modal-custom-body">
+      <form id="formDemonstracao">
+        <div class="form-group">
+          <label for="nomeRepresentante">Nome do Representante</label>
+          <input type="text" class="form-control" id="nomeRepresentante" placeholder="Seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" class="form-control" id="empresa" placeholder="Nome da sua empresa" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+        </div>
+      </form>
+    </div>
+    <div class="modal-custom-footer">
+      <button class="btn btn-secondary" id="btnCancelar">Cancelar</button>
+      <button class="btn btn-primary" id="btnEnviar">Enviar</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Adicionei estilos para os novos elementos */
+  .escolha-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-escolha {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    background-color: var(--azul-primario);
+    color: var(--branco);
+  }
+  
+  .btn-escolha:hover {
+    background-color: var(--azul-primario);
+    transform: translateY(-2px);
+  }
+  
+  /* Mantenha todos os outros estilos existentes */
+  /* Cores personalizadas no tema roxo */
+  :root {
+    --azul-primario: #002db6;
+    --azul-claro:#456eeadd;
+    --roxo-primario: #6a0dad;
+    --roxo-secundario: #8a2be2;
+    --roxo-claro: #e6e6fa;
+    --roxo-escuro: #4b0082;
+    --cinza-claro: #f8f9fa;
+    --cinza-medio: #e9ecef;
+    --branco: #ffffff;
+  }
+  
+  /* Estilos personalizados para o modal */
+  .modal-custom {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-custom-content {
+    background-color: var(--branco);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s;
+    overflow: hidden;
+  }
+  
+  @keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  
+  .modal-custom-header {
+    padding: 20px 25px;
+    background-color: var(--azul-primario);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .logo {
+    height: 100%;
+    width: auto;
+    max-width: 600px;
+    object-fit: contain;
+  }
+  
+  .modal-custom-close {
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--branco);
+    transition: color 0.3s;
+  }
+  
+  .modal-custom-close:hover {
+    color: var(--azul-claro);
+  }
+  
+  .modal-custom-body {
+    padding: 30px;
+    background-color: var(--cinza-claro);
+  }
+  
+  .modal-custom-footer {
+    padding: 20px 25px;
+    background-color: var(--cinza-medio);
+    text-align: right;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--azul-primario);
+    font-size: 16px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--cinza-medio);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    font-size: 16px;
+    height: 50px;
+  }
+  
+  .form-control:focus {
+    border-color: var(--azul-primario);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.2);
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    height: 50px;
+  }
+  
+  .btn-primary {
+    background-color: var(--azul-primario);
+    color: var(--branco);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--azul-primario);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: var(--cinza-medio);
+    color: var(--roxo-escuro);
+    margin-right: 15px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #d1d7dc;
+  }
+  </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Elementos dos modais
+    const modalEscolha = document.getElementById('modalEscolha');
+    const modalForm = document.getElementById('meuModal');
+    const btnModal = document.getElementById('meuBotaoModal');
+    const btnWhatsApp = document.getElementById('btnWhatsApp');
+    const btnPortal = document.getElementById('btnPortal');
+    
+    // Elementos do modal de formulário (mantidos do código original)
+    const span = document.querySelectorAll('.modal-custom-close');
+    const btnCancelar = document.getElementById('btnCancelar');
+    const btnEnviar = document.getElementById('btnEnviar');
+    
+    // Função para abrir qualquer modal
+    function abrirModal(modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    // Função para fechar qualquer modal
+    function fecharModal(modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Abre o modal de escolha ao clicar no botão principal
+    btnModal.onclick = function() {
+      abrirModal(modalEscolha);
+    }
+    
+    // Fecha os modais ao clicar no X
+    span.forEach(function(element) {
+      element.onclick = function() {
+        const modal = this.closest('.modal-custom');
+        fecharModal(modal);
+      };
+    });
+    
+    // Fecha os modais ao clicar fora do conteúdo
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal-custom')) {
+        fecharModal(event.target);
+      }
+    }
+    
+    // Fecha os modais ao pressionar ESC
+    document.onkeydown = function(event) {
+      if (event.key === 'Escape') {
+        const modals = document.querySelectorAll('.modal-custom');
+        modals.forEach(function(modal) {
+          if (modal.style.display === 'flex') {
+            fecharModal(modal);
+          }
+        });
+      }
+    }
+    
+    // Botão WhatsApp no modal de escolha
+    btnWhatsApp.onclick = function() {
+      fecharModal(modalEscolha);
+      abrirModal(modalForm);
+    }
+    
+    // Botão Portal no modal de escolha
+    btnPortal.onclick = function() {
+      fecharModal(modalEscolha);
+      window.open('https://clinicas.gees.com.br/cuidarmais/portal/portalpaciente', '_blank');
+    }
+    
+    // Fecha o modal de formulário ao clicar no botão Cancelar
+    btnCancelar.onclick = function() {
+      fecharModal(modalForm);
+    }
+    
+    // Envia os dados para o WhatsApp (mantido do código original)
+    btnEnviar.onclick = function() {
+      const nome = document.getElementById('nomeRepresentante').value;
+      const empresa = document.getElementById('empresa').value;
+      const email = document.getElementById('email').value;
+      
+      if (!nome || !empresa || !email) {
+        alert('Por favor, preencha todos os campos!');
+        return;
+      }
+      
+      const mensagem = `Olá, gostaria de agendar uma demonstração do Ajudda Card:\n\n` +
+                      `*Nome do Representante:* ${nome}\n` +
+                      `*Empresa:* ${empresa}\n` +
+                      `*E-mail:* ${email}\n\n` +
+                      `Por favor, informe os horários disponíveis.`;
+      
+      const mensagemCodificada = encodeURIComponent(mensagem);
+      const urlWhatsApp = `https://wa.me/5585984415490?text=${mensagemCodificada}`;
+      
+      window.open(urlWhatsApp, '_blank');
+      fecharModal(modalForm);
+      document.getElementById('formDemonstracao').reset();
+    }
+  });
+  
+  // Adicionando Font Awesome para os ícones
+  document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">');
+  </script>
+          </div>
+        </div>
+      </nav>
+   
+    
+    
+      <style>
+        .navbar {
+          background-color: transparent;
+          transition: background-color 0.4s ease;
+        }
+    
+        .navbar-scrolled {
+          background-color: #002db6 !important;
+          transition: background-color 1.0s ease;
+        }
+              /* Estilos específicos para mobile */
+              @media (max-width: 991.98px) {
+            .mobile-hero {
+                background: linear-gradient(#4e20b0, #cfa3f4);
+                padding: 100px 20px 50px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .mobile-hero-image {
+                max-height: 300px;
+                margin: 0 auto 30px;
+                display: block;
+            }
+            
+            .mobile-hero h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: white;
+                margin-bottom: 15px;
+                line-height: 1.2;
+            }
+            
+            .mobile-hero p {
+                font-size: 1.1rem;
+                color: white;
+                margin-bottom: 30px;
+            }
+            
+            .mobile-hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .mobile-hero-buttons .btn-link {
+                color: white;
+                text-decoration: underline;
+                font-size: 1rem;
+            }
+            
+            .mobile-hero-buttons .btn-primary {
+                background-color: #9e6fff;
+                border-color: #9e6fff;
+                font-size: 1rem;
+                padding: 8px 20px;
+            }
+            /* Ajustes para a seção mobile */
+.mobile-hero {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 100px); /* Considera a altura da navbar */
+}
+
+/* Aumenta o celular e ajusta posicionamento */
+.mobile-hero img {
+  transform: scale(1.1);
+  transform-origin: left center;
+  margin-left: -15px;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 576px) {
+  .mobile-hero {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  
+  .mobile-hero img {
+    max-height: 320px;
+    transform: scale(1);
+    margin-left: 0;
+  }
+  
+  .mobile-hero h1 {
+    font-size: 1.6rem !important;
+  }
+  
+  .mobile-hero p {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Ajuste para quando o texto fica muito próximo */
+@media (max-width: 400px) {
+  .mobile-hero .row.align-items-center {
+    flex-direction: column;
+    text-align: center !important;
+  }
+  
+  .mobile-hero .col-6 {
+    width: 100%;
+  }
+  
+  .mobile-hero img {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 320px;
+  }
+  
+  .mobile-hero .text-start {
+    text-align: center !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+            /* Esconde a seção desktop em mobile */
+@media (max-width: 991.98px) {
+    #home.desktop-only {
+        display: none !important;
+    }
+}
+
+/* Mantém o que já tem para esconder mobile em desktop */
+@media (min-width: 992px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+        }
+        
+        /* Esconde a seção mobile em desktop */
+        @media (min-width: 992px) {
+            .mobile-only {
+                display: none !important;
+            }
+        }
+      </style>
+    
+      <script>
+        window.addEventListener('scroll', () => {
+          const navbar = document.querySelector('.navbar');
+          if (window.scrollY > 50) {
+            navbar.classList.add('navbar-scrolled');
+          } else {
+            navbar.classList.remove('navbar-scrolled');
+          }
+        });
+      </script>
+  
+        <!-- Imagem de fundo para desktop -->
+        
+        
+       
+      
+<!-- Banner Hero Section -->
+<section class="position-relative bg-roxo"  style="background: url('assets/img/illustration/banner-parceiros2.PNG') no-repeat center center/cover; min-height: 150vh; padding-bottom: 50vh;"> <!-- Aumentei o padding-bottom -->
+  
+  <!-- Overlay gradiente -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, #00000096, #000000ee);"></div>
+  
+  <!-- Container do Título e Botão (fixo no canto inferior esquerdo) -->
+  <div class="container position-absolute  start-0 z-1 pb-0 ps-5" style="max-width: 100%; margin-top: 55vh;">
+    <div class="text-white">
+      <h1 class="display-3 fw-bold mb-1 fs-5" style="color: #ffffff; line-height: 1.4;" >Junte-se à Cuidar Mais e amplie o <br>acesso à saúde de qualidade.</h1>
+      <button 
+    class="btn btn-primary btn-lg px-5 py-2 mt-3" 
+    style="font-size: 1.5rem;"
+    onclick="document.getElementById('form').scrollIntoView({ behavior: 'smooth' })">
+    Saiba mais sobre parcerias
+</button>
+    </div>
+  </div>
+  
+  <!-- Seção de Benefícios (abaixo do título/botão, centralizada) -->
+  <!-- Seção de Benefícios (abaixo do título/botão) -->
+<div class="position-absolute bottom-0 start-0 end-0 z-1">
+  <div class="container py-5">
+    <h2 class="fw-bold text-center mb-6 text-white">Benefícios de ser nosso parceiro</h2>
+    <div class="row g-4 justify-content-start"> <!-- Alterado para justify-content-start -->
+      
+      <!-- Linha 1 -->
+      <div class="col-lg-6 col-md-8"> <!-- Aumentei para col-lg-6 col-md-8 -->
+        <div class="d-flex align-items-start fs-1">
+          <i class="bi bi-hospital fs-2 me-4" style="color: #ffffff;"></i>
+          <div class="text-start" style="max-width: 100%;"> <!-- Adicionei text-start e max-width -->
+            <h4 class="text-white mb-2">Acesso a serviços de saúde de qualidade</h4>
+            <p class="text-light mb-0">Rede credenciada com os melhores hospitais e clínicas do país</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-8"> <!-- Aumentei para col-lg-6 col-md-8 -->
+        <div class="d-flex align-items-start fs-1">
+          <i class="bi bi-heart-pulse fs-2 me-4" style="color: #ffffff;"></i>
+          <div class="text-start" style="max-width: 120%;">
+            <h4 class="text-white mb-2">Atendimento humanizado e personalizado</h4>
+            <p class="text-light mb-0">Profissionais qualificados com foco na experiência do paciente</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Linha 2 -->
+      <div class="col-lg-6 col-md-8">
+        <div class="d-flex align-items-start fs-1">
+          <i class="bi bi-building fs-2 me-4" style="color: #ffffff;"></i>
+          <div class="text-start" style="max-width: 120%;">
+            <h4 class="text-white mb-2">Infraestrutura moderna e equipada</h4>
+            <p class="text-light mb-0">Unidades com tecnologia de ponta para melhor atendimento</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6 col-md-8">
+        <div class="d-flex align-items-start fs-1">
+          <i class="bi bi-headset fs-2 me-4" style="color: #ffffff;"></i>
+          <div class="text-start" style="max-width: 120%;">
+            <h4 class="text-white mb-2">Suporte contínuo e treinamento</h4>
+            <p class="text-light mb-0">Capacitação permanente para todas as equipes envolvidas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+
+ 
+  
+  
+  
+  <!-- Formulário - Versão com envio para WhatsApp -->
+<section class="py-6 text-white" id="form" style="background: linear-gradient(#afb1b8,#afb1b8);" id="parceiro">
+  <div class="container">
+      <div class="row align-items-center">
+          <div class="col-lg-6">
+              <h1 class="mb-4" style="color: #ffffff;">Pronto para fazer a diferença na saúde de nossa comunidade?</h1>
+              <form id="formParceiro">
+                  <div class="mb-3">
+                      <label for="empresa" class="form-label" style="font-size: 2vh;">Nome da Empresa*</label>
+                      <input type="text" class="form-control" id="empresa" placeholder="Digite o nome da Empresa" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="representante" class="form-label" style="font-size: 2vh;">Nome do Representante*</label>
+                      <input type="text" class="form-control" id="representante" placeholder="Digite o nome do Representante" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label" style="font-size: 2vh;">E-mail*</label>
+                      <input type="email" class="form-control" id="email" placeholder="seuemail@exemplo.com.br" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="telefone" class="form-label" style="font-size: 2vh;">Telefone*</label>
+                      <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="whatsapp" class="form-label" style="font-size: 2vh;">WhatsApp*</label>
+                      <input type="text" class="form-control" id="whatsapp" placeholder="(xx) xxxxx-xxxx" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="setor" class="form-label" style="font-size: 2vh;">Setor de Atuação da Empresa*</label>
+                      <input type="text" class="form-control" id="setor" placeholder="Saúde e Bem-Estar" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="conhecimento" class="form-label" style="font-size: 2vh;">Como você conheceu o Ajudda Card?</label>
+                      <input type="text" class="form-control" id="conhecimento" placeholder="Indicação">
+                  </div>
+                  <button type="submit" class="btn btn-light mt-3">Enviar</button>
+                  <div id="formError" class="alert alert-danger mt-3 d-none" role="alert">
+                      Por favor, preencha todos os campos obrigatórios marcados com *.
+                  </div>
+              </form>
+          </div>
+          <div class="col-lg-6 text-center">
+              <img src="assets/img/illustration/assinar.PNG" alt="Formulário" class="img-fluid" style="border-radius: 3vh;">
+          </div>
+      </div>
+  </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('formParceiro');
+  const errorAlert = document.getElementById('formError');
+  
+  // Máscara para telefone
+  const aplicarMascaraTelefone = (input) => {
+      input.addEventListener('input', function(e) {
+          let value = e.target.value.replace(/\D/g, '');
+          if (value.length > 11) value = value.substring(0, 11);
+          
+          if (value.length > 0) {
+              value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+              if (value.length > 10) {
+                  value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+              } else {
+                  value = value.replace(/(\d)(\d{3})$/, '$1-$2');
+              }
+          }
+          e.target.value = value;
+      });
+  };
+  
+  // Aplicar máscara aos campos de telefone
+  aplicarMascaraTelefone(document.getElementById('telefone'));
+  aplicarMascaraTelefone(document.getElementById('whatsapp'));
+  
+  // Validação do formulário
+  form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Verificar campos obrigatórios
+      const camposObrigatorios = form.querySelectorAll('[required]');
+      let formValido = true;
+      
+      camposObrigatorios.forEach(campo => {
+          if (!campo.value.trim()) {
+              campo.classList.add('is-invalid');
+              formValido = false;
+          } else {
+              campo.classList.remove('is-invalid');
+          }
+      });
+      
+      if (!formValido) {
+          errorAlert.classList.remove('d-none');
+          return;
+      }
+      
+      errorAlert.classList.add('d-none');
+      
+      // Construir mensagem para WhatsApp
+      const mensagem = `Olá Ajudda Card, gostaria de me tornar um parceiro!%0A%0A` +
+                       `*Empresa:* ${document.getElementById('empresa').value}%0A` +
+                       `*Representante:* ${document.getElementById('representante').value}%0A` +
+                       `*E-mail:* ${document.getElementById('email').value}%0A` +
+                       `*Telefone:* ${document.getElementById('telefone').value}%0A` +
+                       `*WhatsApp:* ${document.getElementById('whatsapp').value}%0A` +
+                       `*Setor de Atuação:* ${document.getElementById('setor').value}%0A` +
+                       `*Como conheceu:* ${document.getElementById('conhecimento').value || 'Não informado'}`;
+      
+      // Número do WhatsApp da Ajudda Card
+      const numeroWhatsApp = '5585984415490';
+      
+      // Redirecionar para o WhatsApp
+      window.open(`https://wa.me/${numeroWhatsApp}?text=${mensagem}`, '_blank');
+      
+      // Opcional: Limpar o formulário após envio
+      form.reset();
+  });
+  
+  // Remover classe de erro quando o usuário começa a digitar
+  form.querySelectorAll('input').forEach(input => {
+      input.addEventListener('input', function() {
+          if (this.value.trim()) {
+              this.classList.remove('is-invalid');
+          }
+      });
+  });
+});
+</script>
+
+<style>
+/* Estilo para campos inválidos */
+.is-invalid {
+  border-color: #dc3545 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right calc(0.375em + 0.1875rem) center;
+  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
+}
+
+.is-invalid:focus {
+  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
+}
+</style>
+  
+<style>
+  /* Estilos Gerais do Footer */
+  .footer {
+      background-color: #002db6;
+      color: white;
+      padding: 40px 0 20px;
+  }
+  
+  .footer a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s;
+  }
+  
+  .footer a:hover {
+      color: white;
+  }
+  
+  .footer h4 {
+      color: white; /* Garantindo que os títulos fiquem brancos */
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+  }
+  
+  .footer ul {
+      padding-left: 0;
+      list-style: none;
+  }
+  
+  .footer li {
+      margin-bottom: 10px;
+  }
+  
+  /* Seção de Contato */
+  .contact-info {
+      margin-top: 20px;
+  }
+  
+  .contact-info p {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      color: rgba(255,255,255,0.8);
+  }
+  
+  .contact-info i {
+      margin-right: 10px;
+      font-size: 1.1rem;
+      min-width: 20px;
+      color: white;
+  }
+  
+  /* Logo */
+  .footer-logo {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+  }
+  
+  /* Rodapé Inferior */
+  .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      margin-top: 30px;
+  }
+  
+  /* Layout Responsivo */
+  @media (min-width: 992px) {
+      /* Desktop - 2 colunas principais */
+      .footer-main {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      
+      .footer-brand {
+          flex: 0 0 40%;
+          max-width: 40%;
+          padding-right: 30px;
+      }
+      
+      .footer-links {
+          flex: 0 0 60%;
+          max-width: 60%;
+          display: flex;
+          flex-wrap: wrap;
+      }
+      
+      .footer-column {
+          flex: 0 0 33.333%;
+          max-width: 33.333%;
+          padding: 0 15px;
+      }
+  }
+  
+  @media (max-width: 991.98px) {
+      /* Tablet - 1 coluna */
+      .footer-brand {
+          margin-bottom: 30px;
+          text-align: center;
+      }
+      
+      .footer-logo {
+          margin-left: auto;
+          margin-right: auto;
+      }
+      
+      .footer-links {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+      
+      .footer-column {
+          flex: 0 0 48%;
+          max-width: 48%;
+          margin-bottom: 30px;
+      }
+      
+      .contact-info {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 15px;
+      }
+      
+      .contact-info p {
+          margin-bottom: 0;
+          flex: 0 0 auto;
+      }
+  }
+  
+  @media (max-width: 575.98px) {
+      /* Mobile - ajuste dos contatos */
+      .footer-column {
+          flex: 0 0 100%;
+          max-width: 100%;
+          text-align: center;
+      }
+      
+      .footer-links {
+          display: block;
+      }
+      
+      .contact-info {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+      }
+      
+      .contact-info p {
+          justify-content: center;
+          width: 100%;
+      }
+  }
+</style>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+      <div class="footer-main">
+          <!-- Coluna da Logo e Contatos -->
+          <div class="footer-brand">
+              <a href="index.html">
+                  <img src="assets/img/illustration/logo-cuidar.PNG" alt="Cuidar Mais" class="footer-logo">
+              </a>
+              <div class="contact-info">
+                  <p><i class="fas fa-mobile-alt"></i> 85 99816-0208</p>
+                  <p><i class="fas fa-phone-alt"></i> 3254-4440</p>
+                  <p><i class="fas fa-envelope"></i> cuidarmais@gmail.com</p>
+              </div>
+          </div>
+          
+          <!-- Colunas de Links -->
+          <div class="footer-links">
+              <!-- Coluna 1 -->
+              <div class="footer-column">
+                  <h4>Sobre a Cuidar Mais</h4>
+                  <ul>
+                      <li><a href="quem-somos.html">Quem Somos</a></li>
+                      <li><a href="clientes.html">Clientes</a></li>
+                      <li><a href="parceiros.html">Quero virar parceiro</a></li>
+                  </ul>
+              </div>
+              
+              <!-- Coluna 2 -->
+              <div class="footer-column">
+                  <h4>Serviços</h4>
+                  <ul>
+                      <li><a href="consultas.html">Consultas</a></li>
+                      <li><a href="exames.html">Exames</a></li>
+                      <li><a href="cirurgias.html">Cirurgias</a></li>
+                  </ul>
+              </div>
+              
+              <!-- Coluna 3 -->
+              <div class="footer-column">
+                  <h4>Ajuda</h4>
+                  <ul>
+                      <li><a href="faq.html">Perguntas Frequentes</a></li>
+                      <li><a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20acessar%20o%20suporte%20pelo%20whatssap.%20Podem%20me%20ajudar?">Suporte via WhatsApp</a></li>
+                      <li><a href="politicas-privacidade.html">Política de Privacidade</a></li>
+                      <li><a href="termosuso.html">Termos de Uso</a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      
+      <!-- Rodapé Inferior -->
+      <div class="footer-bottom">
+          <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                  <p class="mb-0">&copy; 2025 Cuidar Mais. Todos os direitos reservados.</p>
+              </div>
+              <div class="col-md-6 text-center text-md-end">
+                  <p class="mb-0">Desenvolvido por <a href="https://www.linkedin.com/in/trajanoluan" target="_blank">LuanDev</a></p>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+   
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap Bundle com Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- Inicialização do Owl Carousel -->
+<script>
+        $(document).ready(function(){
+          $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        loop: true,
+        margin: 30,
+        dots: true,
+        nav: false,
+        responsive:{
+          0:{ items:1 },
+          576:{ items:2 },
+          768:{ items:3 },
+          992:{ items:4 }
+        }
+      });
+  });
+</script>
+<script>
+  // Elementos
+  const whatsappButton = document.getElementById('whatsappButton');
+  const whatsappChat = document.getElementById('whatsappChat');
+  const messageInput = document.getElementById('messageInput');
+  const sendButton = document.getElementById('sendButton');
+  const chatMessages = document.getElementById('chatMessages');
+  const typingIndicator = document.getElementById('typingIndicator');
+  const whatsappNumber = '5585998160208';
+  
+  // Abrir/fechar chat
+  whatsappButton.addEventListener('click', function() {
+      whatsappChat.style.display = whatsappChat.style.display === 'block' ? 'none' : 'block';
+      if (whatsappChat.style.display === 'block') {
+          messageInput.focus();
+      }
+  });
+  
+  // Auto-ajuste da altura do textarea
+  messageInput.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = (this.scrollHeight > 84 ? 84 : this.scrollHeight) + 'px';
+  });
+  
+  // Adicionar mensagem
+  function addMessage(text, isReceived) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', isReceived ? 'received' : 'sent');
+      messageElement.textContent = text;
+      chatMessages.insertBefore(messageElement, typingIndicator);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+  
+  // Enviar mensagem
+  function sendMessage() {
+      const message = messageInput.value.trim();
+      if (message) {
+          addMessage(message, false);
+          messageInput.value = '';
+          messageInput.style.height = 'auto';
+          
+          // Resposta automática
+          typingIndicator.style.display = 'block';
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+          
+          setTimeout(() => {
+              typingIndicator.style.display = 'none';
+              addMessage("Recebemos sua mensagem. Iremos te direcionar para o WhatsApp responsável para podermos te ajudar.", true);
+              
+              // Redireciona para o WhatsApp
+              setTimeout(() => {
+                  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá, vim pelo chat do site: ' + message)}`, '_blank');
+              }, 1500);
+          }, 1000);
+      }
+  }
+  
+  // Eventos
+  sendButton.addEventListener('click', sendMessage);
+  messageInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+      }
+  });
+</script>
+<style>
+  .navbar {
+    background-color: transparent;
+    transition: background-color 0.4s ease;
+    
+  }
+
+  .navbar-scrolled {
+    background-color: #1F529F !important;
+    transition: background-color 1.0s ease;
+  }
+</style>
+
+<script>
+// Controle do scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    // Só aplica o azul se tiver scroll > 50 E não estiver com menu aberto
+    navbar.classList.toggle('navbar-scrolled', window.scrollY > 50 && !navbar.classList.contains('show'));
+});
+
+// Controle do clique no menu
+document.querySelector('.navbar-toggler').addEventListener('click', function() {
+    const navbar = document.querySelector('.navbar');
+    navbar.classList.toggle('show');
+    
+    // Força o azul enquanto o menu estiver aberto
+    if(navbar.classList.contains('show')) {
+        navbar.classList.add('navbar-scrolled');
+    } else if(window.scrollY <= 50) {
+        navbar.classList.remove('navbar-scrolled');
+    }
+});
+
+// Detecta quando o menu é fechado via clique fora
+document.addEventListener('click', function(e) {
+    const navbar = document.querySelector('.navbar');
+    if(!navbar.contains(e.target) && !e.target.classList.contains('navbar-toggler')) {
+        if(window.scrollY <= 50) {
+            navbar.classList.remove('navbar-scrolled');
+        }
+    }
+});
+</script>
+</body>
+</html>

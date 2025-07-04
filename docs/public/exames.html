@@ -1,0 +1,2686 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>Cuidar Mais | Sua Clínica Gerando Valor Além da Consulta</title>
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+      <!-- Owl Carousel CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicons/favicon-16x16.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicons/favicon.ico">
+    <link rel="manifest" href="assets/img/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
+    <meta name="theme-color" content="#ffffff">
+    <style>
+      @media (max-width: 767.98px) {
+    .footer .row.py-7 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    
+    .footer .col-lg-6 {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .footer .logo {
+        margin: 0 auto 1.5rem;
+        display: block;
+    }
+    
+    .footer .col-3, .footer .col-6 {
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+    
+    .footer h4 {
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
+    
+    .footer ul {
+        padding-left: 0;
+    }
+    
+    .footer .row.justify-content-md-between {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer .text-center.text-md-start, 
+    .footer .text-center.text-md-end {
+        text-align: center !important;
+        margin-bottom: 1rem;
+    }
+}
+      /* Estilo do botão flutuante */
+       /* Reset de espaçamentos */
+       * {
+                 margin: 0;
+                 padding: 0;
+                 box-sizing: border-box;
+             }
+             
+             /* Botão flutuante */
+             .whatsapp-float {
+                 position: fixed;
+                 bottom: 30px;
+                 right: 30px;
+                 z-index: 100;
+                 animation: pulse 20s infinite;
+             }
+             
+             @keyframes pulse {
+                 0%, 100% { transform: translateY(0); }
+                 2% { transform: translateY(-10px); }
+                 4% { transform: translateY(0); }
+             }
+             
+             .whatsapp-button {
+                 width: 60px;
+                 height: 60px;
+                 background-color: #25D366;
+                 border-radius: 50%;
+                 display: flex;
+                 align-items: center;
+                 justify-content: center;
+                 box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+                 cursor: pointer;
+                 transition: all 0.3s;
+             }
+             
+             .whatsapp-button:hover {
+                 transform: scale(1.1);
+             }
+             
+             .whatsapp-button img {
+                 width: 35px;
+                 height: 35px;
+             }
+             
+             /* Chat container */
+             .whatsapp-chat {
+                 display: none;
+                 position: fixed;
+                 bottom: 90px;
+                 right: 30px;
+                 width: 300px;
+                 height: 400px;
+                 background: #e5ddd5;
+                 border-radius: 10px;
+                 box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+                 overflow: hidden;
+                 z-index: 101;
+                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+             }
+             
+             /* Cabeçalho */
+             .chat-header {
+                 background: #075e54;
+                 color: white;
+                 padding: 12px 16px;
+                 font-size: 16px;
+                 font-weight: bold;
+             }
+             
+             .chat-status {
+                 font-size: 11px;
+                 font-weight: normal;
+                 opacity: 0.8;
+                 display: block;
+                 margin-top: 2px;
+             }
+             
+             /* Área de mensagens */
+             .chat-messages {
+                 height: 280px;
+                 padding: 10px;
+                 overflow-y: auto;
+                 background-image: url('https://web.whatsapp.com/img/bg-chat-tile-light_a4be512e7195b6b733d9110b408f075d.png');
+                 display: flex;
+                 flex-direction: column;
+             }
+             
+             /* Estilo das mensagens - CORREÇÃO DO ESPAÇAMENTO */
+             .message {
+                 max-width: 80%;
+                 padding: 8px 12px;
+                 margin-bottom: 10px;
+                 border-radius: 7.5px;
+                 position: relative;
+                 word-wrap: break-word;
+                 white-space: pre-wrap;
+                 line-height: 1.4;
+                 font-size: 14.2px;
+                 box-shadow: 0 1px 0.5px rgba(0,0,0,0.13);
+             }
+             
+             .received {
+                 background: white;
+                 align-self: flex-start;
+                 border-top-left-radius: 0;
+             }
+             
+             .sent {
+                 background: #dcf8c6;
+                 align-self: flex-end;
+                 border-top-right-radius: 0;
+             }
+             
+             /* Área de input - CORREÇÃO DO LAYOUT */
+             .chat-input-area {
+                 position: absolute;
+                 bottom: 0;
+                 width: 100%;
+                 padding: 8px;
+                 background: #f0f0f0;
+                 border-top: 1px solid #ddd;
+                 display: flex;
+             }
+             
+             .input-container {
+                 flex: 1;
+                 background: white;
+                 border-radius: 20px;
+                 display: flex;
+                 align-items: center;
+                 padding: 0 12px;
+                 max-height: 100px;
+                 overflow: hidden;
+             }
+             
+             .message-input {
+                 flex: 1;
+                 border: none;
+                 outline: none;
+                 font-size: 14px;
+                 padding: 8px 0;
+                 resize: none;
+                 font-family: inherit;
+                 max-height: 84px;
+                 line-height: 1.4;
+             }
+             
+             /* Botão de enviar - AGORA VISÍVEL */
+             .send-button {
+                 background: transparent;
+                 border: none;
+                 cursor: pointer;
+                 padding: 8px;
+                 margin-left: 4px;
+             }
+             
+             .send-icon {
+                 width: 24px;
+                 height: 24px;
+                 color: #075e54;
+             }
+             
+             /* Indicador de digitação */
+             .typing-indicator {
+                 display: none;
+                 font-size: 12px;
+                 color: #888;
+                 padding: 4px 12px;
+                 font-style: italic;
+                 align-self: flex-start;
+             }
+     </style>
+    <style>
+
+.btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    #showLessBtn {
+        display: none;
+        background-color: #6c757d;
+    }
+    
+    #showLessBtn:hover {
+        background-color: #3494dd;
+    }
+
+/* Ajustes para a seção hero em telas pequenas */
+@media (max-width: 768px) {
+    #home .bg-holder.hero-bg {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+    }
+    
+    #home .container {
+      order: 2;
+      margin-top: 20px;
+    }
+    
+    #home .row {
+      flex-direction: column;
+    }
+  }
+
+  /* Ajustes para o carrossel de feedbacks em telas pequenas */
+  @media (max-width: 768px) {
+    #feedbacks .row.align-items-center {
+      flex-direction: column;
+    }
+    
+    #feedbacks .col-lg-5 {
+      order: -1;
+      margin-bottom: 30px;
+      width: 100%;
+    }
+    
+    #feedbacks .col-lg-6 {
+      width: 100%;
+    }
+  }
+      .feature-card {
+  background-color: #6970dd;
+  color: #000000;
+  border: none;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  height: 100%;
+}
+.text-light{
+  color: #ffffff !important;
+}
+
+.feature-card:hover {
+  background-color: #9e6fff;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+.backgroundcolorfim{
+  background-color: #ffffff;
+}
+
+.feature-card:hover h4,
+.feature-card:hover p {
+  color: #ffffff;
+}
+
+.feature-icon {
+  width: 80px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+.bg-roxo {
+  background-color: #9e6fff !important;
+}
+
+  .hover-scale-card {
+  background-color: #b183ff;
+  color: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  min-height: 330px; /* altura mínima para padronizar */
+  margin-bottom: 24px; /* espaçamento entre os cards */
+}
+
+.hover-scale-card h4,
+.hover-scale-card p {
+  color: #ffffff;
+}
+/* Impede quebra de linha dos elementos lado a lado */
+#feedbacks .row.align-items-center {
+  flex-wrap: nowrap;
+}
+
+
+/* Ajusta altura dos quadrados dos feedbacks */
+#feedbacks .carousel .p-4 {
+  min-height: 280px;
+}
+
+/* Ajusta a altura do carrossel */
+#carouselFeedbacks {
+  min-height: 600px;
+}
+
+/* Força o carrossel a ocupar o espaço da coluna */
+#carouselFeedbacks .carousel-inner {
+  height: 100%;
+}
+
+       /* Estilos existentes... */
+
+        /* ========== NOVOS ESTILOS PARA RESPONSIVIDADE ========== */
+        
+        /* 1. Centralizar botão "Agendar Demonstração" no mobile */
+        @media (max-width: 768px) {
+            .navbar-collapse .btn-primary {
+                margin-left: 0 !important;
+                margin-top: 15px;
+                width: 100%;
+                text-align: center;
+                display: block;
+            }
+            
+            .navbar-collapse {
+                text-align: center;
+            }
+            
+            .navbar-nav {
+                width: 100%;
+            }
+        }
+
+/* Alinha verticalmente os feedbacks para ficarem uniformes */
+#carouselFeedbacks .row.g-4 {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.hover-scale-card:hover {
+  transform: translateY(-5px);
+  background-color: #9e6fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+  .services-card-shadow {
+  background-color: #ffffff; /* fundo branco */
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* sem sombra inicial */
+  margin-right: 30px !important; /* espaçamento entre os cards */
+}
+
+.services-card-shadow:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12); /* sombra suave no hover */
+  transform: translateY(-9px); /* levanta levemente o card */
+}
+.color-white-inicio{
+  color: #ffffff;
+}
+.icone-roxa{
+  color:#9e6fff
+}
+.footer{
+  background-color: #002db6;
+}
+.text-top{
+  text-align: start;
+}
+
+        .navbar {
+          background-color: transparent;
+          transition: background-color 0.4s ease;
+        }
+    
+        .navbar-scrolled {
+          background-color: #002db6 !important;
+          transition: background-color 1.0s ease;
+        }
+              /* Estilos específicos para mobile */
+              @media (max-width: 991.98px) {
+            .mobile-hero {
+                background: linear-gradient(#4e20b0, #cfa3f4);
+                padding: 100px 20px 50px;
+                text-align: center;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .mobile-hero-image {
+                max-height: 300px;
+                margin: 0 auto 30px;
+                display: block;
+            }
+            
+            .mobile-hero h1 {
+                font-size: 2.2rem;
+                font-weight: 700;
+                color: white;
+                margin-bottom: 15px;
+                line-height: 1.2;
+            }
+            
+            .mobile-hero p {
+                font-size: 1.1rem;
+                color: white;
+                margin-bottom: 30px;
+            }
+            
+            .mobile-hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            
+            .mobile-hero-buttons .btn-link {
+                color: white;
+                text-decoration: underline;
+                font-size: 1rem;
+            }
+            
+            .mobile-hero-buttons .btn-primary {
+                background-color: #9e6fff;
+                border-color: #9e6fff;
+                font-size: 1rem;
+                padding: 8px 20px;
+            }
+            /* Estilo padrão para mobile */
+@media (max-width: 991.98px) {
+
+.navbar:not(.navbar-scrolled) {
+      background-color: transparent !important;
+  }
+  /* Navbar azul quando tem scroll OU quando o menu está aberto */
+  .navbar-scrolled,
+  .navbar.show {
+      background-color: #002db6 !important;
+  }
+  /* Botão do menu transparente no topo */
+  .navbar:not(.navbar-scrolled) .navbar-toggler {
+      background-color: transparent !important;
+      border-color: rgba(255,255,255,0.5) !important;
+  }
+
+  /* Quando o menu está aberto OU quando tem scroll */
+  .navbar.show .navbar-toggler,
+  .navbar-scrolled .navbar-toggler {
+      background-color: #002db6 !important;
+      border-color: #002db6 !important;
+  }
+
+  /* Estilo do menu expandido */
+  .navbar-collapse {
+      background-color: #002db6 !important;
+      margin: 8px -15px 0 !important;
+      padding: 0 15px 15px !important;
+  }
+
+  .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+  }
+}
+
+@media (max-width: 991.98px) {
+        .navbar-nav {
+      width: 100%;
+  }
+
+            /* Ajusta o container do menu para ocupar toda a largura */
+  .navbar > .container-fluid {
+      padding-left: 0 !important;
+      padding-right: 0 !important;
+  }
+  .navbar-nav {
+      width: 100%;
+      padding-top: 10px;
+  }
+  .navbar-toggler {
+      background-color: #002db6 !important;
+      border-color: #002db6 !important;
+      padding: 0.5rem 0.75rem;
+      border-radius: 0.25rem;
+      margin-right: 15px;
+  }
+  
+  .navbar-toggler-icon {
+      filter: brightness(0) invert(1);
+  }
+  
+  .navbar-collapse {
+      background-color: #002db6 !important;
+      margin-left: -15px !important;
+      margin-right: -15px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+      margin-top: 8px !important;
+      border-radius: 0 !important;
+      box-shadow: none !important;
+  }
+}
+
+            /* Ajustes para a seção mobile */
+.mobile-hero {
+  position: relative;
+  z-index: 1;
+  min-height: calc(100vh - 100px); /* Considera a altura da navbar */
+}
+
+/* Aumenta o celular e ajusta posicionamento */
+.mobile-hero img {
+  transform: scale(1.1);
+  transform-origin: left center;
+  margin-left: -15px;
+}
+
+/* Ajuste para telas pequenas */
+@media (max-width: 576px) {
+  .mobile-hero {
+    padding-top: 80px;
+    padding-bottom: 40px;
+  }
+  
+  .mobile-hero img {
+    max-height: 320px;
+    transform: scale(1);
+    margin-left: 0;
+  }
+  
+  .mobile-hero h1 {
+    font-size: 1.6rem !important;
+  }
+  
+  .mobile-hero p {
+    font-size: 0.95rem !important;
+  }
+}
+
+/* Ajuste para quando o texto fica muito próximo */
+@media (max-width: 400px) {
+  .mobile-hero .row.align-items-center {
+    flex-direction: column;
+    text-align: center !important;
+  }
+  
+  .mobile-hero .col-6 {
+    width: 100%;
+  }
+  
+  .mobile-hero img {
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 320px;
+  }
+  
+  .mobile-hero .text-start {
+    text-align: center !important;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+}
+            /* Esconde a seção desktop em mobile */
+@media (max-width: 991.98px) {
+    #home.desktop-only {
+        display: none !important;
+    }
+}
+
+/* Mantém o que já tem para esconder mobile em desktop */
+@media (min-width: 992px) {
+    .mobile-only {
+        display: none !important;
+    }
+}
+        }
+        
+        /* Esconde a seção mobile em desktop */
+        @media (min-width: 992px) {
+            .mobile-only {
+                display: none !important;
+            }
+        }
+      
+</style>
+
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400;500;600;700&amp;family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&amp;display=swap" rel="stylesheet">
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <link href="assets/css/user.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+
+
+  </head>
+
+
+  <body>
+     <!-- Botão flutuante -->
+  <div class="whatsapp-float">
+    <div class="whatsapp-button" id="whatsappButton">
+        <img src="https://cdn-icons-png.flaticon.com/512/3670/3670051.png" alt="WhatsApp">
+    </div>
+</div>
+
+<!-- Chat -->
+<div class="whatsapp-chat" id="whatsappChat">
+    <div class="chat-header">
+        Suporte Cuidar Mais
+        <span class="chat-status">Online</span>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+        <div class="message received">Olá! Somos o suporte da Cuidar Mais. Como podemos te ajudar hoje?</div>
+        <div class="typing-indicator" id="typingIndicator">Suporte está digitando...</div>
+    </div>
+    <div class="chat-input-area">
+        <div class="input-container">
+            <textarea class="message-input" id="messageInput" placeholder="Digite sua mensagem..." rows="1"></textarea>
+            <button class="send-button" id="sendButton">
+                <svg class="send-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</div>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top pt-3 mb-0" data-navbar-on-scroll="light">
+          <div class="container-fluid px-5">
+            <!-- Logo alinhada à esquerda -->
+            <a class="navbar-brand me-auto" href="index.html#top">
+              <img src="assets/img/illustration/logo-cuidar.PNG" height="50" alt="logo" />
+            </a>
+      
+            <!-- Botão de menu para mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <!-- Itens centrais e botão na direita -->
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+              <ul class="navbar-nav mx-auto d-flex gap-4 align-items-center">
+                
+                <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="quem-somos.html">Quem Somos</a></li>
+                
+                <!-- Dropdown Nossos Serviços melhorado -->
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" style="color: #ffffff; font-size: 20px;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Nossos Serviços
+                  </a>
+                  <ul class="dropdown-menu p-3" aria-labelledby="navbarDropdown" style="width: 280px; border-radius: 15px;">
+                    <li class="mb-2">
+                      <a class="dropdown-item d-flex align-items-center py-2" href="consultas.html" style="font-size: 18px;">
+                        <i class="fas fa-calendar-check me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                        Consultas
+                      </a>
+                    </li>
+                    <li class="mb-2">
+                      <a class="dropdown-item d-flex align-items-center py-2" href="exames.html" style="font-size: 18px;">
+                        <i class="fas fa-flask me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                        Exames
+                      </a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item d-flex align-items-center py-2" href="cirurgias.html" style="font-size: 18px;">
+                        <i class="fas fa-procedures me-3" style="color: #0d6efd; font-size: 20px;"></i>
+                        Cirurgias
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="parceiros.html">Quero ser Parceiro</a></li>
+                <li class="nav-item"><a class="nav-link" style="color: #ffffff; font-size: 20px;" href="clientes.html">Clientes</a></li>
+              </ul>
+              <!-- Botão na extrema direita -->
+              <button id="meuBotaoModal" class="btn btn-primary" style="background-color: #18C387; color: white;">
+                Fazer Agendamento
+              </button>
+  
+  <!-- Estrutura do Modal de Escolha -->
+<div id="modalEscolha" class="modal-custom">
+  <div class="modal-custom-content">
+    <div class="modal-custom-header">
+      <div class="logo-container">
+        <img src="assets/img/illustration/logo-cuidarmais1.PNG" alt="Ajudda Card Logo" class="logo">
+      </div>
+      <span class="modal-custom-close">&times;</span>
+    </div>
+    <div class="modal-custom-body">
+      <h3 style="color: var(--azul-primario); margin-bottom: 20px; text-align: center;">Como deseja fazer seu agendamento?</h3>
+      <div class="escolha-container">
+        <button class="btn-escolha" id="btnWhatsApp">
+          <i class="fab fa-whatsapp" style="font-size: 24px; margin-right: 10px;"></i>
+          WhatsApp
+        </button>
+        <button class="btn-escolha" id="btnPortal">
+          <i class="fas fa-laptop" style="font-size: 24px; margin-right: 10px;"></i>
+          Portal do Paciente
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Estrutura do Modal do Formulário WhatsApp (mantido igual) -->
+<div id="meuModal" class="modal-custom">
+  <div class="modal-custom-content">
+    <div class="modal-custom-header">
+      <div class="logo-container">
+        <img src="assets/img/illustration/logo-cuidarmais1.PNG" alt="Ajudda Card Logo" class="logo">
+      </div>
+      <span class="modal-custom-close">&times;</span>
+    </div>
+    <div class="modal-custom-body">
+      <form id="formDemonstracao">
+        <div class="form-group">
+          <label for="nomeRepresentante">Nome do Representante</label>
+          <input type="text" class="form-control" id="nomeRepresentante" placeholder="Seu nome completo" required>
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" class="form-control" id="empresa" placeholder="Nome da sua empresa" required>
+        </div>
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" class="form-control" id="email" placeholder="seu@email.com" required>
+        </div>
+      </form>
+    </div>
+    <div class="modal-custom-footer">
+      <button class="btn btn-secondary" id="btnCancelar">Cancelar</button>
+      <button class="btn btn-primary" id="btnEnviar">Enviar</button>
+    </div>
+  </div>
+</div>
+  
+<style>
+    /* Estilo para o container de especialidades */
+    .especialidades-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.initially-hidden {
+    display: none ;
+}
+
+#loadMoreBtn {
+    display: block;
+    margin: 30px auto;
+    padding: 12px 40px;
+    background-color: #2A5C99;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+#loadMoreBtn:hover {
+    background-color: #1E456E;
+}
+
+/* Esconde o botão quando não há mais cards para carregar */
+#loadMoreBtn.hidden {
+    display: none;
+}
+      .additional-cards {
+        display: none;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+        width: 100%;
+    }
+    
+    #verMaisBtn {
+        transition: all 0.3s ease;
+        font-weight: 600;
+    }
+    
+    #verMaisBtn:hover {
+        background-color: #6a0dad;
+        color: white !important;
+    }
+      /* Estilo para a barra de pesquisa no banner */
+      .search-box-banner input:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(158, 111, 255, 0.3);
+    }
+    
+    /* Ajuste para a seção principal de busca */
+    .search-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+        flex-wrap: wrap;
+    }
+    
+    .search-box {
+        position: relative;
+        width: 300px;
+        margin-top: 15px; /* Adicionado para espaçamento em mobile */
+    }
+    
+    .search-box input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
+    
+    .search-box button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--roxo-principal);
+        cursor: pointer;
+    }
+    :root {
+        --roxo-principal: #6a0dad;
+        --roxo-claro: #9e6fff;
+        --cinza-texto: #555;
+    }
+    
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #333;
+    }
+    
+    /* Banner Topo */
+    .banner-topo {
+        background: linear-gradient(135deg, #6a0dad 0%, #8a2be2 100%);
+        color: white;
+        padding: 60px 0;
+        margin-bottom: 40px;
+    }
+    
+    .banner-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .banner-titulo {
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    
+    .banner-titulo span {
+        font-weight: 300;
+    }
+    
+    .banner-icon {
+        width: 120px;
+        height: auto;
+    }
+    
+    /* Barra de Pesquisa */
+    .search-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: #002db6;
+        margin: 0;
+    }
+    
+    .search-box {
+        position: relative;
+        width: 300px;
+    }
+    
+    .search-box input {
+        width: 100%;
+        padding: 10px 15px;
+        border: 2px solid #ddd;
+        border-radius: 30px;
+        font-size: 1rem;
+        transition: all 0.3s;
+    }
+    
+    .search-box input:focus {
+        border-color: var(--roxo-claro);
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(158, 111, 255, 0.2);
+    }
+    
+    .search-box button {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: var(--roxo-principal);
+        cursor: pointer;
+    }
+    
+    /* Cards de Especialidades */
+    .especialidades-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+    
+    .especialidade-card {
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+        border: none;
+    }
+    
+    .especialidade-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+    
+    .especialidade-img {
+        height: 180px;
+        object-fit: cover;
+        width: 100%;
+    }
+    
+    .especialidade-body {
+        padding: 20px;
+    }
+    
+    .especialidade-titulo {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color:  #002db6;
+        margin-bottom: 15px;
+    }
+    
+    .especialidade-precos {
+        color: var(--cinza-texto);
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    
+    .especialidade-precos span {
+        font-weight: 600;
+        color: #333;
+    }
+    
+    .saiba-mais {
+        display: inline-block;
+        color: black;
+        font-weight: 600;
+        margin-bottom: 15px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .saiba-mais:hover {
+        text-decoration: underline;
+    }
+    
+    .btn-agendar {
+        background-color:  #002db6;
+        color: white;
+        border: none;
+        padding: 8px 20px;
+        border-radius: 30px;
+        font-weight: 600;
+        width: 100%;
+        transition: background-color 0.3s;
+    }
+    
+    .btn-agendar:hover {
+        background-color: #5a0b9d;
+        color: white;
+    }
+    
+    /* Modal */
+    .modal-content {
+        border-radius: 15px;
+        border: none;
+    }
+    
+    .modal-header {
+        background-color:  #002db6;
+        color: white;
+        border-bottom: none;
+        border-radius: 15px 15px 0 0 !important;
+    }
+    
+    .modal-title {
+        color: white;
+        font-size: 2vh;
+    }
+    
+    .btn-close {
+        filter: invert(1);
+    }
+    
+    .modal-body {
+        padding: 25px;
+    }
+    
+    .modal-footer {
+        border-top: none;
+        justify-content: center;
+        padding-bottom: 25px;
+    }
+    
+    /* Responsivo */
+    @media (max-width: 768px) {
+        .banner-content {
+            flex-direction: column;
+            text-align: center;
+        }
+        
+        .banner-icon {
+            margin-top: 20px;
+        }
+        
+        .search-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .search-box {
+            width: 100%;
+            margin-top: 15px;
+        }
+        
+        .especialidades-container {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+<style>
+  /* Adicionei estilos para os novos elementos */
+  .escolha-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-escolha {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+    background-color: var(--azul-primario);
+    color: var(--branco);
+  }
+  
+  .btn-escolha:hover {
+    background-color: var(--azul-primario);
+    transform: translateY(-2px);
+  }
+  
+  /* Mantenha todos os outros estilos existentes */
+  /* Cores personalizadas no tema roxo */
+  :root {
+    --azul-primario: #002db6;
+    --azul-claro:#456eeadd;
+    --roxo-primario: #6a0dad;
+    --roxo-secundario: #8a2be2;
+    --roxo-claro: #e6e6fa;
+    --roxo-escuro: #4b0082;
+    --cinza-claro: #f8f9fa;
+    --cinza-medio: #e9ecef;
+    --branco: #ffffff;
+  }
+  
+  /* Estilos personalizados para o modal */
+  .modal-custom {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-custom-content {
+    background-color: var(--branco);
+    width: 90%;
+    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s;
+    overflow: hidden;
+  }
+  
+  @keyframes modalFadeIn {
+    from {opacity: 0; transform: translateY(-20px);}
+    to {opacity: 1; transform: translateY(0);}
+  }
+  
+  .modal-custom-header {
+    padding: 20px 25px;
+    background-color: var(--azul-primario);
+    color: var(--branco);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    align-items: center;
+    height: 50px;
+  }
+  
+  .logo {
+    height: 100%;
+    width: auto;
+    max-width: 600px;
+    object-fit: contain;
+  }
+  
+  .modal-custom-close {
+    font-size: 32px;
+    cursor: pointer;
+    color: var(--branco);
+    transition: color 0.3s;
+  }
+  
+  .modal-custom-close:hover {
+    color: var(--azul-claro);
+  }
+  
+  .modal-custom-body {
+    padding: 30px;
+    background-color: var(--cinza-claro);
+  }
+  
+  .modal-custom-footer {
+    padding: 20px 25px;
+    background-color: var(--cinza-medio);
+    text-align: right;
+  }
+  
+  .form-group {
+    margin-bottom: 25px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: var(--azul-primario);
+    font-size: 16px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 14px;
+    border: 2px solid var(--cinza-medio);
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+    font-size: 16px;
+    height: 50px;
+  }
+  
+  .form-control:focus {
+    border-color: var(--azul-primario);
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(138, 43, 226, 0.2);
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s;
+    height: 50px;
+  }
+  
+  .btn-primary {
+    background-color: var(--azul-primario);
+    color: var(--branco);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--azul-primario);
+    transform: translateY(-2px);
+  }
+  
+  .btn-secondary {
+    background-color: var(--cinza-medio);
+    color: var(--roxo-escuro);
+    margin-right: 15px;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #d1d7dc;
+  }
+  </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Elementos dos modais
+    const modalEscolha = document.getElementById('modalEscolha');
+    const modalForm = document.getElementById('meuModal');
+    const btnModal = document.getElementById('meuBotaoModal');
+    const btnWhatsApp = document.getElementById('btnWhatsApp');
+    const btnPortal = document.getElementById('btnPortal');
+    
+    // Elementos do modal de formulário (mantidos do código original)
+    const span = document.querySelectorAll('.modal-custom-close');
+    const btnCancelar = document.getElementById('btnCancelar');
+    const btnEnviar = document.getElementById('btnEnviar');
+    
+    // Função para abrir qualquer modal
+    function abrirModal(modal) {
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+    
+    // Função para fechar qualquer modal
+    function fecharModal(modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Abre o modal de escolha ao clicar no botão principal
+    btnModal.onclick = function() {
+      abrirModal(modalEscolha);
+    }
+    
+    // Fecha os modais ao clicar no X
+    span.forEach(function(element) {
+      element.onclick = function() {
+        const modal = this.closest('.modal-custom');
+        fecharModal(modal);
+      };
+    });
+    
+    // Fecha os modais ao clicar fora do conteúdo
+    window.onclick = function(event) {
+      if (event.target.classList.contains('modal-custom')) {
+        fecharModal(event.target);
+      }
+    }
+    
+    // Fecha os modais ao pressionar ESC
+    document.onkeydown = function(event) {
+      if (event.key === 'Escape') {
+        const modals = document.querySelectorAll('.modal-custom');
+        modals.forEach(function(modal) {
+          if (modal.style.display === 'flex') {
+            fecharModal(modal);
+          }
+        });
+      }
+    }
+    
+    // Botão WhatsApp no modal de escolha
+    btnWhatsApp.onclick = function() {
+      fecharModal(modalEscolha);
+      abrirModal(modalForm);
+    }
+    
+    // Botão Portal no modal de escolha
+    btnPortal.onclick = function() {
+      fecharModal(modalEscolha);
+      window.open('https://clinicas.gees.com.br/cuidarmais/portal/portalpaciente', '_blank');
+    }
+    
+    // Fecha o modal de formulário ao clicar no botão Cancelar
+    btnCancelar.onclick = function() {
+      fecharModal(modalForm);
+    }
+    
+    // Envia os dados para o WhatsApp (mantido do código original)
+    btnEnviar.onclick = function() {
+      const nome = document.getElementById('nomeRepresentante').value;
+      const empresa = document.getElementById('empresa').value;
+      const email = document.getElementById('email').value;
+      
+      if (!nome || !empresa || !email) {
+        alert('Por favor, preencha todos os campos!');
+        return;
+      }
+      
+      const mensagem = `Olá, gostaria de agendar uma demonstração do Ajudda Card:\n\n` +
+                      `*Nome do Representante:* ${nome}\n` +
+                      `*Empresa:* ${empresa}\n` +
+                      `*E-mail:* ${email}\n\n` +
+                      `Por favor, informe os horários disponíveis.`;
+      
+      const mensagemCodificada = encodeURIComponent(mensagem);
+      const urlWhatsApp = `https://wa.me/5585998160208?text=${mensagemCodificada}`;
+      
+      window.open(urlWhatsApp, '_blank');
+      fecharModal(modalForm);
+      document.getElementById('formDemonstracao').reset();
+    }
+  });
+  
+  // Adicionando Font Awesome para os ícones
+  document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">');
+  </script>
+          </div>
+        </div>
+      </nav>
+</div>
+   
+    
+    
+      <style>
+        .navbar {
+          background-color: transparent;
+          transition: background-color 0.4s ease;
+          
+        }
+    
+        .navbar-scrolled {
+          background-color:  #002db6;
+          transition: background-color 1.0s ease;
+        }
+
+      </style>
+    
+    <script>
+      // Controle do scroll
+      window.addEventListener('scroll', () => {
+          const navbar = document.querySelector('.navbar');
+          // Só aplica o azul se tiver scroll > 50 E não estiver com menu aberto
+          navbar.classList.toggle('navbar-scrolled', window.scrollY > 50 && !navbar.classList.contains('show'));
+      });
+      
+      // Controle do clique no menu
+      document.querySelector('.navbar-toggler').addEventListener('click', function() {
+          const navbar = document.querySelector('.navbar');
+          navbar.classList.toggle('show');
+          
+          // Força o azul enquanto o menu estiver aberto
+          if(navbar.classList.contains('show')) {
+              navbar.classList.add('navbar-scrolled');
+          } else if(window.scrollY <= 50) {
+              navbar.classList.remove('navbar-scrolled');
+          }
+      });
+      
+      // Detecta quando o menu é fechado via clique fora
+      document.addEventListener('click', function(e) {
+          const navbar = document.querySelector('.navbar');
+          if(!navbar.contains(e.target) && !e.target.classList.contains('navbar-toggler')) {
+              if(window.scrollY <= 50) {
+                  navbar.classList.remove('navbar-scrolled');
+              }
+          }
+      });
+      </script>
+    </main>
+  
+        <!-- Imagem de fundo para desktop -->
+        
+        
+       
+      
+<!-- Banner Hero Section - Atualizado com busca funcional -->
+<section class="py-7 position-relative bg-roxo" style="background: url('assets/img/illustration/bannerbanner1.PNG') no-repeat center center/cover; margin-bottom: 20px; margin-top: 0vh; height: 50vh;">
+    <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.554);"></div>
+    <div class="container text-white position-relative z-1 text-center py-7" style="margin-top: 5vh;">
+      <h1 class="display-4 fw-bold mt-3" style="color: #ffffff; ">Agende exames médicos
+         com <br>especialistas
+        sem sair de casa.</h1>
+         
+         <!-- Barra de Pesquisa no Banner - AGORA FUNCIONAL -->
+         <div class="d-flex justify-content-center mt-4">
+            <div class="search-box-banner" style="width: 100%; max-width: 600px; position: relative;">
+                <input type="text" id="searchInput" placeholder="Buscar área de atuação..." class="form-control py-3 px-4" 
+                       style="border-radius: 50px; border: none; padding-right: 50px;">
+                <button type="button" id="searchButton" class="btn" 
+                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none;">
+                    <i class="fas fa-search" style="color: #9e6fff; font-size: 1.2rem;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- JavaScript para a funcionalidade de busca -->
+<script>document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.getElementById('searchInput');
+    const searchButton = document.getElementById('searchButton');
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    const showLessBtn = document.getElementById('showLessBtn');
+    
+    // Seleciona APENAS os cards da seção "Demais áreas" que estão ocultos
+    const hiddenCards = document.querySelectorAll('#demaisEspecialidades .initially-hidden');
+    let currentlyShowing = 0;
+    const cardsToShow = 6;
+    
+    // Função para restaurar o estado inicial dos cards
+    function restoreInitialState() {
+        // Mostra todos os cards principais
+        document.querySelectorAll('#principaisEspecialidades .especialidade-card').forEach(card => {
+            card.style.display = 'block';
+        });
+        
+        // Mostra apenas os 6 primeiros cards das demais áreas
+        document.querySelectorAll('#demaisEspecialidades .especialidade-card').forEach((card, index) => {
+            card.style.display = index < 6 ? 'block' : 'none';
+        });
+        
+        // Reseta o contador
+        currentlyShowing = 0;
+        loadMoreBtn.style.display = 'inline-block';
+        showLessBtn.style.display = 'none';
+    }
+    
+    // Função para filtrar os exames
+    function filterExams() {
+        const searchTerm = searchInput.value.toLowerCase();
+        
+        if (searchTerm === '') {
+            restoreInitialState();
+            return;
+        }
+        
+        const examCards = document.querySelectorAll('.especialidade-card');
+        let hasResults = false;
+        
+        examCards.forEach(card => {
+            const title = card.querySelector('.especialidade-titulo').textContent.toLowerCase();
+            if (title.includes(searchTerm)) {
+                card.style.display = 'block';
+                hasResults = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Esconde os botões de paginação durante a busca
+        loadMoreBtn.style.display = 'none';
+        showLessBtn.style.display = 'none';
+        
+        // Mostrar mensagem se não encontrar resultados
+        const noResultsMsg = document.getElementById('noResultsMessage');
+        if (!hasResults) {
+            if (!noResultsMsg) {
+                const msg = document.createElement('div');
+                msg.id = 'noResultsMessage';
+                msg.className = 'alert alert-info mt-4';
+                msg.textContent = 'Nenhum exame encontrado com esse termo.';
+                document.querySelector('#demaisEspecialidades').parentNode.insertBefore(msg, document.querySelector('#demaisEspecialidades').nextSibling);
+            }
+        } else if (noResultsMsg) {
+            noResultsMsg.remove();
+        }
+    }
+    
+    // Mostra mais cards
+    loadMoreBtn.addEventListener('click', function() {
+        const remainingCards = hiddenCards.length - currentlyShowing;
+        const nextBatch = Math.min(cardsToShow, remainingCards);
+        
+        for (let i = 0; i < nextBatch; i++) {
+            if (hiddenCards[currentlyShowing + i]) {
+                hiddenCards[currentlyShowing + i].style.display = 'block';
+            }
+        }
+        
+        currentlyShowing += nextBatch;
+        
+        if (currentlyShowing > 0) {
+            showLessBtn.style.display = 'inline-block';
+        }
+        
+        if (currentlyShowing >= hiddenCards.length) {
+            loadMoreBtn.style.display = 'none';
+        }
+    });
+    
+    // Mostra menos cards
+    showLessBtn.addEventListener('click', function() {
+        hiddenCards.forEach(card => {
+            card.style.display = 'none';
+        });
+        
+        currentlyShowing = 0;
+        loadMoreBtn.style.display = 'inline-block';
+        showLessBtn.style.display = 'none';
+        
+        document.querySelector('#demaisEspecialidades').scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+    
+    // Event listeners para busca
+    searchButton.addEventListener('click', filterExams);
+    searchInput.addEventListener('keyup', function(e) {
+        if (e.key === 'Enter') {
+            filterExams();
+        }
+    });
+    
+    // Restaura o estado inicial se o usuário apagar a busca
+    searchInput.addEventListener('input', function() {
+        if (searchInput.value === '') {
+            restoreInitialState();
+        }
+    });
+    
+    // Esconde o botão "Carregar mais" se não houver cards ocultos
+    if (hiddenCards.length === 0) {
+        loadMoreBtn.style.display = 'none';
+    }
+});
+    </script>
+  
+<div class="container">
+    <!-- Seção de Principais Áreas -->
+    <div class="search-container">
+        <h2 class="section-title">Exames Gerais</h2>
+    </div>
+    
+    <div class="especialidades-container" id="principaisEspecialidades">
+        <!-- Card 1 - Cardiologia -->
+        <div class="card especialidade-card" style="height: 360px;">
+            <img src="assets/img/illustration/eletrocardiograma.PNG" alt="Cardiologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">ECG - Eletrocardiograma</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalECG">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20ECG%20(Eletrocardiograma).%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        
+        <!-- Card 2 - Clínica Médica -->
+        <div class="card especialidade-card" style="height: 360px;">
+            <img src="assets/img/illustration/eletroencefalograma.JPG" alt="Clínica Médica" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">EEG - Eletroencefalograma</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalEEG">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20EGG%20Eletroencefalograma.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card" style="height: 360px;">
+            <img src="assets/img/illustration/mamografia.PNG" alt="Cardiologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo"> Mamografia Convencional</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalMamografia">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Mamografia%20Convencional.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card" style="height: 360px;">
+            <img src="assets/img/illustration/ressonancia.PNG" alt="Cardiologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Ressonância</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalRessonancia">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Ressonância.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card" style="height: 360px;">
+            <img src="assets/img/illustration/endoscopia.PNG" alt="Cardiologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Endoscopia</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalEndoscopia">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Endoscopia.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card" style="height: 360px;">
+            <img src="assets/img/illustration/raiox.PNG" alt="Cardiologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Raio X </h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalRaioX">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Raio%20X.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card" style="height: 360px;">
+            <img src="assets/img/illustration/ultrassonografia-convencional.PNG" alt="Cardiologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Ultrassonografia Convencional</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalUltrassonografia">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Ultrassonografia%20Convencional.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card" style="height: 360px;">
+            <img src="assets/img/illustration/ultracomdoppler.PNG" alt="Cardiologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Ultrassonografia Doppler</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalDoppler">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Ultrassonografia%20Doppler.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card" style="height: 360px;">
+            <img src="assets/img/illustration/eco.PNG" alt="Cardiologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Ecocardiograma</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalEcocardiograma">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Ecocardiograma.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <!-- Modal ECG - Eletrocardiograma -->
+<div class="modal fade" id="modalECG" tabindex="-1" aria-labelledby="modalECGLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalECGLabel">ECG - Eletrocardiograma</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que registra a atividade elétrica do coração, utilizado para diagnosticar arritmias, infarto e outras condições cardíacas.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20ECG%20(Eletrocardiograma).%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal EEG - Eletroencefalograma -->
+<div class="modal fade" id="modalEEG" tabindex="-1" aria-labelledby="modalEEGLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalEEGLabel">EEG - Eletroencefalograma</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que registra a atividade elétrica do cérebro, utilizado para diagnosticar epilepsia, distúrbios do sono e outras condições neurológicas.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20EEG%20(Eletroencefalograma).%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Mamografia Convencional -->
+<div class="modal fade" id="modalMamografia" tabindex="-1" aria-labelledby="modalMamografiaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalMamografiaLabel">Mamografia Convencional</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame de imagem das mamas que utiliza raios-X para detectar precocemente câncer de mama e outras alterações mamárias.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20uma%20Mamografia%20Convencional.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Ressonância -->
+<div class="modal fade" id="modalRessonancia" tabindex="-1" aria-labelledby="modalRessonanciaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalRessonanciaLabel">Ressonância Magnética</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame de imagem que utiliza campo magnético e ondas de rádio para produzir imagens detalhadas de órgãos e estruturas internas do corpo.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20uma%20Ressonância%20Magnética.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Endoscopia -->
+<div class="modal fade" id="modalEndoscopia" tabindex="-1" aria-labelledby="modalEndoscopiaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalEndoscopiaLabel">Endoscopia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que permite visualizar o interior do esôfago, estômago e duodeno, utilizado para diagnosticar gastrites, úlceras e outros problemas digestivos.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20uma%20Endoscopia.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Raio X -->
+<div class="modal fade" id="modalRaioX" tabindex="-1" aria-labelledby="modalRaioXLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalRaioXLabel">Raio X</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame de imagem que utiliza radiação ionizante para visualizar estruturas internas do corpo, especialmente ossos e pulmões.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20Raio%20X.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Ultrassonografia Convencional -->
+<div class="modal fade" id="modalUltrassonografia" tabindex="-1" aria-labelledby="modalUltrassonografiaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalUltrassonografiaLabel">Ultrassonografia Convencional</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame de imagem que utiliza ondas sonoras para visualizar órgãos internos, tecidos e fluxo sanguíneo, sem uso de radiação.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20uma%20Ultrassonografia%20Convencional.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Ultrassonografia Doppler -->
+<div class="modal fade" id="modalDoppler" tabindex="-1" aria-labelledby="modalDopplerLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalDopplerLabel">Ultrassonografia Doppler</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que avalia o fluxo sanguíneo em artérias e veias, utilizado para diagnosticar tromboses, varizes e outras alterações vasculares.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20uma%20Ultrassonografia%20Doppler.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Ecocardiograma -->
+<div class="modal fade" id="modalEcocardiograma" tabindex="-1" aria-labelledby="modalEcocardiogramaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalEcocardiogramaLabel">Ecocardiograma</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame de ultrassom do coração que avalia sua estrutura, função e fluxos sanguíneos, utilizado para diagnosticar doenças cardíacas.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20Ecocardiograma.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+        
+        
+        
+        
+    </div>
+    
+    <!-- Seção de Demais Áreas -->
+    <div class="search-container mt-5">
+        <h2 class="section-title">Exames Laboratoriais</h2>
+    </div>
+    
+    <div class="especialidades-container" id="demaisEspecialidades">
+        <!-- Primeiros 6 cards visíveis -->
+        <div class="card especialidade-card demais-card" style="height: 360px;">
+            <img src="assets/img/illustration/creatinina.PNG" alt="Endocrinologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Creatinina</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalCreatinina">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Creatinina.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card demais-card" style="height: 360px;">
+            <img src="assets/img/illustration/glicose.PNG" alt="Endocrinologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Glicose</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalGlicose">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Glicose.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card demais-card" style="height: 360px;">
+            <img src="assets/img/illustration/hemograma.PNG" alt="Endocrinologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Hemograma Completo</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalHemograma">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Hemograma%20Completo.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card demais-card" style="height: 360px;">
+            <img src="assets/img/illustration/t4.PNG" alt="Endocrinologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">T4 Livre</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalT4Livre">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20T4%20LIVRE.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card demais-card" style="height: 360px;">
+            <img src="assets/img/illustration/tgo.PNG" alt="Endocrinologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">TGO</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalTGO">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20TGO.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card demais-card" style="height: 360px;">
+            <img src="assets/img/illustration/tsh-subs.PNG" alt="Endocrinologia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">TSH</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalTSH">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%TSH.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        
+        <!-- Repita mais 5 cards visíveis inicialmente -->
+        
+        <!-- Cards ocultos inicialmente -->
+        <div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+            <img src="assets/img/illustration/ureiaureia.PNG" alt="Fisioterapia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Ureia</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalUreia">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Ureia.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+            <img src="assets/img/illustration/URINA.PNG" alt="Fisioterapia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">Urina 1 - Rotina de Urina</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalUrina1">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Urina-1.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+        <div class="card especialidade-card demais-card initially-hidden" style="height: 360px;">
+            <img src="assets/img/illustration/PSA.PNG" alt="Fisioterapia" class="especialidade-img">
+            <div class="especialidade-body">
+                <h5 class="especialidade-titulo">PSA Livre + Total</h5>
+                <a class="saiba-mais" data-bs-toggle="modal" data-bs-target="#modalPSA">+ saiba mais</a>
+                <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20PS4%20Livre+Total.%20Podem%20me%20ajudar?" 
+   class="btn btn-agendar" 
+   target="_blank">
+   Agendar Exames
+</a>
+            </div>
+        </div>
+      
+        <!-- Modal Creatinina -->
+<div class="modal fade" id="modalCreatinina" tabindex="-1" aria-labelledby="modalCreatininaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalCreatininaLabel">Creatinina</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que mede os níveis de creatinina no sangue, utilizado para avaliar a função renal.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Creatinina.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Glicose -->
+<div class="modal fade" id="modalGlicose" tabindex="-1" aria-labelledby="modalGlicoseLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalGlicoseLabel">Glicose</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que mede os níveis de açúcar no sangue, utilizado para diagnosticar e monitorar diabetes.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Glicose.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Hemograma Completo -->
+<div class="modal fade" id="modalHemograma" tabindex="-1" aria-labelledby="modalHemogramaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalHemogramaLabel">Hemograma Completo</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que avalia as células do sangue (hemácias, leucócitos e plaquetas), utilizado para diagnosticar anemias, infecções e outras condições.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20Hemograma%20Completo.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal T4 Livre -->
+<div class="modal fade" id="modalT4Livre" tabindex="-1" aria-labelledby="modalT4LivreLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalT4LivreLabel">T4 Livre</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que mede os níveis do hormônio T4 livre na corrente sanguínea, utilizado para avaliar a função da tireoide.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20T4%20Livre.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal TGO -->
+<div class="modal fade" id="modalTGO" tabindex="-1" aria-labelledby="modalTGOLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalTGOLabel">TGO (AST)</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que mede os níveis da enzima TGO (transaminase glutâmico-oxalacética) no sangue, utilizado para avaliar a função hepática.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20TGO.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal TSH -->
+<div class="modal fade" id="modalTSH" tabindex="-1" aria-labelledby="modalTSHLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalTSHLabel">TSH</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que mede os níveis do hormônio tireoestimulante (TSH), utilizado para avaliar a função da tireoide.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20TSH.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Ureia -->
+<div class="modal fade" id="modalUreia" tabindex="-1" aria-labelledby="modalUreiaLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalUreiaLabel">Ureia</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que mede os níveis de ureia no sangue, utilizado para avaliar a função renal.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Ureia.%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal Urina 1 -->
+<div class="modal fade" id="modalUrina1" tabindex="-1" aria-labelledby="modalUrina1Label" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalUrina1Label">Urina 1 - Rotina de Urina</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que analisa características físicas, químicas e microscópicas da urina, utilizado para detectar infecções urinárias e problemas renais.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20Urina%201%20(Rotina%20de%20Urina).%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- Modal PSA -->
+<div class="modal fade" id="modalPSA" tabindex="-1" aria-labelledby="modalPSALabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="modalPSALabel">PSA Livre + Total</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <p>Exame que mede os níveis de antígeno prostático específico (PSA) no sangue, utilizado para rastrear problemas na próstata, incluindo câncer.</p>
+          </div>
+          <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+              <a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20agendar%20um%20exame%20de%20PSA%20(Livre%20+%20Total).%20Podem%20me%20ajudar?" 
+                 class="btn btn-agendar" 
+                 target="_blank">
+                 Agendar Exame
+              </a>
+          </div>
+      </div>
+  </div>
+</div>
+        <!-- Adicione os demais cards ocultos aqui -->
+        
+    </div>
+    
+    <div class="btn-container">
+      <button id="loadMoreBtn" class="btn" style="background-color: #18c387;">Carregar mais especialidades</button>
+      <button id="showLessBtn" class="btn" style="background-color: #18c387; color: white;">Mostrar menos</button>
+    </div>
+</div>
+    
+    <!-- Adicione os outros modais seguindo o mesmo padrão -->
+    
+    <!-- Bootstrap JS -->
+   <!-- JavaScript atualizado -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const loadMoreBtn = document.getElementById('loadMoreBtn');
+        const showLessBtn = document.getElementById('showLessBtn');
+        const hiddenCards = document.querySelectorAll('#demaisEspecialidades .initially-hidden');
+        let currentlyShowing = 0;
+        const cardsToShow = 6;
+        
+        // Mostra mais cards
+        loadMoreBtn.addEventListener('click', function() {
+            const remainingCards = hiddenCards.length - currentlyShowing;
+            const nextBatch = Math.min(cardsToShow, remainingCards);
+            
+            for (let i = 0; i < nextBatch; i++) {
+                if (hiddenCards[currentlyShowing + i]) {
+                    hiddenCards[currentlyShowing + i].classList.remove('initially-hidden');
+                }
+            }
+            
+            currentlyShowing += nextBatch;
+            
+            // Mostra o botão "Mostrar menos" quando algum card adicional é exibido
+            if (currentlyShowing > 0) {
+                showLessBtn.style.display = 'inline-block';
+            }
+            
+            // Esconde o botão "Carregar mais" se não houver mais cards
+            if (currentlyShowing >= hiddenCards.length) {
+                loadMoreBtn.style.display = 'none';
+            }
+        });
+        
+        // Mostra menos cards (retorna ao estado inicial)
+        showLessBtn.addEventListener('click', function() {
+            // Oculta todos os cards extras
+            hiddenCards.forEach(card => {
+                card.classList.add('initially-hidden');
+            });
+            
+            // Reseta o contador
+            currentlyShowing = 0;
+            
+            // Mostra o botão "Carregar mais" e esconde o "Mostrar menos"
+            loadMoreBtn.style.display = 'inline-block';
+            showLessBtn.style.display = 'none';
+            
+            // Rolagem suave para a seção de "Demais áreas"
+            document.querySelector('#demaisEspecialidades').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+        
+        // Esconde o botão "Carregar mais" se não houver cards ocultos
+        if (hiddenCards.length === 0) {
+            loadMoreBtn.style.display = 'none';
+        }
+    });
+    </script>
+
+
+
+
+    <!-- ============================================-->
+    <!-- <section> begin ============================-->
+      <style>
+        /* Estilos Gerais do Footer */
+        .footer {
+            background-color: #002db6;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        .footer h4 {
+            color: white; /* Garantindo que os títulos fiquem brancos */
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        .footer ul {
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .footer li {
+            margin-bottom: 10px;
+        }
+        
+        /* Seção de Contato */
+        .contact-info {
+            margin-top: 20px;
+        }
+        
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .contact-info i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+            min-width: 20px;
+            color: white;
+        }
+        
+        /* Logo */
+        .footer-logo {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        
+        /* Rodapé Inferior */
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            margin-top: 30px;
+        }
+        
+        /* Layout Responsivo */
+        @media (min-width: 992px) {
+            /* Desktop - 2 colunas principais */
+            .footer-main {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .footer-brand {
+                flex: 0 0 40%;
+                max-width: 40%;
+                padding-right: 30px;
+            }
+            
+            .footer-links {
+                flex: 0 0 60%;
+                max-width: 60%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            
+            .footer-column {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+                padding: 0 15px;
+            }
+        }
+        
+        @media (max-width: 991.98px) {
+            /* Tablet - 1 coluna */
+            .footer-brand {
+                margin-bottom: 30px;
+                text-align: center;
+            }
+            
+            .footer-logo {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            
+            .footer-links {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            
+            .footer-column {
+                flex: 0 0 48%;
+                max-width: 48%;
+                margin-bottom: 30px;
+            }
+            
+            .contact-info {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            .contact-info p {
+                margin-bottom: 0;
+                flex: 0 0 auto;
+            }
+        }
+        
+        @media (max-width: 575.98px) {
+            /* Mobile - ajuste dos contatos */
+            .footer-column {
+                flex: 0 0 100%;
+                max-width: 100%;
+                text-align: center;
+            }
+            
+            .footer-links {
+                display: block;
+            }
+            
+            .contact-info {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            
+            .contact-info p {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+    </style>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <!-- Coluna da Logo e Contatos -->
+                <div class="footer-brand">
+                    <a href="index.html">
+                        <img src="assets/img/illustration/logo-cuidar.PNG" alt="Cuidar Mais" class="footer-logo">
+                    </a>
+                    <div class="contact-info">
+                        <p><i class="fas fa-mobile-alt"></i> 85 99816-0208</p>
+                        <p><i class="fas fa-phone-alt"></i> 3254-4440</p>
+                        <p><i class="fas fa-envelope"></i> cuidarmais@gmail.com</p>
+                    </div>
+                </div>
+                
+                <!-- Colunas de Links -->
+                <div class="footer-links">
+                    <!-- Coluna 1 -->
+                    <div class="footer-column">
+                        <h4>Sobre a Cuidar Mais</h4>
+                        <ul>
+                            <li><a href="quem-somos.html">Quem Somos</a></li>
+                            <li><a href="clientes.html">Clientes</a></li>
+                            <li><a href="parceiros.html">Quero virar parceiro</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Coluna 2 -->
+                    <div class="footer-column">
+                        <h4>Serviços</h4>
+                        <ul>
+                            <li><a href="consultas.html">Consultas</a></li>
+                            <li><a href="exames.html">Exames</a></li>
+                            <li><a href="cirurgias.html">Cirurgias</a></li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Coluna 3 -->
+                    <div class="footer-column">
+                        <h4>Ajuda</h4>
+                        <ul>
+                            <li><a href="faq.html">Perguntas Frequentes</a></li>
+                            <li><a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20acessar%20o%20suporte%20pelo%20whatssap.%20Podem%20me%20ajudar?">Suporte via WhatsApp</a></li>
+                            <li><a href="politicas-privacidade.html">Política de Privacidade</a></li>
+                            <li><a href="termosuso.html">Termos de Uso</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Rodapé Inferior -->
+            <div class="footer-bottom">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        <p class="mb-0">&copy; 2025 Cuidar Mais. Todos os direitos reservados.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <p class="mb-0">Desenvolvido por <a href="https://www.linkedin.com/in/trajanoluan" target="_blank">LuanDev</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+ 
+    <!-- <section> close ============================-->
+    <!-- ============================================-->
+
+
+  </section>
+    </main>
+    <!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap Bundle com Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Owl Carousel JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<!-- Inicialização do Owl Carousel -->
+<script>
+        $(document).ready(function(){
+          $(".testimonial-carousel").owlCarousel({
+        autoplay: true,
+        loop: true,
+        margin: 30,
+        dots: true,
+        nav: false,
+        responsive:{
+          0:{ items:1 },
+          576:{ items:2 },
+          768:{ items:3 },
+          992:{ items:4 }
+        }
+      });
+  });
+</script>
+<script>
+  // Elementos
+  const whatsappButton = document.getElementById('whatsappButton');
+  const whatsappChat = document.getElementById('whatsappChat');
+  const messageInput = document.getElementById('messageInput');
+  const sendButton = document.getElementById('sendButton');
+  const chatMessages = document.getElementById('chatMessages');
+  const typingIndicator = document.getElementById('typingIndicator');
+  const whatsappNumber = '5585998160208';
+  
+  // Abrir/fechar chat
+  whatsappButton.addEventListener('click', function() {
+      whatsappChat.style.display = whatsappChat.style.display === 'block' ? 'none' : 'block';
+      if (whatsappChat.style.display === 'block') {
+          messageInput.focus();
+      }
+  });
+  
+  // Auto-ajuste da altura do textarea
+  messageInput.addEventListener('input', function() {
+      this.style.height = 'auto';
+      this.style.height = (this.scrollHeight > 84 ? 84 : this.scrollHeight) + 'px';
+  });
+  
+  // Adicionar mensagem
+  function addMessage(text, isReceived) {
+      const messageElement = document.createElement('div');
+      messageElement.classList.add('message', isReceived ? 'received' : 'sent');
+      messageElement.textContent = text;
+      chatMessages.insertBefore(messageElement, typingIndicator);
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+  }
+  
+  // Enviar mensagem
+  function sendMessage() {
+      const message = messageInput.value.trim();
+      if (message) {
+          addMessage(message, false);
+          messageInput.value = '';
+          messageInput.style.height = 'auto';
+          
+          // Resposta automática
+          typingIndicator.style.display = 'block';
+          chatMessages.scrollTop = chatMessages.scrollHeight;
+          
+          setTimeout(() => {
+              typingIndicator.style.display = 'none';
+              addMessage("Recebemos sua mensagem. Iremos te direcionar para o WhatsApp responsável para podermos te ajudar.", true);
+              
+              // Redireciona para o WhatsApp
+              setTimeout(() => {
+                  window.open(`https://wa.me/${whatsappNumber}?text=${encodeURIComponent('Olá, vim pelo chat do site: ' + message)}`, '_blank');
+              }, 1500);
+          }, 1000);
+      }
+  }
+  
+  // Eventos
+  sendButton.addEventListener('click', sendMessage);
+  messageInput.addEventListener('keypress', function(e) {
+      if (e.key === 'Enter' && !e.shiftKey) {
+          e.preventDefault();
+          sendMessage();
+      }
+  });
+</script>
+</body>
+</html>
