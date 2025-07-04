@@ -38,19 +38,23 @@
 <meta name="msapplication-TileImage" content="assets/img/favicons/mstile-150x150.png">
 <meta name="theme-color" content="#ffffff">
 <style>
-  @media (max-width: 767.98px) {
+@media (max-width: 767.98px) {
   #nossos-valores .titulo1 {
-    white-space: normal;
-    word-break: break-word;
-    overflow-wrap: break-word;
+    font-size: 2.5rem; /* Tamanho menor para mobile */
+    line-height: 1.2; /* Espaçamento entre linhas ajustado */
+    white-space: normal; /* Permite quebra de linha */
   }
   
   #nossos-valores .titulo1 .texto {
-    display: inline;
+    display: inline; /* Mantém o fluxo normal do texto */
   }
   
-  #nossos-valores .slogan1 {
-    white-space: normal;
+  #nossos-valores .titulo1 br {
+    display: none; /* Remove a quebra de linha forçada */
+  }
+  
+  #nossos-valores .titulo1 span[style*="color: #18C387"] {
+    display: inline; /* Garante que o span colorido fique na mesma linha */
   }
 }
 
@@ -2470,7 +2474,7 @@
     display: inline-block; /* Mantém o alinhamento centralizado com <br> */
 }
   </style>
-  
+
   <div class="secao-unidades">
     <div class="container">
         <div class="header-secao">
