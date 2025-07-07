@@ -1471,23 +1471,27 @@
         
        
       
-<!-- Banner Hero Section - Atualizado com busca funcional -->
-<section class="py-7 position-relative bg-roxo" style="background: url('assets/img/illustration/bannerbanner1.PNG') no-repeat center center/cover; margin-bottom: 20px; margin-top: 0vh; height: 50vh;">
+<!-- Banner Hero Section - Atualizado com busca funcional e layout responsivo -->
+<section class="position-relative bg-roxo" style="background: url('assets/img/illustration/bannerbanner1.PNG') no-repeat center center/cover; margin-bottom: 20px; min-height: 60vh;">
     <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.554);"></div>
-    <div class="container text-white position-relative z-1 text-center py-7" style="margin-top: 5vh;">
-      <h1 class="display-4 fw-bold mt-3" style="color: #ffffff; ">Agende exames médicos
-         com <br>especialistas
-        sem sair de casa.</h1>
-         
-         <!-- Barra de Pesquisa no Banner - AGORA FUNCIONAL -->
-         <div class="d-flex justify-content-center mt-4">
-            <div class="search-box-banner" style="width: 100%; max-width: 600px; position: relative;">
-                <input type="text" id="searchInput" placeholder="Buscar área de atuação..." class="form-control py-3 px-4" 
-                       style="border-radius: 50px; border: none; padding-right: 50px;">
-                <button type="button" id="searchButton" class="btn" 
-                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none;">
-                    <i class="fas fa-search" style="color: #9e6fff; font-size: 1.2rem;"></i>
-                </button>
+    <div class="container text-white position-relative z-1 h-100 d-flex align-items-center">
+        <div class="text-center w-100 py-5">
+            <h1 class="display-4 fw-bold mb-4 px-3" style="color: #ffffff;">
+                Agende exames médicos com <br class="d-none d-md-block">especialistas sem sair de casa.
+            </h1>
+            
+            <!-- Barra de Pesquisa Responsiva -->
+            <div class="row justify-content-center px-3">
+                <div class="col-md-8 col-lg-6">
+                    <div class="search-box-banner position-relative">
+                        <input type="text" id="searchInput" placeholder="Buscar área de atuação..." 
+                               class="form-control py-3 px-4 w-100" style="border-radius: 50px; border: none;">
+                        <button type="button" id="searchButton" class="btn position-absolute end-0 top-50 translate-middle-y me-3" 
+                                style="background: none; border: none;">
+                            <i class="fas fa-search" style="color: #9e6fff; font-size: 1.2rem;"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -2283,7 +2287,7 @@
     </div>
     
     <div class="btn-container">
-      <button id="loadMoreBtn" class="btn" style="background-color: #18c387;">Carregar mais especialidades</button>
+      <button id="loadMoreBtn" class="btn" style="background-color: #18c387;">Mostrar mais</button>
       <button id="showLessBtn" class="btn" style="background-color: #18c387; color: white;">Mostrar menos</button>
     </div>
 </div>

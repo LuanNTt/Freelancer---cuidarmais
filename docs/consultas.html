@@ -1563,26 +1563,26 @@ section:not(.is-visible) {
         
        
       
+
 <!-- Banner Hero Section - Atualizado com busca funcional -->
-<section class="py-7  animate-slide position-relative bg-roxo" style="background: url('assets/img/illustration/bannerbanner1.PNG') no-repeat center center/cover; margin-bottom: 20px; margin-top: 0vh; height: 50vh;">
+<section class="py-7 animate-slide position-relative bg-roxo" style="background: url('assets/img/illustration/bannerbanner1.PNG') no-repeat center center/cover; margin-bottom: 20px; margin-top: 0vh; min-height: 50vh;">
     <div class="position-absolute top-0 start-0 w-100 h-100" style="background-color: rgba(0, 0, 0, 0.554);"></div>
-    <div class="container text-white position-relative z-1 text-center py-7" style="margin-top: 5vh;">
-      <h1 class="display-4 fw-bold mt-3" style="color: #ffffff; ">Agende consultas médicas
-         com <br>especialistas
-        sem sair de casa.</h1>
-        
-         
-         <!-- Barra de Pesquisa no Banner - AGORA FUNCIONAL -->
-         <div class="d-flex justify-content-center mt-4">
-            <div class="search-box-banner" style="width: 100%; max-width: 600px; position: relative;">
-                <input type="text" id="searchInput" placeholder="Buscar área de atuação..." class="form-control py-3 px-4" 
-                       style="border-radius: 50px; border: none; padding-right: 50px;">
-                <button type="button" id="searchButton" class="btn" 
-                        style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: none;">
-                    <i class="fas fa-search" style="color: #9e6fff; font-size: 1.2rem;"></i>
-                </button>
-            </div>
+    <div class="container text-white position-relative z-1 text-center py-7 d-flex flex-column justify-content-center" style="height: 100%;">
+      <h1 class="display-4 fw-bold mt-3 mb-3" style="color: #ffffff;">
+        Agende consultas médicas com <br class="d-none d-md-block">especialistas sem sair de casa.
+      </h1>
+      
+      <!-- Barra de Pesquisa no Banner - AGORA FUNCIONAL -->
+      <div class="d-flex justify-content-center">
+        <div class="search-box-banner w-100 px-3" style="max-width: 600px; position: relative;">
+          <input type="text" id="searchInput" placeholder="Buscar área de atuação..." 
+                 class="form-control py-3 px-4 w-100" style="border-radius: 50px; border: none;">
+          <button type="button" id="searchButton" class="btn" 
+                  style="position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: none; border: none;">
+            <i class="fas fa-search" style="color: #9e6fff; font-size: 1.2rem;"></i>
+          </button>
         </div>
+      </div>
     </div>
 </section>
 <!-- JavaScript para a funcionalidade de busca -->
@@ -2658,7 +2658,7 @@ section:not(.is-visible) {
     </div>
     
     <div class="btn-container">
-        <button id="loadMoreBtn" class="btn animate-bounce" style="background-color: #18c387;">Carregar mais especialidades</button>
+        <button id="loadMoreBtn" class="btn animate-bounce" style="background-color: #18c387;">Mostrar mais</button>
         <button id="showLessBtn" class="btn animate-bounce" style="background-color: #18c387; color: white;">Mostrar menos</button>
     </div>
 </div>

@@ -1245,152 +1245,156 @@ document.addEventListener('click', function(e) {
         
        
       
-<!-- Banner Hero Section -->
-<section class="position-relative bg-roxo" style="background: url('assets/img/illustration/cirurgias.PNG') no-repeat center center/cover; min-height: 150vh; padding-bottom: 50vh;">
+
+
+<!-- Banner Hero Section - Versão Otimizada -->
+<section class="position-relative bg-roxo" style="background: url('assets/img/illustration/cirurgias.PNG') no-repeat center center/cover; min-height: 100vh; display: flex; flex-direction: column;">
+
+  <!-- Overlay gradiente ajustado -->
+  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.527), rgba(0, 0, 0, 0.89));"></div>
   
-  <!-- Overlay gradiente -->
-  <div class="position-absolute top-0 start-0 w-100 h-100" style="background: linear-gradient(to bottom, #00000050, #000000ee);"></div>
-  
- <!-- Container do Formulário Centralizado -->
-<!-- Container do Formulário Centralizado -->
-<div class="container position-absolute start-50 translate-middle z-1" style="max-width: 1000px; width: 90%; margin-top: 32vh;">
-  <div class="text-white bg-dark p-5 rounded-3" style="background-color: rgba(0, 0, 0, 0.452) !important; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
-    <form id="agendamentoForm" class="d-flex flex-column gap-3" onsubmit="enviarParaWhatsApp(event)">
-      <h3 class="text-white text-center mb-4">Preencha e nossa equipe entra em contato com você:</h3>
-      
-      <!-- Campos do formulário em 2 colunas -->
-      <div class="row g-3">
-        <!-- Coluna 1 -->
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="nome" class="form-label text-white mb-1">Nome Completo*</label>
-            <div class="input-group">
-              <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required
-                     pattern="[A-Za-zÀ-ú\s]{5,}">
-              <span class="input-group-text d-none" id="nome-valid">
-                <i class="bi bi-check-circle-fill text-success"></i>
-              </span>
-              <span class="input-group-text d-none" id="nome-invalid">
-                <i class="bi bi-x-circle-fill text-danger"></i>
-              </span>
-            </div>
-            <div class="invalid-tooltip">Por favor, digite seu nome completo (mínimo 5 caracteres).</div>
-          </div>
-          
-          <div class="form-group mt-3">
-            <label for="cpf" class="form-label text-white mb-1">CPF*</label>
-            <div class="input-group">
-              <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
-              <span class="input-group-text d-none" id="cpf-valid">
-                <i class="bi bi-check-circle-fill text-success"></i>
-              </span>
-              <span class="input-group-text d-none" id="cpf-invalid">
-                <i class="bi bi-x-circle-fill text-danger"></i>
-              </span>
-            </div>
-            <div class="invalid-tooltip">Por favor, digite um CPF válido.</div>
-          </div>
-          
-          <div class="form-group mt-3">
-            <label for="telefone" class="form-label text-white mb-1">Telefone*</label>
-            <div class="input-group">
-              <input type="tel" class="form-control" id="telefone" placeholder="(85) 99999-9999" required>
-              <span class="input-group-text d-none" id="telefone-valid">
-                <i class="bi bi-check-circle-fill text-success"></i>
-              </span>
-              <span class="input-group-text d-none" id="telefone-invalid">
-                <i class="bi bi-x-circle-fill text-danger"></i>
-              </span>
+  <!-- Container do Formulário Centralizado -->
+  <div class="container position-relative z-1 flex-grow-1 d-flex align-items-center py-5">
+    <div class="row justify-content-center w-100">
+      <div class="col-lg-10 col-xl-8">
+        <div class="text-white bg-dark p-4 p-md-5 rounded-3" style="background-color: rgba(0, 0, 0, 0.7) !important; box-shadow: 0 0 20px rgba(0,0,0,0.5);">
+          <form id="agendamentoForm" class="d-flex flex-column gap-3" onsubmit="enviarParaWhatsApp(event)">
+            <h3 class="text-white text-center mb-4">Preencha e nossa equipe entra em contato com você:</h3>
             
-            </div>
-            <div class="invalid-tooltip">Por favor, digite um telefone válido.</div>
-            <div id="telefonesAdicionais" class="mt-2"></div>
-          </div>
-        </div>
-        
-        <!-- Coluna 2 -->
-        <div class="col-md-6">
-          <div class="form-group">
-            <label for="cidade" class="form-label text-white mb-1">Cidade/Estado*</label>
-            <div class="input-group">
-              <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade" required
-                     list="cidades-list">
-              <span class="input-group-text d-none" id="cidade-valid">
-                <i class="bi bi-check-circle-fill text-success"></i>
-              </span>
-              <span class="input-group-text d-none" id="cidade-invalid">
-                <i class="bi bi-x-circle-fill text-danger"></i>
-              </span>
-            </div>
-            <datalist id="cidades-list">
-              <!-- Opções serão preenchidas pelo JavaScript -->
-            </datalist>
-            <div class="invalid-tooltip">Por favor, selecione sua cidade.</div>
-          </div>
-          
-          <div class="form-group mt-3">
-            <label for="cirurgia" class="form-label text-white mb-1">Cirurgia Eletiva*</label>
-            <div class="input-group">
-              <input type="text" class="form-control" id="cirurgia" placeholder="Digite o nome da cirurgia" required>
-              <span class="input-group-text d-none" id="cirurgia-valid">
-                <i class="bi bi-check-circle-fill text-success"></i>
-              </span>
-              <span class="input-group-text d-none" id="cirurgia-invalid">
-                <i class="bi bi-x-circle-fill text-danger"></i>
-              </span>
-            </div>
-            <div class="invalid-tooltip">Por favor, informe qual cirurgia deseja agendar.</div>
-          </div>
-          
-          <div class="form-group mt-3">
-            <label class="form-label text-white mb-1">Possui pedido médico*</label>
-            <div class="d-flex gap-3">
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pedido" id="pedido_sim" value="Sim" required
-                       onclick="mostrarCampoPedidoMedico(false)">
-                <label class="form-check-label text-white" for="pedido_sim">Sim</label>
+            <!-- Campos do formulário em 2 colunas -->
+            <div class="row">
+              <!-- Coluna 1 -->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="nome" class="form-label text-white mb-1">Nome Completo*</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="nome" placeholder="Digite seu nome completo" required
+                           pattern="[A-Za-zÀ-ú\s]{5,}">
+                    <span class="input-group-text d-none" id="nome-valid">
+                      <i class="bi bi-check-circle-fill text-success"></i>
+                    </span>
+                    <span class="input-group-text d-none" id="nome-invalid">
+                      <i class="bi bi-x-circle-fill text-danger"></i>
+                    </span>
+                  </div>
+                  <div class="invalid-tooltip">Por favor, digite seu nome completo (mínimo 5 caracteres).</div>
+                </div>
+                
+                <div class="form-group mt-3">
+                  <label for="cpf" class="form-label text-white mb-1">CPF*</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+                    <span class="input-group-text d-none" id="cpf-valid">
+                      <i class="bi bi-check-circle-fill text-success"></i>
+                    </span>
+                    <span class="input-group-text d-none" id="cpf-invalid">
+                      <i class="bi bi-x-circle-fill text-danger"></i>
+                    </span>
+                  </div>
+                  <div class="invalid-tooltip">Por favor, digite um CPF válido.</div>
+                </div>
+                
+                <div class="form-group mt-3">
+                  <label for="telefone" class="form-label text-white mb-1">Telefone*</label>
+                  <div class="input-group">
+                    <input type="tel" class="form-control" id="telefone" placeholder="(85) 99999-9999" required>
+                    <span class="input-group-text d-none" id="telefone-valid">
+                      <i class="bi bi-check-circle-fill text-success"></i>
+                    </span>
+                    <span class="input-group-text d-none" id="telefone-invalid">
+                      <i class="bi bi-x-circle-fill text-danger"></i>
+                    </span>
+                  </div>
+                  <div class="invalid-tooltip">Por favor, digite um telefone válido.</div>
+                  <div id="telefonesAdicionais" class="mt-2"></div>
+                </div>
               </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="pedido" id="pedido_nao" value="Não"
-                       onclick="mostrarCampoPedidoMedico(false)">
-                <label class="form-check-label text-white" for="pedido_nao">Não</label>
+              
+              <!-- Coluna 2 -->
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="cidade" class="form-label text-white mb-1">Cidade/Estado*</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade" required
+                           list="cidades-list">
+                    <span class="input-group-text d-none" id="cidade-valid">
+                      <i class="bi bi-check-circle-fill text-success"></i>
+                    </span>
+                    <span class="input-group-text d-none" id="cidade-invalid">
+                      <i class="bi bi-x-circle-fill text-danger"></i>
+                    </span>
+                  </div>
+                  <datalist id="cidades-list">
+                    <!-- Opções serão preenchidas pelo JavaScript -->
+                  </datalist>
+                  <div class="invalid-tooltip">Por favor, selecione sua cidade.</div>
+                </div>
+                
+                <div class="form-group mt-3">
+                  <label for="cirurgia" class="form-label text-white mb-1">Cirurgia Eletiva*</label>
+                  <div class="input-group">
+                    <input type="text" class="form-control" id="cirurgia" placeholder="Digite o nome da cirurgia" required>
+                    <span class="input-group-text d-none" id="cirurgia-valid">
+                      <i class="bi bi-check-circle-fill text-success"></i>
+                    </span>
+                    <span class="input-group-text d-none" id="cirurgia-invalid">
+                      <i class="bi bi-x-circle-fill text-danger"></i>
+                    </span>
+                  </div>
+                  <div class="invalid-tooltip">Por favor, informe qual cirurgia deseja agendar.</div>
+                </div>
+                
+                <div class="form-group mt-3">
+                  <label class="form-label text-white mb-1">Possui pedido médico*</label>
+                  <div class="d-flex gap-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="pedido" id="pedido_sim" value="Sim" required
+                             onclick="mostrarCampoPedidoMedico(false)">
+                      <label class="form-check-label text-white" for="pedido_sim">Sim</label>
+                    </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="radio" name="pedido" id="pedido_nao" value="Não"
+                             onclick="mostrarCampoPedidoMedico(false)">
+                      <label class="form-check-label text-white" for="pedido_nao">Não</label>
+                    </div>
+                  </div>
+                  <div class="invalid-tooltip">Por favor, selecione uma opção.</div>
+                  
+                  <div id="pedido-medico-container" class="mt-3 d-none">
+                    <label for="pedido-medico" class="form-label text-white mb-1">Pedido Médico (PDF ou imagem)*</label>
+                    <input type="file" class="form-control" id="pedido-medico" accept=".pdf,.jpg,.jpeg,.png">
+                    <small class="text-white-50">Tamanho máximo: 5MB</small>
+                    <div class="invalid-tooltip">Por favor, anexe o pedido médico.</div>
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="invalid-tooltip">Por favor, selecione uma opção.</div>
             
-            <div id="pedido-medico-container" class="mt-3 d-none">
-              <label for="pedido-medico" class="form-label text-white mb-1">Pedido Médico (PDF ou imagem)*</label>
-              <input type="file" class="form-control" id="pedido-medico" accept=".pdf,.jpg,.jpeg,.png">
-              <small class="text-white-50">Tamanho máximo: 5MB</small>
-              <div class="invalid-tooltip">Por favor, anexe o pedido médico.</div>
+            <!-- Termo e botão (largura total) -->
+            <div class="mt-4">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="termo" required>
+                <label class="form-check-label text-white" for="termo" style="font-size: 0.9rem;">
+                  Concordo com os <a href="politicas-privacidade.html" target="_blank" class="text-primary">Termos de Uso</a>*
+                </label>
+                <div class="invalid-tooltip">Você deve concordar com os termos para continuar.</div>
+              </div>
+              
+              <div class="d-flex justify-content-between align-items-center mt-3">
+                <small class="text-white-50">* campo obrigatório</small>
+                <button type="submit" class="btn btn-primary px-5 py-2">Enviar</button>
+              </div>
             </div>
-          </div>
+          </form>
         </div>
       </div>
-      
-      <!-- Termo e botão (largura total) -->
-      <div class="mt-4">
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="termo" required>
-          <label class="form-check-label text-white" for="termo" style="font-size: 0.9rem;">
-            Concordo com os <a href="politicas-privacidade.html" target="_blank" class="text-primary">Termos de Uso</a>*
-          </label>
-          <div class="invalid-tooltip">Você deve concordar com os termos para continuar.</div>
-        </div>
-        
-        <div class="d-flex justify-content-between align-items-center mt-3">
-          <small class="text-white-50">* campo obrigatório</small>
-          <button type="submit" class="btn btn-primary px-5 py-2">Enviar</button>
-        </div>
-      </div>
-    </form>
+    </div>
   </div>
-</div>
   
-  <!-- Seção de Benefícios (mantida igual) -->
-  <div class="position-absolute bottom-0 start-0 end-0 z-1">
-    <div class="container py-5">
-      <h2 class="fw-bold text-center mb-3 text-white">Conheça as cirurgias disponíveis na Cuidar Mais </h2>
+  <!-- Seção de Benefícios - Versão Responsiva -->
+  <div class="position-relative z-1 py-4 py-md-5  bg-opacity-75">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-3 text-white">Conheça as cirurgias disponíveis na Cuidar Mais</h2>
       <div class="row g-4 justify-content-center">
         
         <!-- Linha 1 -->
@@ -1399,8 +1403,7 @@ document.addEventListener('click', function(e) {
             <i class="bi bi-bandaid-fill fs-1 me-4" style="color: #ffffff;"></i>
             <div>
               <h4 class="text-white mb-2">Geral</h4>
-              <p class="text-light mb-0">Procedimentos simples e seguros para diferentes condições do corpo.
-              </p>
+              <p class="text-light mb-0">Procedimentos simples e seguros para diferentes condições do corpo.</p>
             </div>
           </div>
         </div>
@@ -1410,8 +1413,7 @@ document.addEventListener('click', function(e) {
             <i class="bi bi-eye-fill fs-1 me-4" style="color: #ffffff;"></i>
             <div>
               <h4 class="text-white mb-2">Oftalmologia</h4>
-              <p class="text-light mb-0">Corrija ou trate problemas de visão com acompanhamento especializado.
-              </p>
+              <p class="text-light mb-0">Corrija ou trate problemas de visão com acompanhamento especializado.</p>
             </div>
           </div>
         </div>
@@ -1422,9 +1424,7 @@ document.addEventListener('click', function(e) {
             <i class="fa-solid fa-bone" style="color: #ffffff; margin-right: 25px;"></i>
             <div>
               <h4 class="text-white mb-2">Ortopedia</h4>
-              <p class="text-light mb-0">Tratamentos cirúrgicos para ossos, articulações e coluna.
-
-              </p>
+              <p class="text-light mb-0">Tratamentos cirúrgicos para ossos, articulações e coluna.</p>
             </div>
           </div>
         </div>
@@ -1433,185 +1433,284 @@ document.addEventListener('click', function(e) {
           <div class="d-flex align-items-start fs-1">
             <i class="bi bi-ear-fill fs-1 me-4" style="color: #ffffff;"></i>
             <div>
-              <h4 class="text-white mb-2">Otorrinolaringologia
-              </h4>
+              <h4 class="text-white mb-2">Otorrinolaringologia</h4>
               <p class="text-light mb-0">Cirurgias para melhorar respiração, audição ou voz.</p>
             </div>
           </div>
         </div>
-                  <!-- Linha 3 -->
-                  <div class="col-lg-5 col-md-6">
-                    <div class="d-flex align-items-start fs-1">
-                      <i class="bi bi-heart-pulse fs-1 me-4" style="color: #ffffff;"></i>
-                      <div>
-                        <h4 class="text-white mb-2">Vascular</h4>
-                        <p class="text-light mb-0">Procedimentos voltados à circulação e varizes, com conforto e segurança.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-          
-                  <div class="col-lg-5 col-md-6">
-                    <div class="d-flex align-items-start fs-1">
-                      <i class="bi bi-droplet-fill fs-1 me-4" style="color: #ffffff;"></i>
-                      <div>
-                        <h4 class="text-white mb-2">Urologia</h4>
-                        <p class="text-light mb-0">Cuidamos da saúde urinária e reprodutiva com atenção individualizada.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <!-- Linha 4 -->
-                  <div class="col-lg-5 col-md-6">
-                    <div class="d-flex align-items-start fs-1">
-                      <i class="bi bi-gender-female fs-1 me-4" style="color: #ffffff;"></i>
-                      <div>
-                        <h4 class="text-white mb-2"> Ginecologista</h4>
-                        <p class="text-light mb-0">Cuidados cirúrgicos com foco na saúde e bem-estar da mulher.</p>
-                      </div>
-                    </div>
-                  </div>
-          
-                  <div class="col-lg-5 col-md-6">
-                    <div class="d-flex align-items-start fs-1">
-                      <i class="bi bi-headset fs-2 me-4" style="color: #ffffff;"></i>
-                      <div>
-                        <h4 class="text-white mb-2">Dermatologia</h4>
-                        <p class="text-light mb-0">Cirurgias para remoção de sinais, cistos e cuidados com a saúde da pele.</p>
-                      </div>
-                    </div>
-                  </div>
+
+        <!-- Linha 3 -->
+        <div class="col-lg-5 col-md-6">
+          <div class="d-flex align-items-start fs-1">
+            <i class="bi bi-heart-pulse fs-1 me-4" style="color: #ffffff;"></i>
+            <div>
+              <h4 class="text-white mb-2">Vascular</h4>
+              <p class="text-light mb-0">Procedimentos voltados à circulação e varizes, com conforto e segurança.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-6">
+          <div class="d-flex align-items-start fs-1">
+            <i class="bi bi-droplet-fill fs-1 me-4" style="color: #ffffff;"></i>
+            <div>
+              <h4 class="text-white mb-2">Urologia</h4>
+              <p class="text-light mb-0">Cuidamos da saúde urinária e reprodutiva com atenção individualizada.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Linha 4 -->
+        <div class="col-lg-5 col-md-6">
+          <div class="d-flex align-items-start fs-1">
+            <i class="bi bi-gender-female fs-1 me-4" style="color: #ffffff;"></i>
+            <div>
+              <h4 class="text-white mb-2">Ginecologista</h4>
+              <p class="text-light mb-0">Cuidados cirúrgicos com foco na saúde e bem-estar da mulher.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-5 col-md-6">
+          <div class="d-flex align-items-start fs-1">
+            <i class="bi bi-headset fs-2 me-4" style="color: #ffffff;"></i>
+            <div>
+              <h4 class="text-white mb-2">Dermatologia</h4>
+              <p class="text-light mb-0">Cirurgias para remoção de sinais, cistos e cuidados com a saúde da pele.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
- 
 
 
   
 
 
 <style>
-/* Estilo para campos inválidos */
-.is-invalid {
-  border-color: #dc3545 !important;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23dc3545'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23dc3545' stroke='none'/%3e%3c/svg%3e");
-  background-repeat: no-repeat;
-  background-position: right calc(0.375em + 0.1875rem) center;
-  background-size: calc(0.75em + 0.375rem) calc(0.75em + 0.375rem);
-}
-
-.is-invalid:focus {
-  box-shadow: 0 0 0 0.25rem rgba(220, 53, 69, 0.25);
-}
-.footer{
-  background-color: #002db6;
-}
-</style>
-<style>
-  .footer{
+  /* Estilos Gerais do Footer */
+  .footer {
       background-color: #002db6;
-      
-  }
-  /* Adicione isso ao seu CSS existente */
-  .footer .row.py-5.py-lg-7 {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between; /* Distribui o espaço entre as colunas */
+      color: white;
+      padding: 40px 0 20px;
   }
   
-  .footer .col-lg-6 {
-      flex: 0 0 50%; /* Ocupa metade da linha no desktop */
-      max-width: 50%;
+  .footer a {
+      color: rgba(255,255,255,0.8);
+      text-decoration: none;
+      transition: color 0.3s;
   }
   
-  .footer .col-lg-2 {
-      flex: 0 0 16.666667%; /* Ocupa 2 colunas cada (total 6 colunas) */
-      max-width: 16.666667%;
+  .footer a:hover {
+      color: white;
   }
   
-  /* Ajustes para mobile */
-  @media (max-width: 991.98px) {
-      .footer .col-lg-6,
-      .footer .col-lg-2 {
-          flex: 0 0 100%;
-          max-width: 100%;
-      }
-      
-      .footer .col-6 {
-          flex: 0 0 50%;
-          max-width: 50%;
-      }
+  .footer h4 {
+      color: white; /* Garantindo que os títulos fiquem brancos */
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      font-weight: 600;
   }
   
-  /* Garante que os itens de contato fiquem alinhados */
+  .footer ul {
+      padding-left: 0;
+      list-style: none;
+  }
+  
+  .footer li {
+      margin-bottom: 10px;
+  }
+  
+  /* Seção de Contato */
+  .contact-info {
+      margin-top: 20px;
+  }
+  
   .contact-info p {
       display: flex;
       align-items: center;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      color: rgba(255,255,255,0.8);
   }
-         </style>
-        
   
-        <section class="py-0 footer">
-          <div class="container">
-            <div class="row py-5 py-lg-7">
-              <!-- Coluna da Logo e Contatos (esquerda no desktop, topo no mobile) -->
-              <div class="col-12 col-lg-6 mb-4 mb-lg-0">
-                <div class="mb-4">
-                  <a class="text-decoration-none" href="index.html">
-                    <img src="assets/img/illustration/logo-cuidar.PNG" height="60" alt="logo" class="img-fluid" style="max-width: 200px;">
-                  </a>
-                </div>
-                <div class="contact-info">
-                  <p class="text-light mb-2"><i class="bi bi-phone me-2"></i> 85 99816-0208</p>
-                  <p class="text-light mb-2"><i class="bi bi-telephone me-2"></i> 3254-4440</p>
-                  <p class="text-light mb-0"><i class="bi bi-envelope me-2"></i> cuidarmais@gmail.com</p>
-                </div>
+  .contact-info i {
+      margin-right: 10px;
+      font-size: 1.1rem;
+      min-width: 20px;
+      color: white;
+  }
+  
+  /* Logo */
+  .footer-logo {
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 20px;
+  }
+  
+  /* Rodapé Inferior */
+  .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 20px;
+      margin-top: 30px;
+  }
+  
+  /* Layout Responsivo */
+  @media (min-width: 992px) {
+      /* Desktop - 2 colunas principais */
+      .footer-main {
+          display: flex;
+          flex-wrap: wrap;
+      }
+      
+      .footer-brand {
+          flex: 0 0 40%;
+          max-width: 40%;
+          padding-right: 30px;
+      }
+      
+      .footer-links {
+          flex: 0 0 60%;
+          max-width: 60%;
+          display: flex;
+          flex-wrap: wrap;
+      }
+      
+      .footer-column {
+          flex: 0 0 33.333%;
+          max-width: 33.333%;
+          padding: 0 15px;
+      }
+  }
+  
+  @media (max-width: 991.98px) {
+      /* Tablet - 1 coluna */
+      .footer-brand {
+          margin-bottom: 30px;
+          text-align: center;
+      }
+      
+      .footer-logo {
+          margin-left: auto;
+          margin-right: auto;
+      }
+      
+      .footer-links {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+      }
+      
+      .footer-column {
+          flex: 0 0 48%;
+          max-width: 48%;
+          margin-bottom: 30px;
+      }
+      
+      .contact-info {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 15px;
+      }
+      
+      .contact-info p {
+          margin-bottom: 0;
+          flex: 0 0 auto;
+      }
+  }
+  
+  @media (max-width: 575.98px) {
+      /* Mobile - ajuste dos contatos */
+      .footer-column {
+          flex: 0 0 100%;
+          max-width: 100%;
+          text-align: center;
+      }
+      
+      .footer-links {
+          display: block;
+      }
+      
+      .contact-info {
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+      }
+      
+      .contact-info p {
+          justify-content: center;
+          width: 100%;
+      }
+  }
+</style>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+      <div class="footer-main">
+          <!-- Coluna da Logo e Contatos -->
+          <div class="footer-brand">
+              <a href="index.html">
+                  <img src="assets/img/illustration/logo-cuidar.PNG" alt="Cuidar Mais" class="footer-logo">
+              </a>
+              <div class="contact-info">
+                  <p><i class="fas fa-mobile-alt"></i> 85 99816-0208</p>
+                  <p><i class="fas fa-phone-alt"></i> 3254-4440</p>
+                  <p><i class="fas fa-envelope"></i> cuidarmais@gmail.com</p>
+              </div>
+          </div>
+          
+          <!-- Colunas de Links -->
+          <div class="footer-links">
+              <!-- Coluna 1 -->
+              <div class="footer-column">
+                  <h4>Sobre a Cuidar Mais</h4>
+                  <ul>
+                      <li><a href="quem-somos.html">Quem Somos</a></li>
+                      <li><a href="clientes.html">Clientes</a></li>
+                      <li><a href="parceiros.html">Quero virar parceiro</a></li>
+                  </ul>
               </div>
               
-              <!-- Colunas de Links (direita no desktop, abaixo no mobile) -->
-              <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
-                <h4 class="lh-lg fw-bold text-light font-sans-serif mb-3">Sobre a Cuidar Mais</h4>
-                <ul class="list-unstyled text-light">
-                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="quem-somos.html">Quem Somos</a></li>
-                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="clientes.html">Clientes</a></li>
-                  <li class="lh-lg"><a class="footer-link text-light" href="parceiros.html">Quero virar parceiro</a></li>
-                </ul>
+              <!-- Coluna 2 -->
+              <div class="footer-column">
+                  <h4>Serviços</h4>
+                  <ul>
+                      <li><a href="consultas.html">Consultas</a></li>
+                      <li><a href="exames.html">Exames</a></li>
+                      <li><a href="cirurgias.html">Cirurgias</a></li>
+                  </ul>
               </div>
               
-              <div class="col-6 col-md-4 col-lg-2 mb-4 mb-lg-0">
-                <h4 class="lh-lg fw-bold text-light font-sans-serif mb-3">Serviços</h4>
-                <ul class="list-unstyled text-light">
-                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="consultas.html">Consultas</a></li>
-                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="exames.html">Exames</a></li>
-                  <li class="lh-lg"><a class="footer-link text-light" href="cirurgias.html">Cirurgias</a></li>
-                </ul>
+              <!-- Coluna 3 -->
+              <div class="footer-column">
+                  <h4>Ajuda</h4>
+                  <ul>
+                      <li><a href="faq.html">Perguntas Frequentes</a></li>
+                      <li><a href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20acessar%20o%20suporte%20pelo%20whatssap.%20Podem%20me%20ajudar?">Suporte via WhatsApp</a></li>
+                      <li><a href="politicas-privacidade.html">Política de Privacidade</a></li>
+                      <li><a href="termosuso.html">Termos de Uso</a></li>
+                  </ul>
               </div>
-              
-              <div class="col-6 col-md-4 col-lg-2">
-                <h4 class="lh-lg fw-bold text-light font-sans-serif mb-3">Ajuda</h4>
-                <ul class="list-unstyled text-light">
-                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="faq.html">Perguntas Frequentes</a></li>
-                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="https://wa.me/5585998160208?text=Olá,%20vim%20através%20do%20site%20e%20gostaria%20de%20acessar%20o%20suporte%20pelo%20whatssap.%20Podem%20me%20ajudar?">Suporte via WhatsApp</a></li>
-                  <li class="lh-lg mb-2"><a class="footer-link text-light" href="politicas-privacidade.html">Política de Privacidade</a></li>
-                  <li class="lh-lg"><a class="footer-link text-light" href="termosuso.html">Termos de Uso</a></li>
-                </ul>
-              </div>
-            </div>
-            
-            <!-- Rodapé inferior -->
-            <div class="row border-top border-light border-opacity-10 pt-3 mt-3">
-              <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
-                <p class="fs--1 my-2 fw-bold text-200">&copy; 2025 Cuidar Mais</p>
+          </div>
+      </div>
+      
+      <!-- Rodapé Inferior -->
+      <div class="footer-bottom">
+          <div class="row">
+              <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                  <p class="mb-0">&copy; 2025 Cuidar Mais. Todos os direitos reservados.</p>
               </div>
               <div class="col-md-6 text-center text-md-end">
-                <p class="fs--1 my-2 text-200">
-                  Feito por <a class="fw-bold text-info text-200" href="https://www.linkedin.com/in/trajanoluan" target="_blank">LuanDev</a>
-                </p>
+                  <p class="mb-0">Desenvolvido por <a href="https://www.linkedin.com/in/trajanoluan" target="_blank">LuanDev</a></p>
               </div>
-            </div>
           </div>
-        </section>   <!-- ============================================-->
+      </div>
+  </div>
+</footer>
+
 
 
   </section>
