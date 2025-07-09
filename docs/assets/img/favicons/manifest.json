@@ -7,12 +7,12 @@
     "theme_color": "#6970dd",
     "icons": [
       {
-        "src": "/assets/img/favicons/favicon-192.png",
+        "src": "/assets/img/favicons/cuidar-pequeno2.PNG",
         "type": "image/png",
         "sizes": "192x192"
       },
       {
-        "src": "/assets/img/favicons/favicon-512.png",
+        "src": "/assets/img/favicons/cuidar-pequeno2.PNG",
         "type": "image/png",
         "sizes": "512x512"
       }
